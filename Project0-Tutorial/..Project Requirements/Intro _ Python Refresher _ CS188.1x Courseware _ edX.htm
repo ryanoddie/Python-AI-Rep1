@@ -1,0 +1,3596 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7 lte9 lte8 lte7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en"><!--<![endif]--><head dir="ltr">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/1beac94c95" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/nr-632.js"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/7299.js" async="" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/analytics.js" async="" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/fbds.js" async="" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/fbds.js" async="" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/analytics_002.js" async="" type="text/javascript"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XA4GVl5ACwAEV1JQAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"1beac94c95","agent":"js-agent.newrelic.com/nr-632.min.js","transactionName":"NQQGYUZWDUNSVUMPWQxOIkBaVBdZXFgYBVkXExdQQ1YRVR1AXgNBEVsNW1BSGw==","applicationID":"3343327","errorBeacon":"bam.nr-data.net","applicationTime":1691}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>Python Basics | Python Refresher | CS188.1x Courseware | edX</title>
+
+  <script type="text/javascript">
+    /* immediately break out of an iframe if coming from the marketing website */
+    (function(window) {
+      if (window.location !== window.top.location) {
+        window.top.location = window.location;
+      }
+    })(this);
+  </script>
+
+  <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/a"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://d37djvu3ytnwxt.cloudfront.net/static/images/favicon.c074c912999f.ico">
+
+  
+  
+
+    <link href="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-vendor.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+
+    <link href="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-app.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+
+    <link href="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-app-extend1.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+
+    <link href="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-app-extend2.css" rel="stylesheet" type="text/css">
+
+
+
+
+    
+    <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-main_vendor.js" charset="utf-8"></script>
+
+
+
+  <script>
+    window.baseUrl = "https://d37djvu3ytnwxt.cloudfront.net/static/";
+    (function (require) {
+        var urlArgs = "v=987ea85";
+      require.config({
+          baseUrl: baseUrl,
+          urlArgs: urlArgs
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/require-config-lms.js"></script>
+
+  
+
+  
+
+    <link href="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-course-vendor.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+
+    <link href="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-course.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/split.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_005.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_004.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/Markdown.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/Markdown_003.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/Markdown_002.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_003.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_002.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_007.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/mustache.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/URI.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/backbone-min_002.js"></script>
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/tooltip_manager.js"></script>
+
+<link href="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery.css" rel="stylesheet" type="text/css">
+
+
+  
+
+
+
+  
+  
+
+
+  <!--[if lt IE 9]>
+    <script src="https://d37djvu3ytnwxt.cloudfront.net/static/js/html5shiv.d5e37d8ee1a4.js"></script>
+  <![endif]-->
+
+  <script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/1743970571.js"></script>
+
+  <!-- begin Segment.io -->
+<script type="text/javascript">
+  // Asynchronously load Segment.io's analytics.js library
+  window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+  analytics.load("8fncv13bt5");
+  analytics.page();
+
+    analytics.identify("6039505", {
+      email: "ryanoddie.hlive@gmail.com",
+      username: "ryanoddie"
+    });
+</script>
+<!-- end Segment.io -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY">
+
+  
+
+
+<script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/search_app.js" data-requiremodule="js/search/search_app" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/backbone-min.js" data-requiremodule="backbone" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">div.MathJax_MathML {text-align: center; margin: .75em 0px; display: block!important}
+.MathJax_MathML {font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+span.MathJax_MathML {display: inline!important}
+.MathJax_mmlExBox {display: block!important; overflow: hidden; height: 1px; width: 60ex; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0}
+[class="MJX-tex-oldstyle"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-oldstyle-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+[class="MJX-tex-caligraphic"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-caligraphic-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+@font-face /*1*/ {font-family: MathJax_Caligraphic-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf')}
+@font-face /*2*/ {font-family: MathJax_Caligraphic-WEB; font-weight: bold; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf')}
+[mathvariant="double-struck"] {font-family: MathJax_AMS, MathJax_AMS-WEB}
+[mathvariant="script"] {font-family: MathJax_Script, MathJax_Script-WEB}
+[mathvariant="fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB}
+[mathvariant="bold-script"] {font-family: MathJax_Script, MathJax_Caligraphic-WEB; font-weight: bold}
+[mathvariant="bold-fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB; font-weight: bold}
+[mathvariant="monospace"] {font-family: monospace}
+[mathvariant="sans-serif"] {font-family: sans-serif}
+[mathvariant="bold-sans-serif"] {font-family: sans-serif; font-weight: bold}
+[mathvariant="sans-serif-italic"] {font-family: sans-serif; font-style: italic}
+[mathvariant="sans-serif-bold-italic"] {font-family: sans-serif; font-style: italic; font-weight: bold}
+@font-face /*3*/ {font-family: MathJax_AMS-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf')}
+@font-face /*4*/ {font-family: MathJax_Script-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf')}
+@font-face /*5*/ {font-family: MathJax_Fraktur-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf')}
+@font-face /*6*/ {font-family: MathJax_Fraktur-WEB; font-weight: bold; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf')}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?rev=2.4-beta-2') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?rev=2.4-beta-2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?rev=2.4-beta-2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?rev=2.4-beta-2') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/search_router.js" data-requiremodule="js/search/search_router" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/search_form.js" data-requiremodule="js/search/views/search_form" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/search_list_view.js" data-requiremodule="js/search/views/search_list_view" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/search_collection.js" data-requiremodule="js/search/collections/search_collection" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/search_result.js" data-requiremodule="js/search/models/search_result" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/search_item_view.js" data-requiremodule="js/search/views/search_item_view" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/logger.js" data-requiremodule="logger" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script></head>
+
+<body class="ltr courseware  lang_en"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#seq_content">Skip to main content</a>
+
+    
+<!--[if IE]>
+<div class="sr message-accessibility message" id="mathjax-accessibility-message" aria-hidden="true">
+	<p class="copy">This page features MathJax technology to render mathematical formulae. To make math accessibile, we suggest using the MathPlayer plugin. Please visit the <a href="//www.dessci.com/en/products/mathplayer/download.htm">MathPlayer Download Page</a> to download the plugin for your browser.</p>
+</div>
+<div class="sr message-accessibility message" id="mathplayer-browser-message" aria-hidden="true">
+	<p class="copy">
+	 Your browser does not support the MathPlayer plugin. To use MathPlayer, please use Internet Explorer 6 through 9.
+	 </p>
+</div>
+<![endif]-->
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="global slim" aria-label="Main" role="banner">
+  <div class="wrapper-header nav-container">
+    <h1 class="logo" itemscope="" itemtype="http://schema.org/Organization">
+      <a href="https://www.edx.org/" title="Home page" itemprop="url">
+        
+            <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/edx-logo-77x36.png" alt="edX" title="edX" itemprop="url">
+            <span class="sr">Home Page</span>
+        
+      </a>
+    </h1>
+
+    <h2><span class="provider">BerkeleyX:</span> CS188.1x Artificial Intelligence</h2>
+
+
+    <ul class="user">
+      <li class="primary">
+        <a href="https://courses.edx.org/dashboard" class="user-link">
+          <i class="icon fa fa-home" aria-hidden="true"></i>
+          <span class="sr">Dashboard for:</span>
+          <div>ryanoddie</div>
+        </a>
+      </li>
+      <li class="primary">
+        <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">More options dropdown</span> ▾</a>
+        <ul class="dropdown-menu" aria-label="More Options" role="menu">
+          
+              <li><a href="https://www.edx.org/student-faq">Help</a></li>
+          
+          <li><a href="https://courses.edx.org/logout" role="menuitem">Sign out</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </div>
+</header>
+<!--[if lte IE 8]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="help-tab">
+  <a href="#help-modal" rel="leanModal" role="button">Help</a>
+</div>
+
+<section id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-label="edX Help">
+  <div class="inner-wrapper" id="help_wrapper">
+    <button class="close-modal " tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+	<span class="edx">edX</span> Help
+      </h2>
+      <hr>
+    </header>
+
+
+
+    <p>For <strong>questions on course lectures, homework, tools, or materials for this course</strong>, post in the <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/discussion/forum" target="_blank">course discussion forum</a>.
+    </p>
+
+    <p>Have <strong>general questions about edX</strong>? You can find lots of helpful information in the edX <a href="https://www.edx.org/student-faq" target="_blank">FAQ</a>.
+      </p>
+
+    <p>Have a <strong>question about something specific</strong>? You can contact the edX general support team directly:</p>
+    <hr>
+
+    <div class="help-buttons">
+      <a href="#" id="feedback_link_problem">Report a problem</a>
+      <a href="#" id="feedback_link_suggestion">Make a suggestion</a>
+      <a href="#" id="feedback_link_question">Ask a question</a>
+    </div>
+
+    <p class="note">Please note: The edX support team is English 
+speaking. While we will do our best to address your inquiry in any 
+language, our responses will be in English.</p>
+
+  </div>
+
+  <div class="inner-wrapper" id="feedback_form_wrapper">
+    <button class="close-modal">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header></header>
+
+    <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="/submit_feedback">
+      <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+      <label data-field="subject" for="feedback_form_subject">Briefly describe your issue*</label>
+      <input name="subject" id="feedback_form_subject" aria-required="true" type="text">
+      <label data-field="details" for="feedback_form_details">Tell us the details*
+<span class="tip">Include error messages, steps which lead to the issue, etc</span></label>
+      <textarea name="details" id="feedback_form_details" aria-required="true"></textarea>
+      <input name="issue_type" type="hidden">
+      <input name="course_id" value="BerkeleyX/CS188.1x-4/1T2015" type="hidden">
+      <div class="submit">
+        <input name="submit" value="Submit" id="feedback_submit" type="submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>Thank You!</h2>
+      <hr>
+    </header>
+
+    
+    <p>
+    Thank you for your inquiry or feedback.  We typically respond to a 
+request within one business day (Monday to Friday, 13:00 UTC to 21:00 
+UTC.) In the meantime, please review our <a href="https://www.edx.org/student-faq" target="_blank" id="feedback-faq-link" tabindex="0">detailed FAQs</a> where most questions have already been answered.
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $("#help-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#help-modal").attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".help-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#feedback_form")[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $("#help-modal").attr("aria-hidden", "false");
+        $("#help-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#help_wrapper .close-modal").focus();
+    });
+    showFeedback = function(event, issue_type, title, subject_label, details_label) {
+        $("#help_wrapper").css("display", "none");
+        $("#feedback_form input[name='issue_type']").val(issue_type);
+        $("#feedback_form_wrapper").css("display", "block");
+        $("#feedback_form_wrapper header").html("<h2>" + title + "</h2><hr>");
+        $("#feedback_form_wrapper label[data-field='subject']").html(subject_label);
+        $("#feedback_form_wrapper label[data-field='details']").html(details_label);
+        $("#feedback_form_wrapper .close-modal").focus();
+        event.preventDefault();
+    };
+    cycle_modal_tab("#feedback_link_question", "#help_wrapper .close-modal");
+    cycle_modal_tab("#feedback_submit", "#feedback_form_wrapper .close-modal");
+    cycle_modal_tab("#feedback-faq-link", "#feedback_success_wrapper .close-modal");
+    $("#help-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#help_wrapper .close-modal").click();
+        }
+    });
+    $("#feedback_link_problem").click(function(event) {
+        showFeedback(
+            event,
+            "problem",
+            "Report a Problem",
+            "Brief description of the problem" + "*",
+            "Details of the problem you are encountering" + "*" + "<span class='tip'>" +
+              "Include error messages, steps which lead to the issue, etc." + "</span>"
+        );
+    });
+    $("#feedback_link_suggestion").click(function(event) {
+        showFeedback(
+            event,
+            "suggestion",
+            "Make a Suggestion",
+            "Brief description of your suggestion" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_link_question").click(function(event) {
+        showFeedback(
+            event,
+            "question",
+            "Ask a Question",
+            "Brief summary of your question" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $('area,input,select,textarea,button').attr('tabindex', -1);
+        $("#feedback_form_wrapper .close-modal").focus();
+    });
+    $("#feedback_form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#feedback_form").on("ajax:success", function(event, data, status, xhr) {
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        $("#feedback_success_wrapper").focus();
+    });
+    $("#feedback_form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            htmlStr += " " + _.template(
+              "Please {link_start}send us e-mail{link_end}.",
+              {link_start: '<a href="#" id="feedback_email">', link_end: '</a>'},
+              {interpolate: /\{(.+?)\}/g})
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+            $("#feedback_email").click(function(e) {
+                mailto = "mailto:" + "bugs@edx.org" +
+                    "?subject=" + $("#feedback_form input[name='subject']").val() +
+                    "&body=" + $("#feedback_form textarea[name='details']").val();
+                window.open(mailto);
+                e.preventDefault();
+            });
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+})(this)
+</script>
+
+
+
+
+    <div class="content-wrapper" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <i class="icon fa fa-arrows-alt fa-large"></i> <%= gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%= largeALT %>, <%= gettext('Large') %>" src="<%= largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <i class="icon fa fa-remove fa-large"></i> <%= gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <i class="icon fa fa fa-search-plus fa-large"></i> <%= gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <i class="icon fa fa fa-search-minus fa-large"></i> <%= gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+<script type="text/template" id="search_item-tpl">
+    <div class='sri-excerpt'><%= excerpt %></div>
+<span class='sri-type'><%- content_type %></span>
+<span class='sri-location'><%- location.join(' ▸ ') %></span>
+<a class="sri-link" href="<%- url %>"><%= gettext("View") %> <i class="icon fa fa-arrow-right"></i></a>
+
+</script>
+<script type="text/template" id="search_item_seq-tpl">
+    <div class='sri-excerpt'></div>
+<span class='sri-type'></span>
+<span class='sri-location'><%- location.join(' ▸ ') %></span>
+<a class="sri-link" href="<%- url %>"><%= gettext("View") %> <i class="icon fa fa-arrow-right"></i></a>
+
+</script>
+<script type="text/template" id="search_list-tpl">
+    <div class="search-info">
+    <%= gettext("Search Results") %>
+    <div class="search-count"><%= totalCountMsg %></div>
+</div>
+
+<% if (totalCount > 0 ) { %>
+
+    <ol class='search-results'></ol>
+
+    <% if (hasMoreResults) { %>
+        <a class="search-load-next" href="javascript:void(0);">
+            <%= interpolate(
+                ngettext("Load next %(num_items)s result", "Load next %(num_items)s results", pageSize),
+                { num_items: pageSize },
+                true
+            ) %>
+            <i class="icon fa fa-spinner fa-spin"></i>
+        </a>
+    <% } %>
+
+<% } else { %>
+
+    <p><%= gettext("Sorry, no results were found.") %></p>
+
+<% } %>
+
+</script>
+<script type="text/template" id="search_loading-tpl">
+    <i class="icon fa fa-spinner fa-spin"></i> <%= gettext("Loading") %>
+
+
+</script>
+<script type="text/template" id="search_error-tpl">
+    <%= gettext("There was an error, try searching again.") %>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<nav class="courseware wrapper-course-material" aria-label="Course Material">
+  <div class="course-material">
+    <ol class="course-tabs">
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware" class="active">
+                 Courseware
+                   <span class="sr">, current location</span>
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/info" class="">
+                 Course Info
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/progress" class="">
+                 Progress
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/20021a0a32d14a31b087db8d4bb582fd/" class="">
+                 Syllabus
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/f5722e0cf4234e4284764db6414b685c/" class="">
+                 Course Policies
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/f57d184a147b4e739b74b01cb73f3caa/" class="">
+                 Course Staff
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/discussion/forum" class="">
+                 Discussion
+             </a>
+          </li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="course-wrapper">
+
+    <div class="course-index" role="navigation">
+      <header id="open_close_accordion">
+        <a href="#">close</a>
+      </header>
+
+
+      <div role="tablist" class="ui-accordion ui-widget ui-helper-reset" id="accordion" style="">
+        <nav aria-label="Course Navigation">
+            
+
+
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-0" id="ui-accordion-accordion-header-0" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Discussion Forum"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Discussion&nbsp;Forum</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-0" id="ui-accordion-accordion-panel-0" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/1215d7ff8c304058be1a9abc437ef748/303a2a83d5d04e788fe5bd0c47841bdd/">
+              <p>Piazza </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter is-open">
+      
+      <h3 tabindex="0" aria-selected="true" aria-controls="ui-accordion-accordion-panel-1" id="ui-accordion-accordion-header-1" role="tab" class="active ui-accordion-header ui-helper-reset ui-state-default ui-accordion-header-active ui-state-active ui-corner-top ui-accordion-icons" aria-label="Week 1, current chapter"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>
+        <a href="#">Week&nbsp;1</a>
+      </h3>
+
+    <ul aria-hidden="false" aria-expanded="true" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-1" id="ui-accordion-accordion-panel-1" style="" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+          <li class="active ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/c78976d210314651abb740912d8279bb/e8c2d3dd71a84472997173f55c98a35c/">
+              <p>Python Refresher <span class="sr">, current section</span></p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/c78976d210314651abb740912d8279bb/b414886f442a41e4b5fd0408de837e53/">
+              <p>Lecture 1:  Introduction (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-2" id="ui-accordion-accordion-header-2" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 2"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;2</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-2" id="ui-accordion-accordion-panel-2" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/7c56230af88d467c9737344e2e76092e/">
+              <p>Lecture 2: Uninformed Search (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/426f699c608b4ee7a6190f0edbeb5cf3/">
+              <p>Lecture 2: Uninformed Search (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/76f9a53b7aad47638ff968db5938d841/">
+              <p>Lecture 3: Informed Search (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/92bead757c1b4a29b0f3cd6a9c502053/">
+              <p>Lecture 3: Informed Search (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/367b239e4b764465b9ace9b6f6ff3ca7/">
+              <p>Step-By-Step: DFS and BFS </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/9eeaa67e23414033a09f0f4256eeaeac/">
+              <p>Step-By-Step: A* </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/d35abd173ee745dda5417aaa89b97b02/">
+              <p>Homework 1: Search </p>
+              
+              <p class="subtitle">Homework due Feb 23, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/b7a9d45bb7f244f98c0b3fc4a242f291/">
+              <p>Homework 1: Search (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-3" id="ui-accordion-accordion-header-3" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 3"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;3</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-3" id="ui-accordion-accordion-panel-3" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fab202f219447c79915d6ba6eb08344/6171e5fdfd8645c98cdcdf53dfea1880/">
+              <p>Project 1: Search </p>
+              
+              <p class="subtitle">Project 1 due Mar 02, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-4" id="ui-accordion-accordion-header-4" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 4"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;4</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-4" id="ui-accordion-accordion-panel-4" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/cc992b6a8ae34c88a371c1fcdf752ac3/">
+              <p>Lecture 4: CSPs (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/6f8a9aab61e44c4b93458e72a6da100b/">
+              <p>Lecture 4: CSPs (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/42f851793708458184c10c368ff53fc0/">
+              <p>Lecture 5: CSPs II (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/fcdcbb040166497c9c3fb31bc4639fdf/">
+              <p>Lecture 5: CSPs II (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/0460a6606a3e4630b0b4e913dd88c135/">
+              <p>Homework 2: CSPs </p>
+              
+              <p class="subtitle">Homework due Mar 10, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/ae57caaa10c149e4b6ec3a561034678d/">
+              <p>Homework 2: CSPs (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-5" id="ui-accordion-accordion-header-5" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 5"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;5</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-5" id="ui-accordion-accordion-panel-5" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/8616451481ba41d4a40afcf13bc8ab1c/">
+              <p>Lecture 6: Adversarial Search (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/7f571bb27af64d838b05cbf371546537/">
+              <p>Lecture 7: Uncertainty and Utilities (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/dded614399934785863727e7cf4abfa1/">
+              <p>Step-By-Step: Alpha-Beta </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/0356d34a926e4c7199d1d66fd01d89da/">
+              <p>Homework 3: Games </p>
+              
+              <p class="subtitle">Homework due Mar 16, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/91a883e76a204ae6bc16e4a98647ac14/">
+              <p>Homework 3: Games (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-6" id="ui-accordion-accordion-header-6" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 6"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;6</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-6" id="ui-accordion-accordion-panel-6" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/817468c509ef4b64bcb74cd38766ac44/52a12229526341c4b605cdd2b5ae295d/">
+              <p>Project 2: Multi-Agent Search </p>
+              
+              <p class="subtitle">Project 2 due Mar 23, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-7" id="ui-accordion-accordion-header-7" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 7"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;7</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-7" id="ui-accordion-accordion-panel-7" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/99f9c610429f40e1882dd2bfa7deb957/">
+              <p>Lecture 8: Markov Decision Processes (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/0c7a5f8e1ceb43b5ae45544511eb11dc/">
+              <p>Lecture 9: Markov Decision Processes II (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/25829128a13347cfb8d724e8c348484a/">
+              <p>Homework 4: MDPs </p>
+              
+              <p class="subtitle">Homework due Mar 30, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/aee7f9abb0ae421e8917c7283b5a6a7a/">
+              <p>Homework 4: MDPs (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-8" id="ui-accordion-accordion-header-8" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 8"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;8</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-8" id="ui-accordion-accordion-panel-8" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/aa2fe795e9594a96a18b7cf9a3cbcd21/">
+              <p>Lecture 10: Reinforcement Learning (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/bacdd072711c44f991c73bd55b8cdd03/">
+              <p>Lecture 11: Reinforcement Learning II (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/8f12a00e153c437f8e36b0c649af8be3/">
+              <p>Homework 5: Reinforcement Learning </p>
+              
+              <p class="subtitle">Homework due Apr 06, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/c700ec4375884057b470e5d98cba7343/">
+              <p>Homework 5: Reinforcement Learning (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-9" id="ui-accordion-accordion-header-9" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 9"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;9</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-9" id="ui-accordion-accordion-panel-9" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/771ec2a61c4242c39ad6310e0766f714/41c847d3794141a7acb4f6b1e5904215/">
+              <p>Project 3: Reinforcement Learning </p>
+              
+              <p class="subtitle">Project 3 due Apr 13, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-10" id="ui-accordion-accordion-header-10" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 10"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;10</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-10" id="ui-accordion-accordion-panel-10" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/a496bb289edc4b0c918ee2157dfe2e62/">
+              <p>Practice Final I </p>
+              
+              <p class="subtitle">due Apr 13, 2015 at 20:00&nbsp;UTC</p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/b6a2e82efc7348d48da1eeefc139958e/">
+              <p>Practice Final II </p>
+              
+              <p class="subtitle">due Apr 13, 2015 at 20:00&nbsp;UTC</p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/82ddd0b6f1e34d7884d304d166c909bc/">
+              <p>Practice Final III </p>
+              
+              <p class="subtitle">due Apr 13, 2015 at 20:00&nbsp;UTC</p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/617a8724e210462d8d636a2c024cc4ad/">
+              <p>Practice Final I (solution) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/032c322356d14cd68c6c99efc1aaf3b5/">
+              <p>Practice Final II (solution) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/51cb474c2a6b4a4cba28d0cf19d8fe02/">
+              <p>Practice Final III (solution) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-11" id="ui-accordion-accordion-header-11" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 11"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;11</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-11" id="ui-accordion-accordion-panel-11" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/88f5c6b109ec4f7f9d518f5b4bfe9c30/0a4127a7b35b477291cca0d11b13d202/">
+              <p>Final Pre-Release </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/88f5c6b109ec4f7f9d518f5b4bfe9c30/c044dc680f02471783d505d7fdead7a9/">
+              <p>Final Exam </p>
+              
+              <p class="subtitle">Final due Apr 27, 2015 at 20:00&nbsp;UTC</p>
+
+                  <img src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+
+        </nav>
+      </div>
+    </div>
+    <section class="course-content" id="course-content">
+
+      <div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule xblock-initialized" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="sequential" data-request-token="b7495c4ae67211e4830b0abfe3b35129" data-runtime-version="1" data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_sequential;_e8c2d3dd71a84472997173f55c98a35c" data-type="Sequence" data-course-id="BerkeleyX/CS188.1x-4/1T2015">
+  
+  
+
+<div id="sequence_i4x-BerkeleyX-CS188_1x-4-sequential-e8c2d3dd71a84472997173f55c98a35c" class="sequence" data-id="i4x://BerkeleyX/CS188.1x-4/sequential/e8c2d3dd71a84472997173f55c98a35c" data-position="3" data-ajax-url="/courses/BerkeleyX/CS188.1x-4/1T2015/xblock/i4x:;_;_BerkeleyX;_CS188.1x-4;_sequential;_e8c2d3dd71a84472997173f55c98a35c/handler/xmodule_handler">
+  <div class="sequence-nav">
+    <button class="sequence-nav-button button-previous">Previous</button>
+    <nav class="sequence-list-wrapper" aria-label="Unit">
+      <ol style="left: 0px;" id="sequence-list">
+        <li>
+        <a class="seq_other progress-0 visited" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/1b3c8dc283a64f24a743d123b2d2d15c" data-element="1" href="javascript:void(0);" title="Intro" data-page-title="Intro" aria-controls="seq_contents_0" id="tab_0" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Intro</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other progress-0 active" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/ccbf54a658e040869d231a83636dabc9" data-element="2" href="javascript:void(0);" title="Python Basics" data-page-title="Python Basics" aria-controls="seq_contents_1" id="tab_1" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Python Basics</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other progress-0 visited" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/b30f6f40ae5b4a5a88ef9db297c39c85" data-element="3" href="javascript:void(0);" title="Autograding" data-page-title="Autograding" aria-controls="seq_contents_2" id="tab_2" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Autograding</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/b37b93eb834542e2a054f8a655424234" data-element="4" href="javascript:void(0);" title="Q1: Addition" data-page-title="Q1: Addition" aria-controls="seq_contents_3" id="tab_3" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q1: Addition</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/c870c7d603a04793ada0fdbc57f81784" data-element="5" href="javascript:void(0);" title="Q2: buyLotsOfFruit" data-page-title="Q2: buyLotsOfFruit" aria-controls="seq_contents_4" id="tab_4" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q2: buyLotsOfFruit</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/261638b10f634853bbc1d347b8f5f60c" data-element="6" href="javascript:void(0);" title="Q3: shopSmart" data-page-title="Q3: shopSmart" aria-controls="seq_contents_5" id="tab_5" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q3: shopSmart</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_problem inactive progress-none" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/e4dd9b5c026b433bb401c177ecbd68ea" data-element="7" href="javascript:void(0);" title="Project 0 Submission" data-page-title="Project 0 Submission" aria-controls="seq_contents_6" id="tab_6" tabindex="0">
+            <i class="icon fa seq_problem" aria-hidden="true"></i>
+            <p><span class="sr">problem</span> Project 0 Submission</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/5f1f7dd9896e40f896891cd9201dc367" data-element="8" href="javascript:void(0);" title="UNIX Basics" data-page-title="UNIX Basics" aria-controls="seq_contents_7" id="tab_7" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> UNIX Basics</p>
+          </a>
+        </li>
+      </ol>
+    <div style="opacity: 0;" class="left-shadow"></div><div style="opacity: 0;" class="right-shadow"></div></nav>
+    <button class="sequence-nav-button button-next">Next</button>
+  </div>
+
+  <div id="sr-is-focusable" tabindex="-1"></div>
+
+  <div id="seq_contents_0" aria-labelledby="tab_0" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_1b3c8dc283a64f24a743d123b2d2d15c"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/4b05fe4edcf44299a379d28ee42c78eb"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_4b05fe4edcf44299a379d28ee42c78eb"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;h3&gt;&lt;a 
+name="Introduction"&gt;&lt;/a&gt;Introduction&lt;/h3&gt;
+&lt;div class="project"&gt;
+&lt;p&gt;The projects for this class assume you use Python 
+2.7.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Project 0 will cover the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A mini-Python tutorial&lt;/li&gt;
+&lt;li&gt;Project grading: all projects in this course will be 
+autograded after you submit your code through the edX website. For all 
+projects you can submit as many times as you like until the deadline. 
+Every project's release includes its autograder for you to run yourself.
+ This is the recommended, and fastest, way to test your code, but keep 
+in mind you need to submit into the edX system to get your grade 
+registered. &amp;nbsp;While your grade on Project 0 will not count 
+towards your course grade, this is a good opportunity to familiarize 
+yourself with the grading system.&lt;/li&gt;
+&lt;li&gt;An &lt;em&gt;optional&lt;/em&gt; mini-UNIX tutorial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Files to Edit and Submit:&lt;/strong&gt; You will
+ fill in portions of &lt;code&gt;addition.py&lt;/code&gt;, 
+&lt;code&gt;buyLotsOfFruit.py&lt;/code&gt;, and 
+&lt;code&gt;shopSmart.py&lt;/code&gt; in &lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/tutorial/v1/001/tutorial.zip"&gt;tutorial.zip&lt;/a&gt;&lt;/code&gt;
+ during the assignment. You should submit these files with your code and
+ comments. Please &lt;em&gt;do not&lt;/em&gt; change the other files in 
+this distribution or submit any of our original files other than these 
+files.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Evaluation:&lt;/strong&gt; Your code will be 
+autograded for technical correctness. Please &lt;em&gt;do not&lt;/em&gt;
+ change the names of any provided functions or classes within the code, 
+or you will wreak havoc on the autograder.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Getting Help:&lt;/strong&gt; You are not alone! 
+If you find yourself stuck on something, take advantage of our piazza 
+discussion forum.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion:&lt;/strong&gt; Please be careful not 
+to post spoilers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_1" aria-labelledby="tab_1" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_ccbf54a658e040869d231a83636dabc9"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/534c6f534325467e9ea34acf70be2136"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_534c6f534325467e9ea34acf70be2136"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="PythonBasics"&gt;&lt;/a&gt;Python 
+Basics&lt;/h3&gt;
+&lt;h4&gt;Required Files&lt;/h4&gt;
+&lt;p&gt;You can download all of the files associated with the Python 
+mini-tutorial as a zip archive: &lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/tutorial/v1/001/python_basics.zip"&gt;python_basics.zip&lt;/a&gt;.
+ If you did the unix tutorial in the previous tab, you've already 
+downloaded and unzipped this file.&lt;/p&gt;
+&lt;h4&gt;Table of Contents&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#Invoking the Interpreter"&gt;Invoking the 
+Interpreter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Operators"&gt;Operators&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Strings"&gt;Strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Dir and Help"&gt;Dir and 
+Help&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Built-in Data Structures"&gt;Built-in Data 
+Structures&lt;/a&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#Lists"&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Tuples"&gt;Tuples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Sets"&gt;Sets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a 
+href="#Dictionaries"&gt;Dictionaries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;&lt;a href="#Writing Scripts"&gt;Writing 
+Scripts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Indentation"&gt;Indentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#TabsSpaces"&gt;Tabs vs 
+Spaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Writing Functions"&gt;Writing 
+Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Object Basics"&gt;Object 
+Basics&lt;/a&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#Defining Classes"&gt;Defining 
+Classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Using Objects"&gt;Using 
+Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Static vs Instance Variables"&gt;Static vs 
+Instance Variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;&lt;a href="#Tips and Tricks"&gt;Tips and 
+Tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a 
+href="#Troubleshooting"&gt;Troubleshooting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#More References"&gt;More 
+References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;
+&lt;p&gt;The programming assignments in this course will be written in 
+&lt;a href="http://www.python.org/about/"&gt;Python&lt;/a&gt;, an 
+interpreted, object-oriented language that shares some features with 
+both Java and Scheme. This tutorial will walk through the primary 
+syntactic constructions in Python, using short examples.&lt;/p&gt;
+&lt;p&gt;We encourage you to type all python shown in the tutorial onto 
+your own machine. Make sure it responds the same way.&lt;/p&gt;
+&lt;p&gt;You may find the &lt;a 
+href="#Troubleshooting"&gt;Troubleshooting&lt;/a&gt; section helpful if 
+you run into problems. It contains a list of the frequent problems 
+previous CS188 students have encountered when following this 
+tutorial.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Invoking the Interpreter"&gt;&lt;/a&gt;Invoking 
+the Interpreter&lt;/h4&gt;
+&lt;p&gt;Python can be run in one of two modes. It can either be used 
+&lt;i&gt;interactively&lt;/i&gt;, via an interpeter, or it can be called
+ from the command line to execute a &lt;i&gt;script&lt;/i&gt;. We will 
+first use the Python interpreter interactively.&lt;/p&gt;
+&lt;p&gt;You invoke the interpreter by entering 
+&lt;code&gt;python&lt;/code&gt; at the Unix command prompt. &lt;br /&gt;
+ Note: you may have to type &lt;code&gt;python2.4&lt;/code&gt;, 
+&lt;code&gt;python2.5&lt;/code&gt;, &lt;code&gt;python2.6&lt;/code&gt; 
+or &lt;code&gt;python2.7&lt;/code&gt;, rather than 
+&lt;code&gt;python&lt;/code&gt;, depending on your machine.&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~]$ python &lt;br /&gt; Python 
+2.6.5 (r265:79063, Jan 14 2011, 14:20:15) &lt;br /&gt; [GCC 4.4.1] on 
+sunos5 &lt;br /&gt; Type "help", "copyright", "credits" or "license" for
+ more information. &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4&gt;&lt;a name="Operators"&gt;&lt;/a&gt;Operators&lt;/h4&gt;
+&lt;p&gt;The Python interpreter can be used to evaluate expressions, for
+ example simple arithmetic expressions. If you enter such expressions at
+ the prompt (&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;) they 
+will be evaluated and the result will be returned on the next 
+line.&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; 1 + 1 &lt;br /&gt; 2 
+&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 2 * 3 &lt;br /&gt; 6 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Boolean operators also exist in Python to manipulate the 
+primitive &lt;code&gt;True&lt;/code&gt; and 
+&lt;code&gt;False&lt;/code&gt; values.&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; 1==0 &lt;br /&gt; False 
+&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; not (1==0) &lt;br /&gt; True 
+&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; (2==2) and (2==3) &lt;br /&gt; 
+False &lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; (2==2) or (2==3) &lt;br 
+/&gt; True&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4&gt;&lt;a name="Strings"&gt;&lt;/a&gt;Strings&lt;/h4&gt;
+&lt;p&gt;Like Java, Python has a built in string type. The 
+&lt;code&gt;+&lt;/code&gt; operator is overloaded to do string 
+concatenation on string values.&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; 'artificial' + 
+"intelligence" &lt;br /&gt; 'artificialintelligence' 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;There are many built-in methods which allow you to manipulate 
+strings.&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; 
+'artificial'.upper()&lt;br /&gt; 'ARTIFICIAL'&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; 'HELP'.lower()&lt;br /&gt; 'help'&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; len('Help')&lt;br /&gt; 4 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Notice that we can use either single quotes &lt;code&gt;' 
+'&lt;/code&gt; or double quotes &lt;code&gt;" "&lt;/code&gt; to surround
+ string. This allows for easy nesting of strings.&lt;/p&gt;
+&lt;p&gt;We can also store expressions into variables.&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; s = 'hello world' &lt;br 
+/&gt; &amp;gt;&amp;gt;&amp;gt; print s &lt;br /&gt; hello world &lt;br 
+/&gt; &amp;gt;&amp;gt;&amp;gt; s.upper()&lt;br /&gt; 'HELLO WORLD'&lt;br
+ /&gt; &amp;gt;&amp;gt;&amp;gt; len(s.upper())&lt;br /&gt; 11&lt;br 
+/&gt; &amp;gt;&amp;gt;&amp;gt; num = 8.0 &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; num += 2.5 &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; print num &lt;br /&gt; 10.5 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In Python, you do not have declare variables before you assign 
+to them.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Dir and Help"&gt;&lt;/a&gt; Exercise: Dir and 
+Help&lt;/h4&gt;
+&lt;p&gt;Learn about the methods Python provides for strings. To see 
+what methods Python provides for a datatype, use the 
+&lt;code&gt;dir&lt;/code&gt; and &lt;code&gt;help&lt;/code&gt; 
+commands:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; s = 'abc' &lt;br 
+/&gt;&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; dir(s)&lt;br /&gt; 
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', 
+'__eq__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__',
+ '__getslice__', '__gt__', '__hash__', '__init__','__le__', '__len__', 
+'__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', 
+'__reduce_ex__','__repr__', '__rmod__', '__rmul__', '__setattr__', 
+'__str__', 'capitalize', 'center', 'count', 'decode', 'encode', 
+'endswith', 'expandtabs', 'find', 'index', 'isalnum', 'isalpha', 
+'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 
+'lower', 'lstrip', 'replace', 'rfind','rindex', 'rjust', 'rsplit', 
+'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 
+'title', 'translate', 'upper', 'zfill']&lt;br /&gt;&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; help(s.find)&lt;br /&gt; 
+&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Help on built-in function find:&lt;br /&gt;
+find(...)
+    S.find(sub [,start [,end]]) -&amp;gt; int
+    
+    Return the lowest index in S where substring sub is found,
+    such that sub is contained within s[start,end].  Optional
+    arguments start and end are interpreted as in slice notation.
+    
+    Return -1 on failure.&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt; s.find('b')&lt;br /&gt; 1 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Try out some of the string functions listed in 
+&lt;code&gt;dir&lt;/code&gt; (ignore those with underscores '_' around 
+the method name).&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Built-in Data Structures"&gt;&lt;/a&gt;Built-in 
+Data Structures&lt;/h4&gt;
+&lt;p&gt;Python comes equipped with some useful built-in data 
+structures, broadly similar to Java's collections package.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Lists"&gt;&lt;/a&gt;Lists&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Lists&lt;/em&gt; store a sequence of mutable 
+items:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; fruits = 
+['apple','orange','pear','banana']&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+fruits[0] &lt;br /&gt; 'apple' &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We can use the &lt;code&gt;+&lt;/code&gt; operator to do list 
+concatenation:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; otherFruits = 
+['kiwi','strawberry']&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; fruits + 
+otherFruits&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; ['apple', 'orange', 
+'pear', 'banana', 'kiwi', 'strawberry'] &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Python also allows negative-indexing from the back of the list.
+ For instance, &lt;code&gt;fruits[-1]&lt;/code&gt; will access the last 
+element &lt;code&gt;'banana'&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; fruits[-2]&lt;br /&gt; 
+'pear'&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; fruits.pop()&lt;br /&gt; 
+'banana'&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; fruits&lt;br /&gt; 
+['apple', 'orange', 'pear']&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+fruits.append('grapefruit') &lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; fruits
+ &lt;br /&gt; ['apple', 'orange', 'pear', 'grapefruit'] &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; fruits[-1] = 'pineapple' &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; fruits &lt;br /&gt; ['apple', 'orange', 'pear',
+ 'pineapple'] &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We can also index multiple adjacent elements using the slice 
+operator. For instance, &lt;code&gt;fruits[1:3]&lt;/code&gt;, returns a 
+list containing the elements at position 1 and 2. In general 
+&lt;code&gt;fruits[start:stop]&lt;/code&gt; will get the elements in 
+&lt;code&gt;start, start+1, ..., stop-1&lt;/code&gt;. We can also do 
+&lt;code&gt;fruits[start:]&lt;/code&gt; which returns all elements 
+starting from the &lt;code&gt;start&lt;/code&gt; index. Also 
+&lt;code&gt;fruits[:end]&lt;/code&gt; will return all elements before 
+the element at position &lt;code&gt;end&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; fruits[0:2] &lt;br /&gt; 
+['apple', 'orange'] &lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+fruits[:3]&lt;br /&gt; ['apple', 'orange', 'pear'] &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; fruits[2:]&lt;br /&gt; ['pear', 'pineapple'] 
+&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; len(fruits) &lt;br /&gt; 4 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The items stored in lists can be any Python data type. So for 
+instance we can have lists of lists:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; lstOfLsts = 
+[['a','b','c'],[1,2,3],['one','two','three']] &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; lstOfLsts[1][2] &lt;br /&gt; 3&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; lstOfLsts[0].pop()&lt;br /&gt; 'c'&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; lstOfLsts&lt;br /&gt; [['a', 'b'],[1, 2, 
+3],['one', 'two', 'three']]&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4&gt;Exercise: Lists&lt;/h4&gt;
+&lt;p&gt;Play with some of the list functions. You can find the methods 
+you can call on an object via the &lt;code&gt;dir&lt;/code&gt; and get 
+information about them via the &lt;code&gt;help&lt;/code&gt; 
+command:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; dir(list)&lt;br /&gt; 
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', 
+&lt;br /&gt;'__delslice__', '__doc__', '__eq__', '__ge__', 
+'__getattribute__', &lt;br /&gt;'__getitem__', '__getslice__', '__gt__',
+ '__hash__', '__iadd__', '__imul__', &lt;br /&gt;'__init__', '__iter__',
+ '__le__', '__len__', '__lt__', '__mul__', '__ne__', &lt;br 
+/&gt;'__new__', '__reduce__', '__reduce_ex__', '__repr__', 
+'__reversed__', &lt;br /&gt;'__rmul__', '__setattr__', '__setitem__', 
+'__setslice__', '__str__', &lt;br /&gt;'append', 'count', 'extend', 
+'index', 'insert', 'pop', 'remove', 'reverse', &lt;br /&gt;'sort']&lt;br
+ /&gt; &lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&amp;gt;&amp;gt;&amp;gt; help(list.reverse)
+Help on built-in function reverse:
+
+reverse(...)
+    L.reverse() -- reverse *IN PLACE*
+&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; lst = ['a','b','c']&lt;br
+ /&gt; &amp;gt;&amp;gt;&amp;gt; lst.reverse()&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; lst&lt;br /&gt;['c','b','a'] 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Note: Ignore functions with underscores "_" around the names; 
+these are private helper methods. Press 'q' to back out of a help 
+screen.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Tuples"&gt;&lt;/a&gt;Tuples&lt;/h4&gt;
+&lt;p&gt;A data structure similar to the list is the 
+&lt;em&gt;tuple&lt;/em&gt;, which is like a list except that it is 
+immutable once it is created (i.e. you cannot change its content once 
+created). Note that tuples are surrounded with parentheses while lists 
+have square brackets.&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; pair = (3,5)&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; pair[0]&lt;br /&gt; 3&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; x,y = pair&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt;
+ x&lt;br /&gt; 3&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; y&lt;br /&gt; 5 
+&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; pair[1] = 6&lt;br /&gt; TypeError:
+ object does not support item assignment &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The attempt to modify an immutable structure raised an 
+exception. Exceptions indicate errors: index out of bounds errors, type 
+errors, and so on will all report exceptions in this way.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Sets"&gt;&lt;/a&gt;Sets&lt;/h4&gt;
+&lt;p&gt;A &lt;em&gt;set&lt;/em&gt; is another data structure that 
+serves as an unordered list with no duplicate items. Below, we show how 
+to create a set, add things to the set, test if an item is in the set, 
+and perform common set operations (difference, intersection, 
+union):&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; shapes = 
+['circle','square','triangle','circle']&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; setOfShapes = set(shapes)&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; setOfShapes &lt;br /&gt; 
+set(['circle','square','triangle']) &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; setOfShapes.add('polygon') &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; setOfShapes &lt;br /&gt; 
+set(['circle','square','triangle','polygon']) &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; 'circle' in setOfShapes &lt;br /&gt; True 
+&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 'rhombus' in setOfShapes &lt;br 
+/&gt; False &lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; favoriteShapes = 
+['circle','triangle','hexagon']&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+setOfFavoriteShapes = set(favoriteShapes)&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; setOfShapes - setOfFavoriteShapes &lt;br /&gt; 
+set(['square','polyon']) &lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+setOfShapes &amp;amp; setOfFavoriteShapes &lt;br /&gt; 
+set(['circle','triangle'])&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+setOfShapes | setOfFavoriteShapes &lt;br /&gt; 
+set(['circle','square','triangle','polygon','hexagon']) 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;b&gt;Note that the objects in the set are unordered; you 
+cannot assume that their traversal or print order will be the same 
+across machines!&lt;/b&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Dictionaries"&gt;&lt;/a&gt;Dictionaries&lt;/h4&gt;
+&lt;p&gt;The last built-in data structure is the 
+&lt;em&gt;dictionary&lt;/em&gt; which stores a map from one type of 
+object (the key) to another (the value). The key must be an immutable 
+type (string, number, or tuple). The value can be any Python data 
+type.&lt;/p&gt;
+&lt;p&gt;Note: In the example below, the printed order of the keys 
+returned by Python could be different than shown below. The reason is 
+that unlike lists which have a fixed ordering, a dictionary is simply a 
+hash table for which there is no fixed ordering of the keys (like 
+HashMaps in Java). The order of the keys depends on how exactly the 
+hashing algorithm maps keys to buckets, and will usually seem arbitrary.
+ Your code should not rely on key ordering, and you should not be 
+surprised if even a small modification to how your code uses a 
+dictionary results in a new key ordering. &lt;!--(see the &lt;a 
+href="/courses/BerkeleyX/CS188.1x-4/1T2015/wiki/CS188/faq/"&gt;FAQ about
+ dictionary key ordering&lt;/a&gt;). --&gt;&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; studentIds = {'knuth': 
+42.0, 'turing': 56.0, 'nash': 92.0 }&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; studentIds['turing']&lt;br /&gt; 56.0&lt;br 
+/&gt; &amp;gt;&amp;gt;&amp;gt; studentIds['nash'] = 'ninety-two'&lt;br 
+/&gt; &amp;gt;&amp;gt;&amp;gt; studentIds&lt;br /&gt; {'knuth': 42.0, 
+'turing': 56.0, 'nash': 'ninety-two'}&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; del studentIds['knuth']&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; studentIds&lt;br /&gt; {'turing': 56.0, 'nash':
+ 'ninety-two'}&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; studentIds['knuth'] =
+ [42.0,'forty-two']&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+studentIds&lt;br /&gt; {'knuth': [42.0, 'forty-two'], 'turing': 56.0, 
+'nash': 'ninety-two'}&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+studentIds.keys()&lt;br /&gt; ['knuth', 'turing', 'nash']&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; studentIds.values()&lt;br /&gt; [[42.0, 
+'forty-two'], 56.0, 'ninety-two']&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+studentIds.items()&lt;br /&gt; [('knuth',[42.0, 'forty-two']), 
+('turing',56.0), ('nash','ninety-two')]&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; len(studentIds) &lt;br /&gt; 3 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;As with nested lists, you can also create dictionaries of 
+dictionaries.&lt;/p&gt;
+&lt;h4&gt;Exercise: Dictionaries&lt;/h4&gt;
+&lt;p&gt;Use &lt;code&gt;dir&lt;/code&gt; and 
+&lt;code&gt;help&lt;/code&gt; to learn about the functions you can call 
+on dictionaries.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Writing Scripts"&gt;&lt;/a&gt;Writing 
+Scripts&lt;/h4&gt;
+&lt;p&gt;Now that you've got a handle on using Python interactively, 
+let's write a simple Python script that demonstrates Python's 
+&lt;code&gt;for&lt;/code&gt; loop. Open the file called 
+&lt;code&gt;foreach.py&lt;/code&gt; and update it with the following 
+code:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;# This is what a comment looks like 
+fruits = ['apples','oranges','pears','bananas']
+for fruit in fruits:
+    print fruit + ' for sale'
+
+fruitPrices = {'apples': 2.00, 'oranges': 1.50, 'pears': 1.75}
+for fruit, price in fruitPrices.items():
+    if price &amp;lt; 2.00:
+        print '%s cost %f a pound' % (fruit, price)
+    else:
+        print fruit + ' are too expensive!'
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;At the command line, use the following command in the directory
+ containing &lt;code&gt;foreach.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~/tutorial]$ python 
+foreach.py&lt;br /&gt; apples for sale&lt;br /&gt; oranges for 
+sale&lt;br /&gt; pears for sale&lt;br /&gt; bananas for sale&lt;br /&gt;
+ oranges cost 1.500000 a pound&lt;br /&gt; pears cost 1.750000 a 
+pound&lt;br /&gt; apples are too expensive! &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Remember that the print statements listing the costs may be in a
+ different order on your screen than in this tutorial; that's due to the
+ fact that we're looping over dictionary keys, which are unordered. To 
+learn more about control structures (e.g., &lt;code&gt;if&lt;/code&gt; 
+and &lt;code&gt;else&lt;/code&gt;) in Python, check out the official 
+&lt;a href="http://docs.python.org/tut/"&gt;Python tutorial section on 
+this topic&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you like functional programming &lt;!--(like Scheme)--&gt; 
+you might also like &lt;code&gt;map&lt;/code&gt; and 
+&lt;code&gt;filter&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; map(lambda x: x * x, 
+[1,2,3])&lt;br /&gt; [1, 4, 9]&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; 
+filter(lambda x: x &amp;gt; 3, [1,2,3,4,5,4,3,2,1])&lt;br /&gt; [4, 5, 
+4] &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;You can &lt;a 
+href="http://www.secnetix.de/olli/Python/lambda_functions.hawk"&gt;learn
+ more about &lt;code&gt;lambda&lt;/code&gt;&lt;/a&gt; if you're 
+interested.&lt;/p&gt;
+&lt;p&gt;The next snippet of code demonstrates Python's &lt;em&gt;list 
+comprehension&lt;/em&gt; construction:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;nums = [1,2,3,4,5,6]
+plusOneNums = [x+1 for x in nums]
+oddNums = [x for x in nums if x % 2 == 1]
+print oddNums
+oddNumsPlusOne = [x+1 for x in nums if x % 2 ==1]
+print oddNumsPlusOne
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This code is in a file called 
+&lt;code&gt;listcomp.py&lt;/code&gt;, which you can run:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~]$ python listcomp.py&lt;br /&gt; 
+[1,3,5]&lt;br /&gt; [2,4,6] &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4&gt;Exercise: List Comprehensions&lt;/h4&gt;
+&lt;p&gt;Write a list comprehension which, from a list, generates a 
+lowercased version of each string that has length greater than five. You
+ can find the solution in 
+&lt;code&gt;listcomp2.py&lt;/code&gt;.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Indentation"&gt;&lt;/a&gt;Beware of 
+Indendation!&lt;/h4&gt;
+&lt;p&gt;Unlike many other languages, Python uses the indentation in the
+ source code for interpretation. So for instance, for the following 
+script:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;if 0 == 1: 
+    print 'We are in a world of arithmetic pain' 
+print 'Thank you for playing' 
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;will output&lt;/p&gt;
+&lt;div class="code_snippet"&gt;&lt;code&gt; Thank you for playing 
+&lt;/code&gt;&lt;/div&gt;
+&lt;p&gt;But if we had written the script as&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;if 0 == 1: 
+    print 'We are in a world of arithmetic pain'
+    print 'Thank you for playing'
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;there would be no output. The moral of the story: be careful 
+how you indent! It's best to use four spaces for indentation -- that's 
+what the course code uses.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="TabsSpaces"&gt;&lt;/a&gt;Tabs vs Spaces&lt;/h4&gt;
+&lt;p&gt;Because Python uses indentation for code evaluation, it needs 
+to keep track of the level of indentation across code blocks. This means
+ that if your Python file switches from using tabs as indentation to 
+spaces as indentation, the Python interpreter will not be able to 
+resolve the ambiguity of the indentation level and throw an exception. 
+Even though the code can be lined up visually in your text editor, 
+Python "sees" a change in indentation and most likely will throw an 
+exception (or rarely, produce unexpected behavior).&lt;/p&gt;
+&lt;p&gt;This most commonly happens when opening up a Python file that 
+uses an indentation scheme that is opposite from what your text editor 
+uses (aka, your text editor uses spaces and the file uses tabs). When 
+you write new lines in a code block, there will be a mix of tabs and 
+spaces, even though the whitespace is aligned. For a longer discussion 
+on tabs vs spaces, see &lt;a 
+href="http://stackoverflow.com/questions/119562/tabs-versus-spaces-in-python-programming"&gt;this&lt;/a&gt;
+ discussion on StackOverflow.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Writing Functions"&gt;&lt;/a&gt;Writing 
+Functions&lt;/h4&gt;
+&lt;p&gt;As in &lt;!--Scheme or--&gt; Java, in Python you can define 
+your own functions:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;fruitPrices = {'apples':2.00, 'oranges': 1.50, 'pears': 1.75}
+
+def buyFruit(fruit, numPounds):
+    if fruit not in fruitPrices:
+        print "Sorry we don't have %s" % (fruit)
+    else:
+        cost = fruitPrices[fruit] * numPounds
+        print "That'll be %f please" % (cost)
+
+# Main Function
+if __name__ == '__main__':        
+    buyFruit('apples',2.4)
+    buyFruit('coconuts',2)        
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Rather than having a &lt;code&gt;main&lt;/code&gt; function as 
+in Java, the &lt;code&gt;__name__ == '__main__'&lt;/code&gt; check is 
+used to delimit expressions which are executed when the file is called 
+as a script from the command line. The code after the main check is thus
+ the same sort of code you would put in a &lt;code&gt;main&lt;/code&gt; 
+function in Java.&lt;/p&gt;
+&lt;p&gt;Save this script as &lt;em&gt;fruit.py&lt;/em&gt; and run 
+it:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~]$ python fruit.py&lt;br /&gt; 
+That'll be 4.800000 please&lt;br /&gt; Sorry we don't have coconuts 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- %%%%% --&gt;
+&lt;h4&gt;Advanced Exercise&lt;/h4&gt;
+&lt;p&gt;Write a &lt;code&gt;quickSort&lt;/code&gt; function in Python 
+using list comprehensions. Use the first element as the pivot. You can 
+find the solution in &lt;code&gt;quickSort.py&lt;/code&gt;.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Object Basics"&gt;&lt;/a&gt;Object 
+Basics&lt;/h4&gt;
+&lt;p&gt;Although this isn't a class in object-oriented programming, 
+you'll have to use some objects in the programming projects, and so it's
+ worth covering the basics of objects in Python. An object encapsulates 
+data and provides functions for interacting with that data.&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Defining Classes"&gt;&lt;/a&gt;Defining 
+Classes&lt;/h4&gt;
+&lt;p&gt;Here's an example of defining a class named 
+&lt;code&gt;FruitShop&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;class FruitShop:
+
+    def __init__(self, name, fruitPrices):
+        """
+            name: Name of the fruit shop
+            
+            fruitPrices: Dictionary with keys as fruit 
+            strings and prices for values e.g. 
+            {'apples':2.00, 'oranges': 1.50, 'pears': 1.75} 
+        """
+        self.fruitPrices = fruitPrices
+        self.name = name
+        print 'Welcome to the %s fruit shop' % (name)
+        
+    def getCostPerPound(self, fruit):
+        """
+            fruit: Fruit string
+        Returns cost of 'fruit', assuming 'fruit'
+        is in our inventory or None otherwise
+        """
+        if fruit not in self.fruitPrices:
+            print "Sorry we don't have %s" % (fruit)
+            return None
+        return self.fruitPrices[fruit]
+        
+    def getPriceOfOrder(self, orderList):
+        """
+            orderList: List of (fruit, numPounds) tuples
+            
+        Returns cost of orderList. If any of the fruit are  
+        """ 
+        totalCost = 0.0             
+        for fruit, numPounds in orderList:
+            costPerPound = self.getCostPerPound(fruit)
+            if costPerPound != None:
+                totalCost += numPounds * costPerPound
+        return totalCost
+    
+    def getName(self):
+        return self.name
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;FruitShop&lt;/code&gt; class has some data, the
+ name of the shop and the prices per pound of some fruit, and it 
+provides functions, or methods, on this data. What advantage is there to
+ wrapping this data in a class?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Encapsulating the data prevents it from being altered or used 
+inappropriately,&lt;/li&gt;
+&lt;li&gt;The abstraction that objects provide make it easier to write 
+general-purpose code.&lt;/li&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;h4&gt;&lt;a name="Using Objects"&gt;&lt;/a&gt;Using 
+Objects&lt;/h4&gt;
+&lt;p&gt;So how do we make an object and use it? Make sure you have the 
+&lt;code&gt;FruitShop&lt;/code&gt; implementation in 
+&lt;code&gt;shop.py&lt;/code&gt;. We then import the code from this file
+ (making it accessible to other scripts) using &lt;code&gt;import 
+shop&lt;/code&gt;, since &lt;code&gt;shop.py&lt;/code&gt; is the name of
+ the file. Then, we can create &lt;code&gt;FruitShop&lt;/code&gt; 
+objects as follows:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;import shop
+
+shopName = 'the Berkeley Bowl'
+fruitPrices = {'apples': 1.00, 'oranges': 1.50, 'pears': 1.75}
+berkeleyShop = shop.FruitShop(shopName, fruitPrices)
+applePrice = berkeleyShop.getCostPerPound('apples')
+print applePrice
+print('Apples cost $%.2f at %s.' % (applePrice, shopName))
+
+otherName = 'the Stanford Mall'
+otherFruitPrices = {'kiwis':6.00, 'apples': 4.50, 'peaches': 8.75}
+otherFruitShop = shop.FruitShop(otherName, otherFruitPrices)
+otherPrice = otherFruitShop.getCostPerPound('apples')
+print otherPrice
+print('Apples cost $%.2f at %s.' % (otherPrice, otherName))
+print("My, that's expensive!")
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This code is in &lt;code&gt;shopTest.py&lt;/code&gt;; you can 
+run it like this:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;[cs188-ta@nova ~]$ python shopTest.py
+Welcome to the Berkeley Bowl fruit shop
+1.0
+Apples cost $1.00 at the Berkeley Bowl.
+Welcome to the Stanford Mall fruit shop
+4.5
+Apples cost $4.50 at the Stanford Mall.
+My, that's expensive!
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;So what just happended? The &lt;code&gt;import 
+shop&lt;/code&gt; statement told Python to load all of the functions and
+ classes in &lt;code&gt;shop.py&lt;/code&gt;. The line 
+&lt;code&gt;berkeleyShop = shop.FruitShop(shopName, 
+fruitPrices)&lt;/code&gt; constructs an &lt;em&gt;instance&lt;/em&gt; of
+ the &lt;code&gt;FruitShop&lt;/code&gt; class defined in 
+&lt;em&gt;shop.py&lt;/em&gt;, by calling the 
+&lt;code&gt;__init__&lt;/code&gt; function in that class. Note that we 
+only passed two arguments in, while &lt;code&gt;__init__&lt;/code&gt; 
+seems to take three arguments: &lt;code&gt;(self, name, 
+fruitPrices)&lt;/code&gt;. The reason for this is that all methods in a 
+class have &lt;code&gt;self&lt;/code&gt; as the first argument. The 
+&lt;code&gt;self&lt;/code&gt; variable's value is automatically set to 
+the object itself; when calling a method, you only supply the remaining 
+arguments. The &lt;code&gt;self&lt;/code&gt; variable contains all the 
+data (&lt;code&gt;name&lt;/code&gt; and 
+&lt;code&gt;fruitPrices&lt;/code&gt;) for the current specific instance 
+(similar to &lt;code&gt;this&lt;/code&gt; in Java). The print statements
+ use the substitution operator (described in the &lt;a 
+href="https://docs.python.org/2/library/stdtypes.html#string-formatting"&gt;Python
+ docs&lt;/a&gt; if you're curious).&lt;/p&gt;
+&lt;h4&gt;&lt;a name="Static vs Instance Variables"&gt;&lt;/a&gt;Static 
+vs Instance Variables&lt;/h4&gt;
+&lt;p&gt;The following example illustrates how to use static and 
+instance variables in Python.&lt;/p&gt;
+&lt;p&gt;Create the &lt;code&gt;person_class.py&lt;/code&gt; containing 
+the following code:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;class Person:
+    population = 0
+    def __init__(self, myAge):
+        self.age = myAge
+        Person.population += 1
+    def get_population(self):
+        return Person.population
+    def get_age(self):
+        return self.age
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;We first compile the script:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~]$ python person_class.py 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Now use the class as follows:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; import person_class&lt;br
+ /&gt; &amp;gt;&amp;gt;&amp;gt; p1 = person_class.Person(12)&lt;br /&gt;
+ &amp;gt;&amp;gt;&amp;gt; p1.get_population()&lt;br /&gt; 1 &lt;br /&gt;
+ &amp;gt;&amp;gt;&amp;gt; p2 = person_class.Person(63)&lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; p1.get_population()&lt;br /&gt; 2 &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; p2.get_population()&lt;br /&gt; 2 &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; p1.get_age()&lt;br /&gt; 12 &lt;br /&gt; 
+&amp;gt;&amp;gt;&amp;gt; p2.get_age()&lt;br /&gt; 63 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In the code above, &lt;code&gt;age&lt;/code&gt; is an instance 
+variable and &lt;code&gt;population&lt;/code&gt; is a static variable. 
+&lt;code&gt;population&lt;/code&gt; is shared by all instances of the 
+&lt;code&gt;Person&lt;/code&gt; class whereas each instance has its own 
+&lt;code&gt;age&lt;/code&gt; variable.&lt;/p&gt;
+&lt;!-- %%%% --&gt;
+&lt;h4&gt;&lt;a name="Tips and Tricks"&gt;&lt;/a&gt;More Python Tips and
+ Tricks&lt;/h4&gt;
+&lt;p&gt;This tutorial has briefly touched on some major aspects of 
+Python that will be relevant to the course. Here are some more useful 
+tidbits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;range&lt;/code&gt; to generate a sequence of 
+integers, useful for generating traditional indexed 
+&lt;code&gt;for&lt;/code&gt; loops:
+&lt;pre&gt;for index in range(3):
+    print lst[index]
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;After importing a file, if you edit a source file, the changes
+ will not be immediately propagated in the interpreter. For this, use 
+the &lt;code&gt;reload&lt;/code&gt; command: &lt;code&gt;&lt;br 
+/&gt;&lt;br /&gt; &amp;gt;&amp;gt;&amp;gt; reload(shop)&lt;br /&gt; 
+&lt;br /&gt; &lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&lt;a 
+name="Troubleshooting"&gt;&lt;/a&gt;Troubleshooting&lt;/h4&gt;
+&lt;p&gt;These are some problems (and their solutions) that new Python 
+learners commonly encounter.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Problem:&lt;/b&gt;&lt;br /&gt; ImportError: No module 
+named py&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Solution:&lt;/b&gt;&lt;br /&gt; When using 
+&lt;code&gt;import&lt;/code&gt;, do not include the ".py" from the 
+filename. &lt;br /&gt; For example, you should say: &lt;code&gt;import 
+shop&lt;/code&gt; &lt;br /&gt; NOT: &lt;code&gt;import 
+shop&lt;b&gt;.py&lt;/b&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Problem:&lt;/b&gt;&lt;br /&gt; NameError: name 'MY 
+VARIABLE' is not defined&lt;br /&gt; Even after importing you may see 
+this.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Solution:&lt;/b&gt;&lt;br /&gt; To access a member of a
+ module, you have to type &lt;code&gt;MODULE NAME.MEMBER 
+NAME&lt;/code&gt;, where &lt;code&gt;MODULE NAME&lt;/code&gt; is the 
+name of the &lt;code&gt;.py&lt;/code&gt; file, and &lt;code&gt;MEMBER 
+NAME&lt;/code&gt; is the name of the variable (or function) you are 
+trying to access.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Problem:&lt;/b&gt;&lt;br /&gt; TypeError: 'dict' 
+object is not callable&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Solution:&lt;/b&gt;&lt;br /&gt; Dictionary looks up 
+are done using square brackets: [ and ]. NOT parenthesis: ( and 
+).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Problem:&lt;/b&gt;&lt;br /&gt; ValueError: too many 
+values to unpack&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Solution:&lt;/b&gt;&lt;br /&gt; Make sure the number 
+of variables you are assigning in a &lt;code&gt;for&lt;/code&gt; loop 
+matches the number of elements in each item of the list. Similarly for 
+working with tuples.&lt;/p&gt;
+&lt;p&gt;For example, if &lt;code&gt;pair&lt;/code&gt; is a tuple of two
+ elements (e.g. &lt;code&gt;pair =('apple', 2.0)&lt;/code&gt;) then the 
+following code would cause the "too many values to unpack 
+error":&lt;/p&gt;
+&lt;div class="code_snippet"&gt;&lt;code&gt;(a,b,c) = 
+pair&lt;/code&gt;&lt;/div&gt;
+&lt;p&gt;Here is a problematic scenario involving a 
+&lt;code&gt;for&lt;/code&gt; loop:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;pairList = [('apples', 2.00), ('oranges', 1.50), ('pears', 
+1.75)]
+for fruit, price, &lt;em&gt;color&lt;/em&gt; in pairList:
+    print '%s fruit costs %f and is the color %s' % (fruit, price, 
+color)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Problem:&lt;/b&gt;&lt;br /&gt; AttributeError: 'list' 
+object has no attribute 'length' (or something similar)&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Solution:&lt;/b&gt;&lt;br /&gt; Finding length of 
+lists is done using &lt;code&gt;len(NAME OF 
+LIST)&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Problem:&lt;/b&gt;&lt;br /&gt; Changes to a file are 
+not taking effect.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Solution:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make sure you are saving all your files after any 
+changes.&lt;/li&gt;
+&lt;li&gt;If you are editing a file in a window different from the one 
+you are using to execute python, make sure you 
+&lt;code&gt;reload(&lt;i&gt;YOUR_MODULE&lt;/i&gt;)&lt;/code&gt; to 
+guarantee your changes are being reflected. 
+&lt;code&gt;reload&lt;/code&gt; works similarly to 
+&lt;code&gt;import&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&lt;a name="More References"&gt;&lt;/a&gt;More 
+References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;The place to go for more Python information: &lt;a 
+href="http://www.python.org/"&gt;www.python.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A good reference book: &lt;a 
+href="http://oreilly.com/catalog/9780596513986/"&gt;Learning 
+Python&lt;/a&gt; (From the UCB campus, you can read the whole book 
+online)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_2" aria-labelledby="tab_2" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_b30f6f40ae5b4a5a88ef9db297c39c85"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/4c2377e9754349ccbc3fe941d43432b4"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_4c2377e9754349ccbc3fe941d43432b4"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Autograding"&gt;&lt;/a&gt;Autograding&lt;/h3&gt;
+&lt;p&gt;All projects in this course will be autograded after you submit
+ your code through the edX website. For all projects you can submit as 
+many times as you like until the deadline. Every project's release 
+includes its autograder for you to run yourself. This is the 
+recommended, and fastest, way to test your code, but keep in mind you 
+need to submit into the edX system to get your grade 
+registered.&lt;/p&gt;
+&lt;p&gt;To get you familiarized with the autograder, we will ask you to
+ code, test, and submit solutions for three questions. You will submit 
+your files on the last tab in this sequence (scroll up and click on the 
+right most tab).&lt;/p&gt;
+&lt;p&gt;You can download all of the files associated the autograder 
+tutorial as a zip archive: &lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/tutorial/v1/001/tutorial.zip"&gt;tutorial.zip&lt;/a&gt;
+ (note this is &lt;b&gt;different&lt;/b&gt; from the zip file used in 
+the UNIX and Python mini-tutorials, python_basics.zip). Unzip this file 
+and examine its contents:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;[cs188-ta@nova ~]$ unzip tutorial.zip
+[cs188-ta@nova ~]$ cd tutorial
+[cs188-ta@nova ~/tutorial]$ ls
+addition.py
+autograder.py
+buyLotsOfFruit.py
+grading.py
+projectParams.py
+shop.py
+shopSmart.py
+testClasses.py
+testParser.py
+test_cases
+tutorialTestClasses.py
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This contains a number of files you'll edit or run:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;addition.py&lt;/code&gt;: source file for question
+ 1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;buyLotsOfFruit.py&lt;/code&gt;: source file for 
+question 2&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;shop.py&lt;/code&gt;: source file for question 
+3&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;shopSmart.py&lt;/code&gt;: source file for 
+question 3&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;autograder.py&lt;/code&gt;: autograding script 
+(see below)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and others you can ignore:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;test_cases&lt;/code&gt;: directory contains the 
+test cases for each question&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grading.py&lt;/code&gt;: autograder 
+code&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;testClasses.py&lt;/code&gt;: autograder 
+code&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tutorialTestClasses.py&lt;/code&gt;: test classes 
+for this particular project&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;projectParams.py&lt;/code&gt;: project 
+parameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The command &lt;code&gt;python autograder.py&lt;/code&gt; 
+grades your solution to all three problems. If we run it before editing 
+any files we get a page or two of output:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;[cs188-ta@nova ~/tutorial]$ python autograder.py 
+Starting on 1-21 at 23:39:51
+
+Question q1
+===========
+*** FAIL: test_cases/q1/addition1.test
+*** 	add(a,b) must return the sum of a and b
+*** 	student result: "0"
+*** 	correct result: "2"
+*** FAIL: test_cases/q1/addition2.test
+*** 	add(a,b) must return the sum of a and b
+*** 	student result: "0"
+*** 	correct result: "5"
+*** FAIL: test_cases/q1/addition3.test
+*** 	add(a,b) must return the sum of a and b
+*** 	student result: "0"
+*** 	correct result: "7.9"
+*** Tests failed.
+
+### Question q1: 0/1 ###
+
+
+Question q2
+===========
+*** FAIL: test_cases/q2/food_price1.test
+*** 	buyLotsOfFruit must compute the correct cost of the order
+*** 	student result: "0.0"
+*** 	correct result: "12.25"
+*** FAIL: test_cases/q2/food_price2.test
+*** 	buyLotsOfFruit must compute the correct cost of the order
+*** 	student result: "0.0"
+*** 	correct result: "14.75"
+*** FAIL: test_cases/q2/food_price3.test
+*** 	buyLotsOfFruit must compute the correct cost of the order
+*** 	student result: "0.0"
+*** 	correct result: "6.4375"
+*** Tests failed.
+
+### Question q2: 0/1 ###
+
+
+Question q3
+===========
+Welcome to shop1 fruit shop
+Welcome to shop2 fruit shop
+*** FAIL: test_cases/q3/select_shop1.test
+*** 	shopSmart(order, shops) must select the cheapest shop
+*** 	student result: "None"
+*** 	correct result: "&amp;lt;FruitShop: shop1&amp;gt;"
+Welcome to shop1 fruit shop
+Welcome to shop2 fruit shop
+*** FAIL: test_cases/q3/select_shop2.test
+*** 	shopSmart(order, shops) must select the cheapest shop
+*** 	student result: "None"
+*** 	correct result: "&amp;lt;FruitShop: shop2&amp;gt;"
+Welcome to shop1 fruit shop
+Welcome to shop2 fruit shop
+Welcome to shop3 fruit shop
+*** FAIL: test_cases/q3/select_shop3.test
+*** 	shopSmart(order, shops) must select the cheapest shop
+*** 	student result: "None"
+*** 	correct result: "&amp;lt;FruitShop: shop3&amp;gt;"
+*** Tests failed.
+
+### Question q3: 0/1 ###
+
+
+Finished at 23:39:51
+
+Provisional grades
+==================
+Question q1: 0/1
+Question q2: 0/1
+Question q3: 0/1
+------------------
+Total: 0/3
+
+Your grades are NOT yet registered.  To register your grades, make sure
+to follow your instructor's guidelines to receive credit on your 
+project.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;For each of the three questions, this shows the results of that
+ question's tests, the questions grade, and a final summary at the end. 
+Because you haven't yet solved the questions, all the tests fail. As you
+ solve each question you may find some tests pass while other fail. When
+ all tests pass for a question, you get full marks.&lt;/p&gt;
+&lt;p&gt;Looking at the results for question 1, you can see that it has 
+failed three tests with the error message "add(a,b) must return the sum 
+of a and b". The answer your code gives is always 0, but the correct 
+answer is different. We'll fix that in the next tab.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_3" aria-labelledby="tab_3" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_b37b93eb834542e2a054f8a655424234"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/a4dba2dafde648c7b5b65c269e12ea5a"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_a4dba2dafde648c7b5b65c269e12ea5a"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Q1"&gt;&lt;/a&gt;Question 1: Addition&lt;/h3&gt;
+&lt;p&gt;Open &lt;code&gt;addition.py&lt;/code&gt; and look at the 
+definition of &lt;code&gt;add&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;    def add(a, b):
+        "Return the sum of a and b"
+        "*** YOUR CODE HERE ***"
+        return 0
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The tests called this with &lt;code&gt;a&lt;/code&gt; and 
+&lt;code&gt;b&lt;/code&gt; set to different values, but the code always 
+returned zero. Modify this definition to read:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;    def add(a, b):
+        "Return the sum of a and b"
+        print "Passed a=%s and b=%s, returning a+b=%s" % (a,b,a+b)
+        return a+b
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now rerun the autograder (omitting the results for questions 2 
+and 3):&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;[cs188-ta@nova ~/tutorial]$ python autograder.py -q q1
+Starting on 1-21 at 23:52:05
+
+Question q1
+===========
+Passed a=1 and b=1, returning a+b=2
+*** PASS: test_cases/q1/addition1.test
+*** 	add(a,b) returns the sum of a and b
+Passed a=2 and b=3, returning a+b=5
+*** PASS: test_cases/q1/addition2.test
+*** 	add(a,b) returns the sum of a and b
+Passed a=10 and b=-2.1, returning a+b=7.9
+*** PASS: test_cases/q1/addition3.test
+*** 	add(a,b) returns the sum of a and b
+
+### Question q1: 1/1 ###
+
+Finished at 23:41:01
+
+Provisional grades
+==================
+Question q1: 1/1
+Question q2: 0/1
+Question q3: 0/1
+------------------
+Total: 1/3
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;You now pass all tests, getting full marks for question 1. 
+Notice the new lines "Passed a=..." which appear before "*** PASS: ...".
+ These are produced by the print statement in 
+&lt;code&gt;add&lt;/code&gt;. You can use print statements like that to 
+output information useful for debugging. You can also run the autograder
+ with the option &lt;code&gt;--mute&lt;/code&gt; to temporarily hide 
+such lines, as follows:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;[cs188-ta@nova ~/tutorial]$ python autograder.py -q q1 --mute
+	
+Starting on 1-22 at 14:15:33
+
+Question q1
+===========
+*** PASS: test_cases/q1/addition1.test
+*** 	add(a,b) returns the sum of a and b
+*** PASS: test_cases/q1/addition2.test
+*** 	add(a,b) returns the sum of a and b
+*** PASS: test_cases/q1/addition3.test
+*** 	add(a,b) returns the sum of a and b
+
+### Question q1: 1/1 ###
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_4" aria-labelledby="tab_4" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_c870c7d603a04793ada0fdbc57f81784"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/7040b85e1999492e8da9162951c843d6"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_7040b85e1999492e8da9162951c843d6"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;body&gt;
+&lt;div class="project"&gt;
+&lt;h4&gt;Question 2: buyLotsOfFruit function&lt;/h4&gt;
+&lt;p&gt;Add a &lt;code&gt;buyLotsOfFruit(orderList)&lt;/code&gt; 
+function to &lt;code&gt;buyLotsOfFruit.py&lt;/code&gt; which takes a 
+list of &lt;code&gt;(fruit,pound)&lt;/code&gt; tuples and returns the 
+cost of your list. If there is some &lt;code&gt;fruit&lt;/code&gt; in 
+the list which doesn't appear in &lt;code&gt;fruitPrices&lt;/code&gt; it
+ should print an error message and return &lt;code&gt;None&lt;/code&gt;.
+ Please do not change the &lt;code&gt;fruitPrices&lt;/code&gt; 
+variable.&lt;/p&gt;
+&lt;p&gt;Run &lt;code&gt;python autograder.py&lt;/code&gt; until 
+question 2 passes all tests and you get full marks. Each test will 
+confirm that &lt;code&gt;buyLotsOfFruit(orderList)&lt;/code&gt; returns 
+the correct answer given various possible inputs. For example, 
+&lt;code&gt;test_cases/q2/food_price1.test&lt;/code&gt; tests 
+whether:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;&lt;code&gt;Cost of [('apples', 2.0), 
+('pears', 3.0), ('limes', 4.0)] is 12.25&lt;/code&gt;&lt;/div&gt;
+&lt;div class="code_snippet"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;p&gt;Once your code passes all tests, &lt;b&gt;submit your code 
+through the right most tab, to register your grades with us&lt;/b&gt;. 
+Verify that our autograder gives the same output as yours.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_5" aria-labelledby="tab_5" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_261638b10f634853bbc1d347b8f5f60c"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/7562668c4a7c48aa9e32619eea201bd6"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_7562668c4a7c48aa9e32619eea201bd6"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Q3"&gt;&lt;/a&gt; Question 3: shopSmart 
+function&lt;/h3&gt;
+&lt;p&gt;Fill in the function 
+&lt;code&gt;shopSmart(orders,shops)&lt;/code&gt; in 
+&lt;code&gt;shopSmart.py&lt;/code&gt;, which takes an 
+&lt;code&gt;orderList&lt;/code&gt; (like the kind passed in to 
+&lt;code&gt;FruitShop.getPriceOfOrder&lt;/code&gt;) and a list of 
+&lt;code&gt;FruitShop&lt;/code&gt; and returns the 
+&lt;code&gt;FruitShop&lt;/code&gt; where your order costs the least 
+amount in total. Don't change the file name or variable names, please. 
+Note that we will provide the &lt;code&gt;shop.py&lt;/code&gt; 
+implementation as a "support" file, so you don't need to submit 
+yours.&lt;/p&gt;
+&lt;p&gt;Run &lt;code&gt;python autograder.py&lt;/code&gt; until 
+question 3 passes all tests and you get full marks. Each test will 
+confirm that &lt;code&gt;shopSmart(orders,shops)&lt;/code&gt; returns 
+the correct answer given various possible inputs. For example, with the 
+following variable definitions:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;pre&gt;orders1 = [('apples',1.0), ('oranges',3.0)]
+orders2 = [('apples',3.0)]       
+dir1 = {'apples': 2.0, 'oranges':1.0}
+shop1 =  shop.FruitShop('shop1',dir1)
+dir2 = {'apples': 1.0, 'oranges': 5.0}
+shop2 = shop.FruitShop('shop2',dir2)
+shops = [shop1, shop2]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;test_cases/q3/select_shop1.test&lt;/code&gt; tests 
+whether:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; shopSmart.shopSmart(orders1, shops) == shop1 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;and &lt;code&gt;test_cases/q3/select_shop2.test&lt;/code&gt; 
+tests whether:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt;shopSmart.shopSmart(orders2, shops) == shop2 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Once your code passes all tests, &lt;b&gt;submit your code 
+through the right most tab, to register your grades with us&lt;/b&gt;. 
+Verify that our autograder gives the same output as yours.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_6" aria-labelledby="tab_6" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_e4dd9b5c026b433bb401c177ecbd68ea"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/problem/461d3e50f1fd41c4acd401878fbc0313"&gt;
+
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-problem xmodule_display xmodule_CapaModule" 
+data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" 
+data-block-type="problem" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_problem;_461d3e50f1fd41c4acd401878fbc0313"
+ data-type="Problem" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "Problem"}
+  &lt;/script&gt;
+  &lt;div 
+id="problem_i4x-BerkeleyX-CS188_1x-4-problem-461d3e50f1fd41c4acd401878fbc0313"
+ class="problems-wrapper" 
+data-problem-id="i4x://BerkeleyX/CS188.1x-4/problem/461d3e50f1fd41c4acd401878fbc0313"
+ 
+data-url="/courses/BerkeleyX/CS188.1x-4/1T2015/xblock/i4x:;_;_BerkeleyX;_CS188.1x-4;_problem;_461d3e50f1fd41c4acd401878fbc0313/handler/xmodule_handler"
+ data-progress_status="none" data-progress_detail="0/3"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_7" aria-labelledby="tab_7" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_5f1f7dd9896e40f896891cd9201dc367"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/b2ed4c73d3f64dbab1bba888710c2564"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="b7495c4ae67211e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_b2ed4c73d3f64dbab1bba888710c2564"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="UnixBasics"&gt;&lt;/a&gt;Unix Basics 
+(optional)&lt;/h3&gt;
+&lt;p&gt;Here are basic commands to navigate UNIX and edit 
+files.&lt;/p&gt;
+&lt;h4&gt;File/Directory Manipulation&lt;/h4&gt;
+&lt;p&gt;When you open a terminal window, you're placed at a command 
+prompt:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~]$ &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The prompt shows your username, the host you are logged onto, 
+and your current location in the directory structure (your path). The 
+tilde character is shorthand for your home directory. Note your prompt 
+may look slightly different. To make a directory, use the 
+&lt;code&gt;mkdir&lt;/code&gt; command. Use &lt;code&gt;cd&lt;/code&gt; 
+to change to that directory:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~]$ mkdir foo&lt;br /&gt; 
+[cs188-ta@nova ~]$ cd foo&lt;br /&gt; [cs188-ta@nova ~/foo]$ 
+&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Use &lt;code&gt;ls&lt;/code&gt; to see a listing of the 
+contents of a directory, and &lt;code&gt;touch&lt;/code&gt; to create an
+ empty file:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~/foo]$ ls&lt;br /&gt; 
+[cs188-ta@nova ~/foo]$ touch hello_world&lt;br /&gt; [cs188-ta@nova 
+~/foo]$ ls&lt;br /&gt; hello_world&lt;br /&gt; [cs188-ta@nova ~/foo]$ cd
+ ..&lt;br /&gt; [cs188-ta@nova ~]$ &lt;br /&gt; &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Download &lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/tutorial/v1/001/python_basics.zip"&gt;python_basics.zip&lt;/a&gt;
+ into your home directory (note: the zip file's name may be slightly 
+different when you download it). Use &lt;code&gt;unzip&lt;/code&gt; to 
+extract the contents of the zip file:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;&lt;code&gt; [cs188-ta@nova ~]$ ls 
+*.zip&lt;br /&gt; python_basics.zip&lt;br /&gt; [cs188-ta@nova ~]$ unzip
+ python_basics.zip&lt;br /&gt; [cs188-ta@nova ~]$ cd python_basics&lt;br
+ /&gt; [cs188-ta@nova ~/python_basics]$ ls&lt;br /&gt; foreach.py&lt;br 
+/&gt; helloWorld.py&lt;br /&gt; listcomp.py&lt;br /&gt; 
+listcomp2.py&lt;br /&gt; quickSort.py&lt;br /&gt; shop.py&lt;br /&gt; 
+shopTest.py&lt;br /&gt; &lt;/code&gt;&lt;/div&gt;
+&lt;p&gt;Some other useful Unix commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cp&lt;/code&gt; copies a file or files&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rm&lt;/code&gt; removes (deletes) a 
+file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mv&lt;/code&gt; moves a file (i.e., cut/paste 
+instead of copy/paste)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;man&lt;/code&gt; displays documentation for a 
+command&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pwd&lt;/code&gt; prints your current 
+path&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xterm&lt;/code&gt; opens a new terminal 
+window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;firefox&lt;/code&gt; opens a web 
+browser&lt;/li&gt;
+&lt;li&gt;Press "Ctrl-c" to kill a running process&lt;/li&gt;
+&lt;li&gt;Append &lt;code&gt;&amp;amp;&lt;/code&gt; to a command to run 
+it in the background&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fg&lt;/code&gt; brings a program running in the 
+background to the foreground&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;The Emacs text editor&lt;/h4&gt;
+&lt;p&gt;Emacs is a customizable text editor which has some nice 
+features specifically tailored for programmers. However, you can use any
+ other text editor that you may prefer (such as 
+&lt;code&gt;vi&lt;/code&gt;, &lt;code&gt;pico&lt;/code&gt;, or 
+&lt;code&gt;joe&lt;/code&gt; on Unix; or Notepad on Windows; or 
+TextWrangler on OS X; and &lt;a 
+href="http://en.wikipedia.org/wiki/Python_IDE#Python"&gt;many 
+more&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;To run Emacs, type &lt;code&gt;emacs&lt;/code&gt; at a command 
+prompt:&lt;/p&gt;
+&lt;div class="code_snippet"&gt;
+&lt;p&gt;&lt;code&gt; [cs188-ta@nova ~/python_basics]$ emacs 
+helloWorld.py &amp;amp;&lt;br /&gt; [1] 3262 &lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Here we gave the argument 
+&lt;code&gt;helloWorld.py&lt;/code&gt; which will either open that file 
+for editing if it exists, or create it otherwise. Emacs notices that 
+this is a Python source file (because of the 
+&lt;code&gt;.py&lt;/code&gt; ending) and enters Python-mode, which is 
+supposed to help you write code. When editing this file you may notice 
+some of that text becomes automatically colored: this is syntax 
+highlighting to help you distinguish items such as keywords, variables, 
+strings, and comments. Pressing Enter, Tab, or Backspace may cause the 
+cursor to jump to weird locations: this is because Python is very picky 
+about indentation, and Emacs is predicting the proper tabbing that you 
+should use.&lt;/p&gt;
+&lt;p&gt;Some basic Emacs editing commands (&lt;code&gt;C-&lt;/code&gt; 
+means "while holding the Ctrl-key"):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-x C-s&lt;/code&gt; Save the current 
+file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x C-f&lt;/code&gt; Open a file, or create a new 
+file it if doesn't exist&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-k&lt;/code&gt; Cut a line, add it to the 
+clipboard&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-y&lt;/code&gt; Paste the contents of the 
+clipboard&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-_&lt;/code&gt; Undo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-g&lt;/code&gt; Abort a half-entered 
+command&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also copy and paste using just the mouse. Using the 
+left button, select a region of text to copy. Click the middle button to
+ paste.&lt;/p&gt;
+&lt;p&gt;There are two ways you can use Emacs to develop Python code. 
+The most straightforward way is to use it just as a text editor: create 
+and edit Python files in Emacs; then run Python to test the code 
+somewhere else, like in a terminal window. Alternatively, you can run 
+Python inside Emacs: see the options under "Python" in the menubar, or 
+type &lt;code&gt;C-c !&lt;/code&gt; to start a Python interpreter in a 
+split screen. (Use &lt;code&gt;C-x o&lt;/code&gt; to switch between the 
+split screens, or just click if C-x doesn't work).&lt;/p&gt;
+&lt;p&gt;If you want to spend some extra setup time becoming a power 
+user, you can try an IDE like &lt;a 
+href="http://www.eclipse.org/downloads/"&gt;Eclipse&lt;/a&gt; (Download 
+the Eclipse Classic package at the bottom). Check out &lt;a 
+href="http://pydev.org/manual_101_root.html"&gt;PyDev&lt;/a&gt; for 
+Python support in Eclipse.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div aria-labelledby="tab_1" id="seq_content">
+    <div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized" data-request-token="b7495c4ae67211e4830b0abfe3b35129" data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_ccbf54a658e040869d231a83636dabc9" data-block-type="vertical" data-course-id="BerkeleyX/CS188.1x-4/1T2015">
+  <div class="vert-mod">
+  <div class="vert vert-0" data-id="i4x://BerkeleyX/CS188.1x-4/html/534c6f534325467e9ea34acf70be2136">
+    <div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule xblock-initialized" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="b7495c4ae67211e4830b0abfe3b35129" data-runtime-version="1" data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_534c6f534325467e9ea34acf70be2136" data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015">
+  
+  <div class="project">
+<h3><a name="PythonBasics"></a>Python Basics</h3>
+<h4>Required Files</h4>
+<p>You can download all of the files associated with the Python mini-tutorial as a zip archive: <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/tutorial/v1/001/python_basics.zip">python_basics.zip</a>. If you did the unix tutorial in the previous tab, you've already downloaded and unzipped this file.</p>
+<h4>Table of Contents</h4>
+<ul>
+<li><a href="#Invoking%20the%20Interpreter">Invoking the Interpreter</a></li>
+<li><a href="#Operators">Operators</a></li>
+<li><a href="#Strings">Strings</a></li>
+<li><a href="#Dir%20and%20Help">Dir and Help</a></li>
+<li><a href="#Built-in%20Data%20Structures">Built-in Data Structures</a></li>
+<ul>
+<li><a href="#Lists">Lists</a></li>
+<li><a href="#Tuples">Tuples</a></li>
+<li><a href="#Sets">Sets</a></li>
+<li><a href="#Dictionaries">Dictionaries</a></li>
+</ul>
+<li><a href="#Writing%20Scripts">Writing Scripts</a></li>
+<li><a href="#Indentation">Indentation</a></li>
+<li><a href="#TabsSpaces">Tabs vs Spaces</a></li>
+<li><a href="#Writing%20Functions">Writing Functions</a></li>
+<li><a href="#Object%20Basics">Object Basics</a></li>
+<ul>
+<li><a href="#Defining%20Classes">Defining Classes</a></li>
+<li><a href="#Using%20Objects">Using Objects</a></li>
+<li><a href="#Static%20vs%20Instance%20Variables">Static vs Instance Variables</a></li>
+</ul>
+<li><a href="#Tips%20and%20Tricks">Tips and Tricks</a></li>
+<li><a href="#Troubleshooting">Troubleshooting</a></li>
+<li><a href="#More%20References">More References</a></li>
+</ul>
+<br>
+<p>The programming assignments in this course will be written in <a href="http://www.python.org/about/">Python</a>,
+ an interpreted, object-oriented language that shares some features with
+ both Java and Scheme. This tutorial will walk through the primary 
+syntactic constructions in Python, using short examples.</p>
+<p>We encourage you to type all python shown in the tutorial onto your own machine. Make sure it responds the same way.</p>
+<p>You may find the <a href="#Troubleshooting">Troubleshooting</a> 
+section helpful if you run into problems. It contains a list of the 
+frequent problems previous CS188 students have encountered when 
+following this tutorial.</p>
+<h4><a name="Invoking the Interpreter"></a>Invoking the Interpreter</h4>
+<p>Python can be run in one of two modes. It can either be used <i>interactively</i>, via an interpeter, or it can be called from the command line to execute a <i>script</i>. We will first use the Python interpreter interactively.</p>
+<p>You invoke the interpreter by entering <code>python</code> at the Unix command prompt. <br> Note: you may have to type <code>python2.4</code>, <code>python2.5</code>, <code>python2.6</code> or <code>python2.7</code>, rather than <code>python</code>, depending on your machine.</p>
+<div class="code_snippet">
+<p><code> [cs188-ta@nova ~]$ python <br> Python 2.6.5 (r265:79063, Jan 14 2011, 14:20:15) <br> [GCC 4.4.1] on sunos5 <br> Type "help", "copyright", "credits" or "license" for more information. <br> &gt;&gt;&gt;</code></p>
+</div>
+<h4><a name="Operators"></a>Operators</h4>
+<p>The Python interpreter can be used to evaluate expressions, for 
+example simple arithmetic expressions. If you enter such expressions at 
+the prompt (<code>&gt;&gt;&gt;</code>) they will be evaluated and the result will be returned on the next line.</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; 1 + 1 <br> 2 <br> &gt;&gt;&gt; 2 * 3 <br> 6 </code></p>
+</div>
+<p>Boolean operators also exist in Python to manipulate the primitive <code>True</code> and <code>False</code> values.</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; 1==0 <br> False <br> &gt;&gt;&gt; not (1==0) <br> True <br> &gt;&gt;&gt; (2==2) and (2==3) <br> False <br> &gt;&gt;&gt; (2==2) or (2==3) <br> True</code></p>
+</div>
+<h4><a name="Strings"></a>Strings</h4>
+<p>Like Java, Python has a built in string type. The <code>+</code> operator is overloaded to do string concatenation on string values.</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; 'artificial' + "intelligence" <br> 'artificialintelligence' </code></p>
+</div>
+<p>There are many built-in methods which allow you to manipulate strings.</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; 'artificial'.upper()<br> 'ARTIFICIAL'<br> &gt;&gt;&gt; 'HELP'.lower()<br> 'help'<br> &gt;&gt;&gt; len('Help')<br> 4 </code></p>
+</div>
+<p>Notice that we can use either single quotes <code>' '</code> or double quotes <code>" "</code> to surround string. This allows for easy nesting of strings.</p>
+<p>We can also store expressions into variables.</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; s = 'hello world' <br> &gt;&gt;&gt; print s <br> hello world <br> &gt;&gt;&gt; s.upper()<br> 'HELLO WORLD'<br> &gt;&gt;&gt; len(s.upper())<br> 11<br> &gt;&gt;&gt; num = 8.0 <br> &gt;&gt;&gt; num += 2.5 <br> &gt;&gt;&gt; print num <br> 10.5 </code></p>
+</div>
+<p>In Python, you do not have declare variables before you assign to them.</p>
+<h4><a name="Dir and Help"></a> Exercise: Dir and Help</h4>
+<p>Learn about the methods Python provides for strings. To see what methods Python provides for a datatype, use the <code>dir</code> and <code>help</code> commands:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; s = 'abc' <br><br> &gt;&gt;&gt; dir(s)<br> 
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', 
+'__eq__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__',
+ '__getslice__', '__gt__', '__hash__', '__init__','__le__', '__len__', 
+'__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', 
+'__reduce_ex__','__repr__', '__rmod__', '__rmul__', '__setattr__', 
+'__str__', 'capitalize', 'center', 'count', 'decode', 'encode', 
+'endswith', 'expandtabs', 'find', 'index', 'isalnum', 'isalpha', 
+'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 
+'lower', 'lstrip', 'replace', 'rfind','rindex', 'rjust', 'rsplit', 
+'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 
+'title', 'translate', 'upper', 'zfill']<br><br> &gt;&gt;&gt; help(s.find)<br> </code></p>
+<pre><code>Help on built-in function find:<br>
+find(...)
+    S.find(sub [,start [,end]]) -&gt; int
+    
+    Return the lowest index in S where substring sub is found,
+    such that sub is contained within s[start,end].  Optional
+    arguments start and end are interpreted as in slice notation.
+    
+    Return -1 on failure.<br>
+</code></pre>
+<p><code> &gt;&gt; s.find('b')<br> 1 </code></p>
+</div>
+<p>Try out some of the string functions listed in <code>dir</code> (ignore those with underscores '_' around the method name).</p>
+<h4><a name="Built-in Data Structures"></a>Built-in Data Structures</h4>
+<p>Python comes equipped with some useful built-in data structures, broadly similar to Java's collections package.</p>
+<h4><a name="Lists"></a>Lists</h4>
+<p><em>Lists</em> store a sequence of mutable items:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; fruits = ['apple','orange','pear','banana']<br> &gt;&gt;&gt; fruits[0] <br> 'apple' </code></p>
+</div>
+<p>We can use the <code>+</code> operator to do list concatenation:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; otherFruits = ['kiwi','strawberry']<br> &gt;&gt;&gt; fruits + otherFruits<br> &gt;&gt;&gt; ['apple', 'orange', 'pear', 'banana', 'kiwi', 'strawberry'] </code></p>
+</div>
+<p>Python also allows negative-indexing from the back of the list. For instance, <code>fruits[-1]</code> will access the last element <code>'banana'</code>:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; fruits[-2]<br> 'pear'<br> &gt;&gt;&gt; fruits.pop()<br> 'banana'<br> &gt;&gt;&gt; fruits<br> ['apple', 'orange', 'pear']<br> &gt;&gt;&gt; fruits.append('grapefruit') <br> &gt;&gt;&gt; fruits <br> ['apple', 'orange', 'pear', 'grapefruit'] <br> &gt;&gt;&gt; fruits[-1] = 'pineapple' <br> &gt;&gt;&gt; fruits <br> ['apple', 'orange', 'pear', 'pineapple'] </code></p>
+</div>
+<p>We can also index multiple adjacent elements using the slice operator. For instance, <code>fruits[1:3]</code>, returns a list containing the elements at position 1 and 2. In general <code>fruits[start:stop]</code> will get the elements in <code>start, start+1, ..., stop-1</code>. We can also do <code>fruits[start:]</code> which returns all elements starting from the <code>start</code> index. Also <code>fruits[:end]</code> will return all elements before the element at position <code>end</code>:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; fruits[0:2] <br> ['apple', 'orange'] <br> &gt;&gt;&gt; fruits[:3]<br> ['apple', 'orange', 'pear'] <br> &gt;&gt;&gt; fruits[2:]<br> ['pear', 'pineapple'] <br> &gt;&gt;&gt; len(fruits) <br> 4 </code></p>
+</div>
+<p>The items stored in lists can be any Python data type. So for instance we can have lists of lists:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; lstOfLsts = [['a','b','c'],[1,2,3],['one','two','three']] <br> &gt;&gt;&gt; lstOfLsts[1][2] <br> 3<br> &gt;&gt;&gt; lstOfLsts[0].pop()<br> 'c'<br> &gt;&gt;&gt; lstOfLsts<br> [['a', 'b'],[1, 2, 3],['one', 'two', 'three']]</code></p>
+</div>
+<h4>Exercise: Lists</h4>
+<p>Play with some of the list functions. You can find the methods you can call on an object via the <code>dir</code> and get information about them via the <code>help</code> command:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; dir(list)<br> ['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', <br>'__delslice__', '__doc__', '__eq__', '__ge__', '__getattribute__', <br>'__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', <br>'__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', <br>'__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', <br>'__rmul__', '__setattr__', '__setitem__', '__setslice__', '__str__', <br>'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', <br>'sort']<br> </code></p>
+<pre>&gt;&gt;&gt; help(list.reverse)
+Help on built-in function reverse:
+
+reverse(...)
+    L.reverse() -- reverse *IN PLACE*
+</pre>
+<p><code> &gt;&gt;&gt; lst = ['a','b','c']<br> &gt;&gt;&gt; lst.reverse()<br> &gt;&gt;&gt; lst<br>['c','b','a'] </code></p>
+</div>
+<p>Note: Ignore functions with underscores "_" around the names; these are private helper methods. Press 'q' to back out of a help screen.</p>
+<h4><a name="Tuples"></a>Tuples</h4>
+<p>A data structure similar to the list is the <em>tuple</em>, which is like a list except that it is immutable once it is created (i.e. you cannot change its content once created). Note that tuples are surrounded with parentheses while lists have square brackets.</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; pair = (3,5)<br> &gt;&gt;&gt; pair[0]<br> 3<br> &gt;&gt;&gt; x,y = pair<br> &gt;&gt;&gt; x<br> 3<br> &gt;&gt;&gt; y<br> 5 <br> &gt;&gt;&gt; pair[1] = 6<br> TypeError: object does not support item assignment </code></p>
+</div>
+<p>The attempt to modify an immutable structure raised an exception. Exceptions indicate errors: index out of bounds errors, type errors, and so on will all report exceptions in this way.</p>
+<h4><a name="Sets"></a>Sets</h4>
+<p>A <em>set</em> is another data structure that serves as an unordered list with no duplicate items. Below, we show how to create a set, add things to the set, test if an item is in the set, and perform common set operations (difference, intersection, union):</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; shapes = ['circle','square','triangle','circle']<br> &gt;&gt;&gt; setOfShapes = set(shapes)<br> &gt;&gt;&gt; setOfShapes <br> set(['circle','square','triangle']) <br> &gt;&gt;&gt; setOfShapes.add('polygon') <br> &gt;&gt;&gt; setOfShapes <br> set(['circle','square','triangle','polygon']) <br> &gt;&gt;&gt; 'circle' in setOfShapes <br> True <br> &gt;&gt;&gt; 'rhombus' in setOfShapes <br> False <br> &gt;&gt;&gt; favoriteShapes = ['circle','triangle','hexagon']<br> &gt;&gt;&gt; setOfFavoriteShapes = set(favoriteShapes)<br> &gt;&gt;&gt; setOfShapes - setOfFavoriteShapes <br> set(['square','polyon']) <br> &gt;&gt;&gt; setOfShapes &amp; setOfFavoriteShapes <br> set(['circle','triangle'])<br> &gt;&gt;&gt; setOfShapes | setOfFavoriteShapes <br> set(['circle','square','triangle','polygon','hexagon']) </code></p>
+</div>
+<p><b>Note that the objects in the set are unordered; you cannot assume that their traversal or print order will be the same across machines!</b></p>
+<h4><a name="Dictionaries"></a>Dictionaries</h4>
+<p>The last built-in data structure is the <em>dictionary</em> which stores a map from one type of object (the key) to another (the value). The key must be an immutable type (string, number, or tuple). The value can be any Python data type.</p>
+<p>Note: In the example below, the printed order of the keys returned by Python could be different than shown below. The reason is that unlike lists which have a fixed ordering, a dictionary is simply a hash table for which there is no fixed ordering of the keys (like HashMaps in Java). The order of the keys depends on how exactly the hashing algorithm maps keys to buckets, and will usually seem arbitrary. Your code should not rely on key ordering, and you should not be surprised if even a small modification to how your code uses a dictionary results in a new key ordering. <!--(see the <a href="/courses/BerkeleyX/CS188.1x-4/1T2015/wiki/CS188/faq/">FAQ about dictionary key ordering</a>). --></p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; studentIds = {'knuth': 42.0, 'turing': 56.0, 'nash': 92.0 }<br> &gt;&gt;&gt; studentIds['turing']<br> 56.0<br> &gt;&gt;&gt; studentIds['nash'] = 'ninety-two'<br> &gt;&gt;&gt; studentIds<br> {'knuth': 42.0, 'turing': 56.0, 'nash': 'ninety-two'}<br> &gt;&gt;&gt; del studentIds['knuth']<br> &gt;&gt;&gt; studentIds<br> {'turing': 56.0, 'nash': 'ninety-two'}<br> &gt;&gt;&gt; studentIds['knuth'] = [42.0,'forty-two']<br> &gt;&gt;&gt; studentIds<br> {'knuth': [42.0, 'forty-two'], 'turing': 56.0, 'nash': 'ninety-two'}<br> &gt;&gt;&gt; studentIds.keys()<br> ['knuth', 'turing', 'nash']<br> &gt;&gt;&gt; studentIds.values()<br> [[42.0, 'forty-two'], 56.0, 'ninety-two']<br> &gt;&gt;&gt; studentIds.items()<br> [('knuth',[42.0, 'forty-two']), ('turing',56.0), ('nash','ninety-two')]<br> &gt;&gt;&gt; len(studentIds) <br> 3 </code></p>
+</div>
+<p>As with nested lists, you can also create dictionaries of dictionaries.</p>
+<h4>Exercise: Dictionaries</h4>
+<p>Use <code>dir</code> and <code>help</code> to learn about the functions you can call on dictionaries.</p>
+<h4><a name="Writing Scripts"></a>Writing Scripts</h4>
+<p>Now that you've got a handle on using Python interactively, let's write a simple Python script that demonstrates Python's <code>for</code> loop. Open the file called <code>foreach.py</code> and update it with the following code:</p>
+<div class="code_snippet">
+<pre># This is what a comment looks like 
+fruits = ['apples','oranges','pears','bananas']
+for fruit in fruits:
+    print fruit + ' for sale'
+
+fruitPrices = {'apples': 2.00, 'oranges': 1.50, 'pears': 1.75}
+for fruit, price in fruitPrices.items():
+    if price &lt; 2.00:
+        print '%s cost %f a pound' % (fruit, price)
+    else:
+        print fruit + ' are too expensive!'
+</pre>
+</div>
+<p>At the command line, use the following command in the directory containing <code>foreach.py</code>:</p>
+<div class="code_snippet">
+<p><code> [cs188-ta@nova ~/tutorial]$ python foreach.py<br> apples for sale<br> oranges for sale<br> pears for sale<br> bananas for sale<br> oranges cost 1.500000 a pound<br> pears cost 1.750000 a pound<br> apples are too expensive! </code></p>
+</div>
+<p>Remember that the print statements listing the costs may be in a different order on your screen than in this tutorial; that's due to the fact that we're looping over dictionary keys, which are unordered. To learn more about control structures (e.g., <code>if</code> and <code>else</code>) in Python, check out the official <a href="http://docs.python.org/tut/">Python tutorial section on this topic</a>.</p>
+<p>If you like functional programming <!--(like Scheme)--> you might also like <code>map</code> and <code>filter</code>:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; map(lambda x: x * x, [1,2,3])<br> [1, 4, 9]<br> &gt;&gt;&gt; filter(lambda x: x &gt; 3, [1,2,3,4,5,4,3,2,1])<br> [4, 5, 4] </code></p>
+</div>
+<p>You can <a href="http://www.secnetix.de/olli/Python/lambda_functions.hawk">learn more about <code>lambda</code></a> if you're interested.</p>
+<p>The next snippet of code demonstrates Python's <em>list comprehension</em> construction:</p>
+<div class="code_snippet">
+<pre>nums = [1,2,3,4,5,6]
+plusOneNums = [x+1 for x in nums]
+oddNums = [x for x in nums if x % 2 == 1]
+print oddNums
+oddNumsPlusOne = [x+1 for x in nums if x % 2 ==1]
+print oddNumsPlusOne
+</pre>
+</div>
+<p>This code is in a file called <code>listcomp.py</code>, which you can run:</p>
+<div class="code_snippet">
+<p><code> [cs188-ta@nova ~]$ python listcomp.py<br> [1,3,5]<br> [2,4,6] </code></p>
+</div>
+<h4>Exercise: List Comprehensions</h4>
+<p>Write a list comprehension which, from a list, generates a lowercased version of each string that has length greater than five. You can find the solution in <code>listcomp2.py</code>.</p>
+<h4><a name="Indentation"></a>Beware of Indendation!</h4>
+<p>Unlike many other languages, Python uses the indentation in the source code for interpretation. So for instance, for the following script:</p>
+<div class="code_snippet">
+<pre>if 0 == 1: 
+    print 'We are in a world of arithmetic pain' 
+print 'Thank you for playing' 
+</pre>
+</div>
+<p>will output</p>
+<div class="code_snippet"><code> Thank you for playing </code></div>
+<p>But if we had written the script as</p>
+<div class="code_snippet">
+<pre>if 0 == 1: 
+    print 'We are in a world of arithmetic pain'
+    print 'Thank you for playing'
+</pre>
+</div>
+<p>there would be no output. The moral of the story: be careful how you indent! It's best to use four spaces for indentation -- that's what the course code uses.</p>
+<h4><a name="TabsSpaces"></a>Tabs vs Spaces</h4>
+<p>Because Python uses indentation for code evaluation, it needs to keep track of the level of indentation across code blocks. This means that if your Python file switches from using tabs as indentation to spaces as indentation, the Python interpreter will not be able to resolve the ambiguity of the indentation level and throw an exception. Even though the code can be lined up visually in your text editor, Python "sees" a change in indentation and most likely will throw an exception (or rarely, produce unexpected behavior).</p>
+<p>This most commonly happens when opening up a Python file that uses an indentation scheme that is opposite from what your text editor uses (aka, your text editor uses spaces and the file uses tabs). When you write new lines in a code block, there will be a mix of tabs and spaces, even though the whitespace is aligned. For a longer discussion on tabs vs spaces, see <a href="http://stackoverflow.com/questions/119562/tabs-versus-spaces-in-python-programming">this</a> discussion on StackOverflow.</p>
+<h4><a name="Writing Functions"></a>Writing Functions</h4>
+<p>As in <!--Scheme or--> Java, in Python you can define your own functions:</p>
+<div class="code_snippet">
+<pre>fruitPrices = {'apples':2.00, 'oranges': 1.50, 'pears': 1.75}
+
+def buyFruit(fruit, numPounds):
+    if fruit not in fruitPrices:
+        print "Sorry we don't have %s" % (fruit)
+    else:
+        cost = fruitPrices[fruit] * numPounds
+        print "That'll be %f please" % (cost)
+
+# Main Function
+if __name__ == '__main__':        
+    buyFruit('apples',2.4)
+    buyFruit('coconuts',2)        
+</pre>
+</div>
+<p>Rather than having a <code>main</code> function as in Java, the <code>__name__ == '__main__'</code> check is used to delimit expressions which are executed when the file is called as a script from the command line. The code after the main check is thus the same sort of code you would put in a <code>main</code> function in Java.</p>
+<p>Save this script as <em>fruit.py</em> and run it:</p>
+<div class="code_snippet">
+<p><code> [cs188-ta@nova ~]$ python fruit.py<br> That'll be 4.800000 please<br> Sorry we don't have coconuts </code></p>
+</div>
+<!-- %%%%% -->
+<h4>Advanced Exercise</h4>
+<p>Write a <code>quickSort</code> function in Python using list comprehensions. Use the first element as the pivot. You can find the solution in <code>quickSort.py</code>.</p>
+<h4><a name="Object Basics"></a>Object Basics</h4>
+<p>Although this isn't a class in object-oriented programming, you'll have to use some objects in the programming projects, and so it's worth covering the basics of objects in Python. An object encapsulates data and provides functions for interacting with that data.</p>
+<h4><a name="Defining Classes"></a>Defining Classes</h4>
+<p>Here's an example of defining a class named <code>FruitShop</code>:</p>
+<div class="code_snippet">
+<pre>class FruitShop:
+
+    def __init__(self, name, fruitPrices):
+        """
+            name: Name of the fruit shop
+            
+            fruitPrices: Dictionary with keys as fruit 
+            strings and prices for values e.g. 
+            {'apples':2.00, 'oranges': 1.50, 'pears': 1.75} 
+        """
+        self.fruitPrices = fruitPrices
+        self.name = name
+        print 'Welcome to the %s fruit shop' % (name)
+        
+    def getCostPerPound(self, fruit):
+        """
+            fruit: Fruit string
+        Returns cost of 'fruit', assuming 'fruit'
+        is in our inventory or None otherwise
+        """
+        if fruit not in self.fruitPrices:
+            print "Sorry we don't have %s" % (fruit)
+            return None
+        return self.fruitPrices[fruit]
+        
+    def getPriceOfOrder(self, orderList):
+        """
+            orderList: List of (fruit, numPounds) tuples
+            
+        Returns cost of orderList. If any of the fruit are  
+        """ 
+        totalCost = 0.0             
+        for fruit, numPounds in orderList:
+            costPerPound = self.getCostPerPound(fruit)
+            if costPerPound != None:
+                totalCost += numPounds * costPerPound
+        return totalCost
+    
+    def getName(self):
+        return self.name
+</pre>
+</div>
+<p>The <code>FruitShop</code> class has some data, the name of the shop and the prices per pound of some fruit, and it provides functions, or methods, on this data. What advantage is there to wrapping this data in a class?</p>
+<ol>
+<li>Encapsulating the data prevents it from being altered or used inappropriately,</li>
+<li>The abstraction that objects provide make it easier to write general-purpose code.</li>
+</ol><br>
+<h4><a name="Using Objects"></a>Using Objects</h4>
+<p>So how do we make an object and use it? Make sure you have the <code>FruitShop</code> implementation in <code>shop.py</code>. We then import the code from this file (making it accessible to other scripts) using <code>import shop</code>, since <code>shop.py</code> is the name of the file. Then, we can create <code>FruitShop</code> objects as follows:</p>
+<div class="code_snippet">
+<pre>import shop
+
+shopName = 'the Berkeley Bowl'
+fruitPrices = {'apples': 1.00, 'oranges': 1.50, 'pears': 1.75}
+berkeleyShop = shop.FruitShop(shopName, fruitPrices)
+applePrice = berkeleyShop.getCostPerPound('apples')
+print applePrice
+print('Apples cost $%.2f at %s.' % (applePrice, shopName))
+
+otherName = 'the Stanford Mall'
+otherFruitPrices = {'kiwis':6.00, 'apples': 4.50, 'peaches': 8.75}
+otherFruitShop = shop.FruitShop(otherName, otherFruitPrices)
+otherPrice = otherFruitShop.getCostPerPound('apples')
+print otherPrice
+print('Apples cost $%.2f at %s.' % (otherPrice, otherName))
+print("My, that's expensive!")
+</pre>
+</div>
+<p>This code is in <code>shopTest.py</code>; you can run it like this:</p>
+<div class="code_snippet">
+<pre>[cs188-ta@nova ~]$ python shopTest.py
+Welcome to the Berkeley Bowl fruit shop
+1.0
+Apples cost $1.00 at the Berkeley Bowl.
+Welcome to the Stanford Mall fruit shop
+4.5
+Apples cost $4.50 at the Stanford Mall.
+My, that's expensive!
+</pre>
+</div>
+<p>So what just happended? The <code>import shop</code> statement told Python to load all of the functions and classes in <code>shop.py</code>. The line <code>berkeleyShop = shop.FruitShop(shopName, fruitPrices)</code> constructs an <em>instance</em> of the <code>FruitShop</code> class defined in <em>shop.py</em>, by calling the <code>__init__</code> function in that class. Note that we only passed two arguments in, while <code>__init__</code> seems to take three arguments: <code>(self, name, fruitPrices)</code>. The reason for this is that all methods in a class have <code>self</code> as the first argument. The <code>self</code> variable's value is automatically set to the object itself; when calling a method, you only supply the remaining arguments. The <code>self</code> variable contains all the data (<code>name</code> and <code>fruitPrices</code>) for the current specific instance (similar to <code>this</code> in Java). The print statements use the substitution operator (described in the <a href="https://docs.python.org/2/library/stdtypes.html#string-formatting">Python docs</a> if you're curious).</p>
+<h4><a name="Static vs Instance Variables"></a>Static vs Instance Variables</h4>
+<p>The following example illustrates how to use static and instance variables in Python.</p>
+<p>Create the <code>person_class.py</code> containing the following code:</p>
+<div class="code_snippet">
+<pre>class Person:
+    population = 0
+    def __init__(self, myAge):
+        self.age = myAge
+        Person.population += 1
+    def get_population(self):
+        return Person.population
+    def get_age(self):
+        return self.age
+</pre>
+</div>
+<p>We first compile the script:</p>
+<div class="code_snippet">
+<p><code> [cs188-ta@nova ~]$ python person_class.py </code></p>
+</div>
+<p>Now use the class as follows:</p>
+<div class="code_snippet">
+<p><code> &gt;&gt;&gt; import person_class<br> &gt;&gt;&gt; p1 = person_class.Person(12)<br> &gt;&gt;&gt; p1.get_population()<br> 1 <br> &gt;&gt;&gt; p2 = person_class.Person(63)<br> &gt;&gt;&gt; p1.get_population()<br> 2 <br> &gt;&gt;&gt; p2.get_population()<br> 2 <br> &gt;&gt;&gt; p1.get_age()<br> 12 <br> &gt;&gt;&gt; p2.get_age()<br> 63 </code></p>
+</div>
+<p>In the code above, <code>age</code> is an instance variable and <code>population</code> is a static variable. <code>population</code> is shared by all instances of the <code>Person</code> class whereas each instance has its own <code>age</code> variable.</p>
+<!-- %%%% -->
+<h4><a name="Tips and Tricks"></a>More Python Tips and Tricks</h4>
+<p>This tutorial has briefly touched on some major aspects of Python that will be relevant to the course. Here are some more useful tidbits:</p>
+<ul>
+<li>Use <code>range</code> to generate a sequence of integers, useful for generating traditional indexed <code>for</code> loops:
+<pre>for index in range(3):
+    print lst[index]
+</pre>
+</li>
+<li>After importing a file, if you edit a source file, the changes will not be immediately propagated in the interpreter. For this, use the <code>reload</code> command: <code><br><br> &gt;&gt;&gt; reload(shop)<br> <br> </code></li>
+</ul>
+<h4><a name="Troubleshooting"></a>Troubleshooting</h4>
+<p>These are some problems (and their solutions) that new Python learners commonly encounter.</p>
+<ul>
+<li>
+<p><b>Problem:</b><br> ImportError: No module named py</p>
+<p><b>Solution:</b><br> When using <code>import</code>, do not include the ".py" from the filename. <br> For example, you should say: <code>import shop</code> <br> NOT: <code>import shop<b>.py</b></code></p>
+</li>
+<li>
+<p><b>Problem:</b><br> NameError: name 'MY VARIABLE' is not defined<br> Even after importing you may see this.</p>
+<p><b>Solution:</b><br> To access a member of a module, you have to type <code>MODULE NAME.MEMBER NAME</code>, where <code>MODULE NAME</code> is the name of the <code>.py</code> file, and <code>MEMBER NAME</code> is the name of the variable (or function) you are trying to access.</p>
+</li>
+<li>
+<p><b>Problem:</b><br> TypeError: 'dict' object is not callable</p>
+<p><b>Solution:</b><br> Dictionary looks up are done using square brackets: [ and ]. NOT parenthesis: ( and ).</p>
+</li>
+<li>
+<p><b>Problem:</b><br> ValueError: too many values to unpack</p>
+<p><b>Solution:</b><br> Make sure the number of variables you are assigning in a <code>for</code> loop matches the number of elements in each item of the list. Similarly for working with tuples.</p>
+<p>For example, if <code>pair</code> is a tuple of two elements (e.g. <code>pair =('apple', 2.0)</code>) then the following code would cause the "too many values to unpack error":</p>
+<div class="code_snippet"><code>(a,b,c) = pair</code></div>
+<p>Here is a problematic scenario involving a <code>for</code> loop:</p>
+<div class="code_snippet">
+<pre>pairList = [('apples', 2.00), ('oranges', 1.50), ('pears', 1.75)]
+for fruit, price, <em>color</em> in pairList:
+    print '%s fruit costs %f and is the color %s' % (fruit, price, color)
+</pre>
+</div>
+</li>
+<li>
+<p><b>Problem:</b><br> AttributeError: 'list' object has no attribute 'length' (or something similar)</p>
+<p><b>Solution:</b><br> Finding length of lists is done using <code>len(NAME OF LIST)</code>.</p>
+</li>
+<li>
+<p><b>Problem:</b><br> Changes to a file are not taking effect.</p>
+<p><b>Solution:</b></p>
+<ol>
+<li>Make sure you are saving all your files after any changes.</li>
+<li>If you are editing a file in a window different from the one you are using to execute python, make sure you <code>reload(<i>YOUR_MODULE</i>)</code> to guarantee your changes are being reflected. <code>reload</code> works similarly to <code>import</code>.</li>
+</ol></li>
+</ul>
+<h4><a name="More References"></a>More References</h4>
+<ul>
+<li>The place to go for more Python information: <a href="http://www.python.org/">www.python.org</a></li>
+<li>A good reference book: <a href="http://oreilly.com/catalog/9780596513986/">Learning Python</a> (From the UCB campus, you can read the whole book online)</li>
+</ul>
+</div>
+</div>
+
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+  <nav class="sequence-bottom" aria-label="Section">
+    <button class="sequence-nav-button button-previous">Previous</button>
+    <button class="sequence-nav-button button-next">Next</button>
+  </nav>
+</div>
+
+
+
+<script type="text/javascript">
+  var sequenceNav;
+  $(document).ready(function() {
+    sequenceNav = new SequenceNav($('.sequence-nav'));
+  });
+</script>
+
+</div>
+
+    </section>
+  </div>
+</div>
+
+<nav class="nav-utilities " aria-label="Course Utilities">
+
+
+</nav>
+
+
+<div id="accessibile-confirm-modal" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="accessibile-confirm-title">
+    <button class="close-modal">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="accessibile-confirm-title">
+          Confirm
+        <span class="sr">,
+          modal open
+        </span>
+      </h2>
+    </header>
+    <div role="alertdialog" class="status message" tabindex="-1">
+        <p class="message-title"></p>
+    </div>
+    <hr aria-hidden="true">
+    <div class="actions">
+        <button class="dismiss ok-button">OK</button>
+        <button class="dismiss cancel-button" data-dismiss="leanModal">Cancel</button>
+    </div>
+  </div>
+  <a href="#accessibile-confirm-modal" rel="leanModal" id="confirm_open_button" style="display:none">open</a>
+</div>
+
+<script type="text/javascript">
+var accessible_confirm = function(message, callback) {
+    $("#accessibile-confirm-modal .cancel-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+    });
+    $("#accessibile-confirm-modal .ok-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+        callback();
+    });
+
+    accessible_modal("#accessibile-confirm-modal #confirm_open_button", "#accessibile-confirm-modal .close-modal", "#accessibile-confirm-modal", ".content-wrapper");
+    $("#accessibile-confirm-modal #confirm_open_button").click();
+    $("#accessibile-confirm-modal .message-title").html(message);
+};
+</script>
+
+
+      
+    </div>
+
+    
+      
+  
+  
+      
+
+
+<div class="wrapper wrapper-footer edx-footer edx-footer-new">
+  <footer id="footer-global" class="footer-global" role="contentinfo" aria-label="Footer">
+
+    <div class="footer-about">
+      <h2 class="sr footer-about-title">About edX</h2>
+
+      <div class="footer-about-logo">
+        <img alt="edX logo" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/edx-header-logo.png">
+      </div>
+
+      <div class="footer-about-copy">
+        <p>
+          EdX offers interactive online classes and MOOCs from the world's best universities. Online courses from MITx, HarvardX, BerkeleyX, UTx and many other universities. Topics include biology, business, chemistry, computer science, economics, finance, electronics, engineering, food and nutrition, history, humanities, law, literature, math, medicine, music, philosophy, physics, science, statistics and more. EdX is a non-profit online initiative created by founding partners Harvard and MIT.
+        </p>
+      </div>
+
+      <div class="footer-about-copyright">
+      	<p>© 2015 edX Inc.</p>
+
+      	<p>
+      	  EdX, Open edX, and the edX and Open edX logos are registered trademarks or trademarks of <a href="https://www.edx.org/"><span class="copy">edX Inc.</span></a>
+      	</p>
+      </div>
+
+      <div class="footer-about-openedx">
+        <a href="http://open.edx.org/" title="Powered by Open edX">
+          <img alt="Powered by Open edX" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/edx-openedx-logo-tag.png">
+        </a>
+      </div>
+
+      <div class="footer-about-links">
+        <a href="https://www.edx.org/edx-terms-service"><span class="copy">Terms of Service and Honor Code</span></a>
+        <a href="https://www.edx.org/edx-privacy-policy"><span class="copy">Privacy Policy</span>
+	  <span class="note">
+	    (Revised 10/22/2014)
+	</span></a>
+      </div>
+    </div>
+
+    <nav class="footer-nav" role="navigation" aria-label="About edX">
+      <h2 class="footer-nav-title">About edX</h2>
+
+      <div class="footer-nav-links">
+        <a href="https://www.edx.org/about-us"><span class="copy">About</span></a>
+        <a href="https://www.edx.org/news"><span class="copy">News</span></a>
+        <a href="https://www.edx.org/contact"><span class="copy">Contact</span></a>
+        <a href="https://www.edx.org/student-faq"><span class="copy">FAQ</span></a>
+        <a href="https://www.edx.org/edx-blog"><span class="copy">edX Blog</span></a>
+        <a href="https://www.edx.org/donate"><span class="copy">Donate to edX</span></a>
+        <a href="https://www.edx.org/jobs"><span class="copy">Jobs at edX</span></a>
+      </div>
+    </nav>
+
+    <div class="footer-follow">
+      <h2 class="footer-follow-title">Follow Us</h2>
+
+      <div class="footer-follow-links">
+        
+        <a href="http://www.facebook.com/EdxOnline" title="Facebook" rel="noreferrer">
+          <i class="icon fa fa-facebook-square element-invisible"></i>
+          <span class="copy">Facebook</span>
+        </a>
+        
+        <a href="https://twitter.com/edXOnline" title="Twitter" rel="noreferrer">
+          <i class="icon fa fa-twitter element-invisible"></i>
+          <span class="copy">Twitter</span>
+        </a>
+        
+        <a href="http://www.linkedin.com/company/edx" title="LinkedIn" rel="noreferrer">
+          <i class="icon fa fa-linkedin-square element-invisible"></i>
+          <span class="copy">LinkedIn</span>
+        </a>
+        
+        <a href="https://plus.google.com/+edXOnline" title="Google+" rel="noreferrer">
+          <i class="icon fa fa-google-plus-square element-invisible"></i>
+          <span class="copy">Google+</span>
+        </a>
+        
+        <a href="http://edxstories.tumblr.com/" title="Tumblr" rel="noreferrer">
+          <i class="icon fa fa-tumblr-square element-invisible"></i>
+          <span class="copy">Tumblr</span>
+        </a>
+        
+        <a href="http://www.meetup.com/edX-Global-Community" title="Meetup" rel="noreferrer">
+          <i class="icon fa fa-calendar element-invisible"></i>
+          <span class="copy">Meetup</span>
+        </a>
+        
+        <a href="http://www.reddit.com/r/edx" title="Reddit" rel="noreferrer">
+          <i class="icon fa fa-reddit-square element-invisible"></i>
+          <span class="copy">Reddit</span>
+        </a>
+        
+        <a href="https://www.youtube.com/user/edxonline?sub_confirmation=1" title="Youtube" rel="noreferrer">
+          <i class="icon fa fa-youtube-square element-invisible"></i>
+          <span class="copy">Youtube</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</div>
+
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/noreferrer.js" charset="utf-8"></script>
+
+
+    
+
+  </div>
+
+    
+    <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-application.js" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-modules.js" charset="utf-8"></script>
+
+
+
+  
+  <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_006.js"></script>
+  <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery.js"></script>
+
+  <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/codemirror-compressed.js"></script>
+
+  
+    <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-courseware.js" charset="utf-8"></script>
+
+
+  
+    <script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/discussion.js" charset="utf-8"></script>
+
+
+
+  
+
+
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+  HUB = MathJax.Hub
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="Intro%20_%20Python%20Refresher%20_%20CS188.1x%20Courseware%20_%20edX_files/MathJax.js"></script>
+
+<script type="text/template" id="_inline_discussion">
+
+<section class="discussion" data-discussion-id="{{discussionId}}">
+    <article class="new-post-article"></article>
+
+    <section class="threads">
+        {{#threads}}
+            <article class="discussion-thread" id="thread_{{id}}">
+            </article>
+        {{/threads}}
+    </section>
+
+    <section class="pagination">
+    </section>
+</section>
+</script>
+<script type="text/template" id="_user_profile">
+
+<h2>Active Threads</h2>
+<section class="discussion">
+    {{#threads}}
+        <article class="discussion-thread" id="thread_{{id}}"/>
+    {{/threads}}
+</section>
+<section class="pagination"/>
+</script>
+<script type="text/template" id="_pagination">
+
+<nav class="discussion-{{discussiontype}}-paginator discussion-paginator">
+    <ol>
+        {{#previous}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">&lt; Previous</a></li>
+        {{/previous}}
+        {{#first}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="1">1</a></li>
+        {{/first}}
+        {{#leftdots}}
+        <li>…</li>
+        {{/leftdots}}
+
+        {{#lowPages}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/lowPages}}
+        <li class="current-page"><span>{{page}}</span></li>
+        {{#highPages}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/highPages}}
+
+        {{#rightdots}}
+        <li>…</li>
+        {{/rightdots}}
+        {{#last}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/last}}
+        {{#next}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">Next &gt;</a></li>
+        {{/next}}
+    </ol>
+</nav>
+
+</script>
+<script type="text/template" id="_profile_thread">
+
+<article class="discussion-article" data-id="{{id}}">
+    <div class="discussion-post">
+        <header>
+            <h3>{{title}}</h3>
+            <p class="posted-details">                
+                {{#user}}
+                <a href="{{user_url}}" class="username">{{username}}</a>
+                {{/user}}
+                {{^user}}
+                anonymous
+                {{/user}}
+
+                <span class="timeago" title="{{created_at}}">{{created_at}}</span>
+                <span class="post-status-closed top-post-status" style="display: none">
+                    &bull; This thread is closed.
+                </span>
+            </p>
+        </header>
+        <div class="post-body">{{{abbreviatedBody}}}</div>
+    </div>
+    <div class="post-tools">
+        <a href="{{permalink}}">View discussion</a>
+    </div>
+
+</article>
+</script>
+
+
+  <script type="text/javascript">
+    var $$course_id = "BerkeleyX/CS188.1x\u002D4/1T2015";
+
+    $(function(){
+        $(".ui-accordion-header a, .ui-accordion-content .subtitle").each(function() {
+          var elemText = $(this).text().replace(/^\s+|\s+$/g,''); // Strip leading and trailing whitespace
+          var wordArray = elemText.split(" ");
+          var finalTitle = "";
+          if (wordArray.length > 0) {
+            for (i=0;i<=wordArray.length-1;i++) {
+              finalTitle += wordArray[i];
+              if (i == (wordArray.length-2)) {
+                finalTitle += "&nbsp;";
+              } else if (i == (wordArray.length-1)) {
+                // Do nothing
+              } else {
+                finalTitle += " ";
+              }
+            }
+          }
+          $(this).html(finalTitle);
+        });
+      });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function () {
+    var sample_rate = 0.05;
+    var roll = Math.floor(Math.random() * 100)/100;
+    var onloadBeaconSent = false;
+
+    if(roll < sample_rate){
+      $(window).load(function() {
+        setTimeout(function(){
+          var t = window.performance.timing;
+
+          var data = {
+            event: "onload",
+            value: t.loadEventEnd - t.navigationStart,
+            page: window.location.href,
+          };
+
+          if (!onloadBeaconSent) {
+            $.ajax({method: "POST", url: "/performance", data: data});
+          }
+          onloadBeaconSent = true;
+        }, 0);
+      });
+    }
+  }());
+</script>
+<div style="display: none; opacity: 0;" class="tooltip"></div><div id="lean_overlay"></div><div id="reader-feedback" class="sr" style="display:none" aria-hidden="false" aria-atomic="true" aria-live="assertive"></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Size1,sans-serif;" id="MathJax_Font_Test"></div></div></body></html>
+<!-- Performance beacon for onload times -->

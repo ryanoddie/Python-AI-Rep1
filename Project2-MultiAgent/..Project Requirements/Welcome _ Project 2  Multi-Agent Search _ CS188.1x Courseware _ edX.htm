@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7 lte9 lte8 lte7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en"><!--<![endif]--><head dir="ltr">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/1beac94c95" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/nr-632.js"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/7299.js" async="" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/analytics.js" async="" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/fbds.js" async="" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/fbds.js" async="" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/analytics_002.js" async="" type="text/javascript"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XA4GVl5ACwAEV1JQAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"1beac94c95","agent":"js-agent.newrelic.com/nr-632.min.js","transactionName":"NQQGYUZWDUNSVUMPWQxOIkBaVBdZXFgYBVkXExdQQ1YRVR1AXgNBEVsNW1BSGw==","applicationID":"3343327","errorBeacon":"bam.nr-data.net","applicationTime":2104}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>Q1: Reflex Agent | Project 2: Multi-Agent Search | CS188.1x Courseware | edX</title>
+
+  <script type="text/javascript">
+    /* immediately break out of an iframe if coming from the marketing website */
+    (function(window) {
+      if (window.location !== window.top.location) {
+        window.top.location = window.location;
+      }
+    })(this);
+  </script>
+
+  <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/a"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://d37djvu3ytnwxt.cloudfront.net/static/images/favicon.c074c912999f.ico">
+
+  
+  
+
+    <link href="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-vendor.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+
+    <link href="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-app.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+
+    <link href="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-app-extend1.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+
+    <link href="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-app-extend2.css" rel="stylesheet" type="text/css">
+
+
+
+
+    
+    <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-main_vendor.js" charset="utf-8"></script>
+
+
+
+  <script>
+    window.baseUrl = "https://d37djvu3ytnwxt.cloudfront.net/static/";
+    (function (require) {
+        var urlArgs = "v=987ea85";
+      require.config({
+          baseUrl: baseUrl,
+          urlArgs: urlArgs
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/require-config-lms.js"></script>
+
+  
+
+  
+
+    <link href="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-course-vendor.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+
+    <link href="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-style-course.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/split.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_005.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_004.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/Markdown.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/Markdown_003.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/Markdown_002.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_003.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_002.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_007.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/mustache.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/URI.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/backbone-min_002.js"></script>
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/tooltip_manager.js"></script>
+
+<link href="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery.css" rel="stylesheet" type="text/css">
+
+
+  
+
+
+
+  
+  
+
+
+  <!--[if lt IE 9]>
+    <script src="https://d37djvu3ytnwxt.cloudfront.net/static/js/html5shiv.d5e37d8ee1a4.js"></script>
+  <![endif]-->
+
+  <script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/1743970571.js"></script>
+
+  <!-- begin Segment.io -->
+<script type="text/javascript">
+  // Asynchronously load Segment.io's analytics.js library
+  window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+  analytics.load("8fncv13bt5");
+  analytics.page();
+
+    analytics.identify("6039505", {
+      email: "ryanoddie.hlive@gmail.com",
+      username: "ryanoddie"
+    });
+</script>
+<!-- end Segment.io -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY">
+
+  
+
+
+<script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/search_app.js" data-requiremodule="js/search/search_app" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/backbone-min.js" data-requiremodule="backbone" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">div.MathJax_MathML {text-align: center; margin: .75em 0px; display: block!important}
+.MathJax_MathML {font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+span.MathJax_MathML {display: inline!important}
+.MathJax_mmlExBox {display: block!important; overflow: hidden; height: 1px; width: 60ex; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0}
+[class="MJX-tex-oldstyle"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-oldstyle-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+[class="MJX-tex-caligraphic"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-caligraphic-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+@font-face /*1*/ {font-family: MathJax_Caligraphic-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf')}
+@font-face /*2*/ {font-family: MathJax_Caligraphic-WEB; font-weight: bold; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf')}
+[mathvariant="double-struck"] {font-family: MathJax_AMS, MathJax_AMS-WEB}
+[mathvariant="script"] {font-family: MathJax_Script, MathJax_Script-WEB}
+[mathvariant="fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB}
+[mathvariant="bold-script"] {font-family: MathJax_Script, MathJax_Caligraphic-WEB; font-weight: bold}
+[mathvariant="bold-fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB; font-weight: bold}
+[mathvariant="monospace"] {font-family: monospace}
+[mathvariant="sans-serif"] {font-family: sans-serif}
+[mathvariant="bold-sans-serif"] {font-family: sans-serif; font-weight: bold}
+[mathvariant="sans-serif-italic"] {font-family: sans-serif; font-style: italic}
+[mathvariant="sans-serif-bold-italic"] {font-family: sans-serif; font-style: italic; font-weight: bold}
+@font-face /*3*/ {font-family: MathJax_AMS-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf')}
+@font-face /*4*/ {font-family: MathJax_Script-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf')}
+@font-face /*5*/ {font-family: MathJax_Fraktur-WEB; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf')}
+@font-face /*6*/ {font-family: MathJax_Fraktur-WEB; font-weight: bold; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf')}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?rev=2.4-beta-2') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?rev=2.4-beta-2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?rev=2.4-beta-2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?rev=2.4-beta-2') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?rev=2.4-beta-2') format('woff'), url('https://cdn.mathjax.org/mathjax/2.4-latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?rev=2.4-beta-2') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/search_router.js" data-requiremodule="js/search/search_router" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/search_form.js" data-requiremodule="js/search/views/search_form" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/search_list_view.js" data-requiremodule="js/search/views/search_list_view" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/search_collection.js" data-requiremodule="js/search/collections/search_collection" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/search_item_view.js" data-requiremodule="js/search/views/search_item_view" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/search_result.js" data-requiremodule="js/search/models/search_result" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/logger.js" data-requiremodule="logger" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script></head>
+
+<body class="ltr courseware  lang_en"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#seq_content">Skip to main content</a>
+
+    
+<!--[if IE]>
+<div class="sr message-accessibility message" id="mathjax-accessibility-message" aria-hidden="true">
+	<p class="copy">This page features MathJax technology to render mathematical formulae. To make math accessibile, we suggest using the MathPlayer plugin. Please visit the <a href="//www.dessci.com/en/products/mathplayer/download.htm">MathPlayer Download Page</a> to download the plugin for your browser.</p>
+</div>
+<div class="sr message-accessibility message" id="mathplayer-browser-message" aria-hidden="true">
+	<p class="copy">
+	 Your browser does not support the MathPlayer plugin. To use MathPlayer, please use Internet Explorer 6 through 9.
+	 </p>
+</div>
+<![endif]-->
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="global slim" aria-label="Main" role="banner">
+  <div class="wrapper-header nav-container">
+    <h1 class="logo" itemscope="" itemtype="http://schema.org/Organization">
+      <a href="https://www.edx.org/" title="Home page" itemprop="url">
+        
+            <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/edx-logo-77x36.png" alt="edX" title="edX" itemprop="url">
+            <span class="sr">Home Page</span>
+        
+      </a>
+    </h1>
+
+    <h2><span class="provider">BerkeleyX:</span> CS188.1x Artificial Intelligence</h2>
+
+
+    <ul class="user">
+      <li class="primary">
+        <a href="https://courses.edx.org/dashboard" class="user-link">
+          <i class="icon fa fa-home" aria-hidden="true"></i>
+          <span class="sr">Dashboard for:</span>
+          <div>ryanoddie</div>
+        </a>
+      </li>
+      <li class="primary">
+        <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">More options dropdown</span> ▾</a>
+        <ul class="dropdown-menu" aria-label="More Options" role="menu">
+          
+              <li><a href="https://www.edx.org/student-faq">Help</a></li>
+          
+          <li><a href="https://courses.edx.org/logout" role="menuitem">Sign out</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </div>
+</header>
+<!--[if lte IE 8]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="help-tab">
+  <a href="#help-modal" rel="leanModal" role="button">Help</a>
+</div>
+
+<section id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-label="edX Help">
+  <div class="inner-wrapper" id="help_wrapper">
+    <button class="close-modal " tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+	<span class="edx">edX</span> Help
+      </h2>
+      <hr>
+    </header>
+
+
+
+    <p>For <strong>questions on course lectures, homework, tools, or materials for this course</strong>, post in the <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/discussion/forum" target="_blank">course discussion forum</a>.
+    </p>
+
+    <p>Have <strong>general questions about edX</strong>? You can find lots of helpful information in the edX <a href="https://www.edx.org/student-faq" target="_blank">FAQ</a>.
+      </p>
+
+    <p>Have a <strong>question about something specific</strong>? You can contact the edX general support team directly:</p>
+    <hr>
+
+    <div class="help-buttons">
+      <a href="#" id="feedback_link_problem">Report a problem</a>
+      <a href="#" id="feedback_link_suggestion">Make a suggestion</a>
+      <a href="#" id="feedback_link_question">Ask a question</a>
+    </div>
+
+    <p class="note">Please note: The edX support team is English 
+speaking. While we will do our best to address your inquiry in any 
+language, our responses will be in English.</p>
+
+  </div>
+
+  <div class="inner-wrapper" id="feedback_form_wrapper">
+    <button class="close-modal">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header></header>
+
+    <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="/submit_feedback">
+      <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+      <label data-field="subject" for="feedback_form_subject">Briefly describe your issue*</label>
+      <input name="subject" id="feedback_form_subject" aria-required="true" type="text">
+      <label data-field="details" for="feedback_form_details">Tell us the details*
+<span class="tip">Include error messages, steps which lead to the issue, etc</span></label>
+      <textarea name="details" id="feedback_form_details" aria-required="true"></textarea>
+      <input name="issue_type" type="hidden">
+      <input name="course_id" value="BerkeleyX/CS188.1x-4/1T2015" type="hidden">
+      <div class="submit">
+        <input name="submit" value="Submit" id="feedback_submit" type="submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>Thank You!</h2>
+      <hr>
+    </header>
+
+    
+    <p>
+    Thank you for your inquiry or feedback.  We typically respond to a 
+request within one business day (Monday to Friday, 13:00 UTC to 21:00 
+UTC.) In the meantime, please review our <a href="https://www.edx.org/student-faq" target="_blank" id="feedback-faq-link" tabindex="0">detailed FAQs</a> where most questions have already been answered.
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $("#help-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#help-modal").attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".help-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#feedback_form")[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $("#help-modal").attr("aria-hidden", "false");
+        $("#help-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#help_wrapper .close-modal").focus();
+    });
+    showFeedback = function(event, issue_type, title, subject_label, details_label) {
+        $("#help_wrapper").css("display", "none");
+        $("#feedback_form input[name='issue_type']").val(issue_type);
+        $("#feedback_form_wrapper").css("display", "block");
+        $("#feedback_form_wrapper header").html("<h2>" + title + "</h2><hr>");
+        $("#feedback_form_wrapper label[data-field='subject']").html(subject_label);
+        $("#feedback_form_wrapper label[data-field='details']").html(details_label);
+        $("#feedback_form_wrapper .close-modal").focus();
+        event.preventDefault();
+    };
+    cycle_modal_tab("#feedback_link_question", "#help_wrapper .close-modal");
+    cycle_modal_tab("#feedback_submit", "#feedback_form_wrapper .close-modal");
+    cycle_modal_tab("#feedback-faq-link", "#feedback_success_wrapper .close-modal");
+    $("#help-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#help_wrapper .close-modal").click();
+        }
+    });
+    $("#feedback_link_problem").click(function(event) {
+        showFeedback(
+            event,
+            "problem",
+            "Report a Problem",
+            "Brief description of the problem" + "*",
+            "Details of the problem you are encountering" + "*" + "<span class='tip'>" +
+              "Include error messages, steps which lead to the issue, etc." + "</span>"
+        );
+    });
+    $("#feedback_link_suggestion").click(function(event) {
+        showFeedback(
+            event,
+            "suggestion",
+            "Make a Suggestion",
+            "Brief description of your suggestion" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_link_question").click(function(event) {
+        showFeedback(
+            event,
+            "question",
+            "Ask a Question",
+            "Brief summary of your question" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $('area,input,select,textarea,button').attr('tabindex', -1);
+        $("#feedback_form_wrapper .close-modal").focus();
+    });
+    $("#feedback_form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#feedback_form").on("ajax:success", function(event, data, status, xhr) {
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        $("#feedback_success_wrapper").focus();
+    });
+    $("#feedback_form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            htmlStr += " " + _.template(
+              "Please {link_start}send us e-mail{link_end}.",
+              {link_start: '<a href="#" id="feedback_email">', link_end: '</a>'},
+              {interpolate: /\{(.+?)\}/g})
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+            $("#feedback_email").click(function(e) {
+                mailto = "mailto:" + "bugs@edx.org" +
+                    "?subject=" + $("#feedback_form input[name='subject']").val() +
+                    "&body=" + $("#feedback_form textarea[name='details']").val();
+                window.open(mailto);
+                e.preventDefault();
+            });
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+})(this)
+</script>
+
+
+
+
+    <div class="content-wrapper" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <i class="icon fa fa-arrows-alt fa-large"></i> <%= gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%= largeALT %>, <%= gettext('Large') %>" src="<%= largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <i class="icon fa fa-remove fa-large"></i> <%= gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <i class="icon fa fa fa-search-plus fa-large"></i> <%= gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <i class="icon fa fa fa-search-minus fa-large"></i> <%= gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+<script type="text/template" id="search_item-tpl">
+    <div class='sri-excerpt'><%= excerpt %></div>
+<span class='sri-type'><%- content_type %></span>
+<span class='sri-location'><%- location.join(' ▸ ') %></span>
+<a class="sri-link" href="<%- url %>"><%= gettext("View") %> <i class="icon fa fa-arrow-right"></i></a>
+
+</script>
+<script type="text/template" id="search_item_seq-tpl">
+    <div class='sri-excerpt'></div>
+<span class='sri-type'></span>
+<span class='sri-location'><%- location.join(' ▸ ') %></span>
+<a class="sri-link" href="<%- url %>"><%= gettext("View") %> <i class="icon fa fa-arrow-right"></i></a>
+
+</script>
+<script type="text/template" id="search_list-tpl">
+    <div class="search-info">
+    <%= gettext("Search Results") %>
+    <div class="search-count"><%= totalCountMsg %></div>
+</div>
+
+<% if (totalCount > 0 ) { %>
+
+    <ol class='search-results'></ol>
+
+    <% if (hasMoreResults) { %>
+        <a class="search-load-next" href="javascript:void(0);">
+            <%= interpolate(
+                ngettext("Load next %(num_items)s result", "Load next %(num_items)s results", pageSize),
+                { num_items: pageSize },
+                true
+            ) %>
+            <i class="icon fa fa-spinner fa-spin"></i>
+        </a>
+    <% } %>
+
+<% } else { %>
+
+    <p><%= gettext("Sorry, no results were found.") %></p>
+
+<% } %>
+
+</script>
+<script type="text/template" id="search_loading-tpl">
+    <i class="icon fa fa-spinner fa-spin"></i> <%= gettext("Loading") %>
+
+
+</script>
+<script type="text/template" id="search_error-tpl">
+    <%= gettext("There was an error, try searching again.") %>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<nav class="courseware wrapper-course-material" aria-label="Course Material">
+  <div class="course-material">
+    <ol class="course-tabs">
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware" class="active">
+                 Courseware
+                   <span class="sr">, current location</span>
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/info" class="">
+                 Course Info
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/progress" class="">
+                 Progress
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/20021a0a32d14a31b087db8d4bb582fd/" class="">
+                 Syllabus
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/f5722e0cf4234e4284764db6414b685c/" class="">
+                 Course Policies
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/f57d184a147b4e739b74b01cb73f3caa/" class="">
+                 Course Staff
+             </a>
+          </li>
+        
+          <li>
+             <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/discussion/forum" class="">
+                 Discussion
+             </a>
+          </li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="course-wrapper">
+
+    <div class="course-index" role="navigation">
+      <header id="open_close_accordion">
+        <a href="#">close</a>
+      </header>
+
+
+      <div role="tablist" class="ui-accordion ui-widget ui-helper-reset" id="accordion" style="">
+        <nav aria-label="Course Navigation">
+            
+
+
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-0" id="ui-accordion-accordion-header-0" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Discussion Forum"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Discussion&nbsp;Forum</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-0" id="ui-accordion-accordion-panel-0" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/1215d7ff8c304058be1a9abc437ef748/303a2a83d5d04e788fe5bd0c47841bdd/">
+              <p>Piazza </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-1" id="ui-accordion-accordion-header-1" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;1</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-1" id="ui-accordion-accordion-panel-1" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/c78976d210314651abb740912d8279bb/e8c2d3dd71a84472997173f55c98a35c/">
+              <p>Python Refresher </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/c78976d210314651abb740912d8279bb/b414886f442a41e4b5fd0408de837e53/">
+              <p>Lecture 1:  Introduction (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-2" id="ui-accordion-accordion-header-2" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 2"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;2</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-2" id="ui-accordion-accordion-panel-2" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/7c56230af88d467c9737344e2e76092e/">
+              <p>Lecture 2: Uninformed Search (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/426f699c608b4ee7a6190f0edbeb5cf3/">
+              <p>Lecture 2: Uninformed Search (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/76f9a53b7aad47638ff968db5938d841/">
+              <p>Lecture 3: Informed Search (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/92bead757c1b4a29b0f3cd6a9c502053/">
+              <p>Lecture 3: Informed Search (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/367b239e4b764465b9ace9b6f6ff3ca7/">
+              <p>Step-By-Step: DFS and BFS </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/9eeaa67e23414033a09f0f4256eeaeac/">
+              <p>Step-By-Step: A* </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/d35abd173ee745dda5417aaa89b97b02/">
+              <p>Homework 1: Search </p>
+              
+              <p class="subtitle">Homework due Feb 23, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/eafff8d8427440069a749c1b825c0561/b7a9d45bb7f244f98c0b3fc4a242f291/">
+              <p>Homework 1: Search (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-3" id="ui-accordion-accordion-header-3" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 3"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;3</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-3" id="ui-accordion-accordion-panel-3" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fab202f219447c79915d6ba6eb08344/6171e5fdfd8645c98cdcdf53dfea1880/">
+              <p>Project 1: Search </p>
+              
+              <p class="subtitle">Project 1 due Mar 02, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-4" id="ui-accordion-accordion-header-4" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 4"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;4</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-4" id="ui-accordion-accordion-panel-4" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/cc992b6a8ae34c88a371c1fcdf752ac3/">
+              <p>Lecture 4: CSPs (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/6f8a9aab61e44c4b93458e72a6da100b/">
+              <p>Lecture 4: CSPs (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/42f851793708458184c10c368ff53fc0/">
+              <p>Lecture 5: CSPs II (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/fcdcbb040166497c9c3fb31bc4639fdf/">
+              <p>Lecture 5: CSPs II (edited) (continued) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/0460a6606a3e4630b0b4e913dd88c135/">
+              <p>Homework 2: CSPs </p>
+              
+              <p class="subtitle">Homework due Mar 10, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/e388ea8629ff4228845b54d70ffc8afd/ae57caaa10c149e4b6ec3a561034678d/">
+              <p>Homework 2: CSPs (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-5" id="ui-accordion-accordion-header-5" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 5"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;5</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-5" id="ui-accordion-accordion-panel-5" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/8616451481ba41d4a40afcf13bc8ab1c/">
+              <p>Lecture 6: Adversarial Search (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/7f571bb27af64d838b05cbf371546537/">
+              <p>Lecture 7: Uncertainty and Utilities (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/dded614399934785863727e7cf4abfa1/">
+              <p>Step-By-Step: Alpha-Beta </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/0356d34a926e4c7199d1d66fd01d89da/">
+              <p>Homework 3: Games </p>
+              
+              <p class="subtitle">Homework due Mar 16, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/49f4667aceef4ee982cce2250e17d605/91a883e76a204ae6bc16e4a98647ac14/">
+              <p>Homework 3: Games (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter is-open">
+      
+      <h3 tabindex="0" aria-selected="true" aria-controls="ui-accordion-accordion-panel-6" id="ui-accordion-accordion-header-6" role="tab" class="active ui-accordion-header ui-helper-reset ui-state-default ui-accordion-header-active ui-state-active ui-corner-top ui-accordion-icons" aria-label="Week 6, current chapter"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>
+        <a href="#">Week&nbsp;6</a>
+      </h3>
+
+    <ul aria-hidden="false" aria-expanded="true" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-6" id="ui-accordion-accordion-panel-6" style="" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+          <li class="active graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/817468c509ef4b64bcb74cd38766ac44/52a12229526341c4b605cdd2b5ae295d/">
+              <p>Project 2: Multi-Agent Search <span class="sr">, current section</span></p>
+              
+              <p class="subtitle">Project 2 due Mar 23, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-7" id="ui-accordion-accordion-header-7" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 7"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;7</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-7" id="ui-accordion-accordion-panel-7" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/99f9c610429f40e1882dd2bfa7deb957/">
+              <p>Lecture 8: Markov Decision Processes (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/0c7a5f8e1ceb43b5ae45544511eb11dc/">
+              <p>Lecture 9: Markov Decision Processes II (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/25829128a13347cfb8d724e8c348484a/">
+              <p>Homework 4: MDPs </p>
+              
+              <p class="subtitle">Homework due Mar 30, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/85b74069281948dca60c88b09aa1604b/aee7f9abb0ae421e8917c7283b5a6a7a/">
+              <p>Homework 4: MDPs (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-8" id="ui-accordion-accordion-header-8" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 8"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;8</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-8" id="ui-accordion-accordion-panel-8" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/aa2fe795e9594a96a18b7cf9a3cbcd21/">
+              <p>Lecture 10: Reinforcement Learning (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/bacdd072711c44f991c73bd55b8cdd03/">
+              <p>Lecture 11: Reinforcement Learning II (edited) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/8f12a00e153c437f8e36b0c649af8be3/">
+              <p>Homework 5: Reinforcement Learning </p>
+              
+              <p class="subtitle">Homework due Apr 06, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/b3a5d589c4204ba8acedaec4393c20a7/c700ec4375884057b470e5d98cba7343/">
+              <p>Homework 5: Reinforcement Learning (practice) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-9" id="ui-accordion-accordion-header-9" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 9"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;9</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-9" id="ui-accordion-accordion-panel-9" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/771ec2a61c4242c39ad6310e0766f714/41c847d3794141a7acb4f6b1e5904215/">
+              <p>Project 3: Reinforcement Learning </p>
+              
+              <p class="subtitle">Project 3 due Apr 13, 2015 at 12:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-10" id="ui-accordion-accordion-header-10" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 10"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;10</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-10" id="ui-accordion-accordion-panel-10" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/a496bb289edc4b0c918ee2157dfe2e62/">
+              <p>Practice Final I </p>
+              
+              <p class="subtitle">due Apr 13, 2015 at 20:00&nbsp;UTC</p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/b6a2e82efc7348d48da1eeefc139958e/">
+              <p>Practice Final II </p>
+              
+              <p class="subtitle">due Apr 13, 2015 at 20:00&nbsp;UTC</p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/82ddd0b6f1e34d7884d304d166c909bc/">
+              <p>Practice Final III </p>
+              
+              <p class="subtitle">due Apr 13, 2015 at 20:00&nbsp;UTC</p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/617a8724e210462d8d636a2c024cc4ad/">
+              <p>Practice Final I (solution) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/032c322356d14cd68c6c99efc1aaf3b5/">
+              <p>Practice Final II (solution) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/5fc9cecd39944428aeb92986e1c69a4d/51cb474c2a6b4a4cba28d0cf19d8fe02/">
+              <p>Practice Final III (solution) </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+    </ul>
+  </div>
+
+    
+  <div class="chapter">
+      
+      <h3 tabindex="-1" aria-selected="false" aria-controls="ui-accordion-accordion-panel-11" id="ui-accordion-accordion-header-11" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" aria-label="Week 11"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        <a href="#">Week&nbsp;11</a>
+      </h3>
+
+    <ul aria-hidden="true" aria-expanded="false" role="tabpanel" aria-labelledby="ui-accordion-accordion-header-11" id="ui-accordion-accordion-panel-11" style="display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+          <li class=" ">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/88f5c6b109ec4f7f9d518f5b4bfe9c30/0a4127a7b35b477291cca0d11b13d202/">
+              <p>Final Pre-Release </p>
+              
+              <p class="subtitle"></p>
+
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/courseware/88f5c6b109ec4f7f9d518f5b4bfe9c30/c044dc680f02471783d505d7fdead7a9/">
+              <p>Final Exam </p>
+              
+              <p class="subtitle">Final due Apr 27, 2015 at 20:00&nbsp;UTC</p>
+
+                  <img src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/graded.png" alt="Graded Section">
+            </a>
+          </li>
+    </ul>
+  </div>
+
+
+        </nav>
+      </div>
+    </div>
+    <section class="course-content" id="course-content">
+
+      <div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule xblock-initialized" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="sequential" data-request-token="a3e07e44e66e11e4830b0abfe3b35129" data-runtime-version="1" data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_sequential;_52a12229526341c4b605cdd2b5ae295d" data-type="Sequence" data-course-id="BerkeleyX/CS188.1x-4/1T2015">
+  
+  
+
+<div id="sequence_i4x-BerkeleyX-CS188_1x-4-sequential-52a12229526341c4b605cdd2b5ae295d" class="sequence" data-id="i4x://BerkeleyX/CS188.1x-4/sequential/52a12229526341c4b605cdd2b5ae295d" data-position="8" data-ajax-url="/courses/BerkeleyX/CS188.1x-4/1T2015/xblock/i4x:;_;_BerkeleyX;_CS188.1x-4;_sequential;_52a12229526341c4b605cdd2b5ae295d/handler/xmodule_handler">
+  <div class="sequence-nav">
+    <button class="sequence-nav-button button-previous">Previous</button>
+    <nav class="sequence-list-wrapper" aria-label="Unit">
+      <ol style="left: 0px;" id="sequence-list">
+        <li>
+        <a class="seq_other progress-0 visited" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/7ab586d56a0642048e09259f3add3d96" data-element="1" href="javascript:void(0);" title="Introduction" data-page-title="Introduction" aria-controls="seq_contents_0" id="tab_0" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Introduction</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other progress-0 visited" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/e622a6b004734ed8812f519e399d1f26" data-element="2" href="javascript:void(0);" title="Welcome" data-page-title="Welcome" aria-controls="seq_contents_1" id="tab_1" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Welcome</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other progress-0 active" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/2d9d5ddceb824f79b9ae0d03f5e3a53a" data-element="3" href="javascript:void(0);" title="Q1: Reflex Agent" data-page-title="Q1: Reflex Agent" aria-controls="seq_contents_2" id="tab_2" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q1: Reflex Agent</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/13fe001c23024691a7680c7667e1351e" data-element="4" href="javascript:void(0);" title="Q2: Minimax" data-page-title="Q2: Minimax" aria-controls="seq_contents_3" id="tab_3" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q2: Minimax</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/1f772e63e7e449a18729e1ee741cf213" data-element="5" href="javascript:void(0);" title="Q3: Alpha Beta Pruning" data-page-title="Q3: Alpha Beta Pruning" aria-controls="seq_contents_4" id="tab_4" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q3: Alpha Beta Pruning</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/5ff269816a2a4bfc8629b6ed977bbf9e" data-element="6" href="javascript:void(0);" title="Q4: Expectimax" data-page-title="Q4: Expectimax" aria-controls="seq_contents_5" id="tab_5" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q4: Expectimax</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_other inactive progress-0" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/a91de92268bf41f3a2b5160240524af4" data-element="7" href="javascript:void(0);" title="Q5: Evaluation Functions" data-page-title="Q5: Evaluation Functions" aria-controls="seq_contents_6" id="tab_6" tabindex="0">
+            <i class="icon fa seq_other" aria-hidden="true"></i>
+            <p><span class="sr">other</span> Q5: Evaluation Functions</p>
+          </a>
+        </li>
+        <li>
+        <a class="seq_problem progress-none visited" data-id="i4x://BerkeleyX/CS188.1x-4/vertical/540282904b0e46808baa1433ffb70a01" data-element="8" href="javascript:void(0);" title="Project 2 Submission" data-page-title="Project 2 Submission" aria-controls="seq_contents_7" id="tab_7" tabindex="0">
+            <i class="icon fa seq_problem" aria-hidden="true"></i>
+            <p><span class="sr">problem</span> Project 2 Submission</p>
+          </a>
+        </li>
+      </ol>
+    <div style="opacity: 0;" class="left-shadow"></div><div style="opacity: 0;" class="right-shadow"></div></nav>
+    <button class="sequence-nav-button button-next">Next</button>
+  </div>
+
+  <div id="sr-is-focusable" tabindex="-1"></div>
+
+  <div id="seq_contents_0" aria-labelledby="tab_0" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_7ab586d56a0642048e09259f3add3d96"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/ebe7a3ad1b0e4713b54e424fa9a7464b"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_ebe7a3ad1b0e4713b54e424fa9a7464b"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;h2 class="project_title"&gt;Project 2: Multi-Agent 
+Pacman&lt;/h2&gt;
+&lt;div class="project"&gt;
+&lt;blockquote&gt;&lt;center&gt;&lt;img 
+src="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/pacman_multi_agent.png"
+ width="400px" /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;center&gt;Pacman, now with ghosts.&lt;br /&gt; Minimax, 
+Expectimax,&lt;br /&gt; Evaluation.&lt;/center&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;&lt;a name="Introduction"&gt;&lt;/a&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;In this project, you will design agents for the classic version
+ of Pacman, including ghosts. Along the way, you will implement both 
+minimax and expectimax search and try your hand at evaluation function 
+design.&lt;/p&gt;
+&lt;p&gt;The code base has not changed much from the previous project, 
+but please start with a fresh installation, rather than intermingling 
+files from project 1.&lt;/p&gt;
+&lt;p&gt;As in project 1, this project includes an autograder for you to
+ grade your answers on your machine. This can be run on all questions 
+with the command:&lt;/p&gt;
+&lt;pre&gt;python autograder.py&lt;/pre&gt;
+&lt;p&gt;It can be run for one particular question, such as q2, 
+by:&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q2&lt;/pre&gt;
+&lt;p&gt;It can be run for one particular test by commands of the 
+form:&lt;/p&gt;
+&lt;pre&gt;python autograder.py -t 
+test_cases/q2/0-small-tree&lt;/pre&gt;
+&lt;p&gt;By default, the autograder displays graphics with the 
+&lt;code&gt;-t&lt;/code&gt; option, but doesn't with the 
+&lt;code&gt;-q&lt;/code&gt; option. You can force graphics by using the 
+&lt;code&gt;--graphics&lt;/code&gt; flag, or force no graphics by using 
+the &lt;code&gt;--no-graphics&lt;/code&gt; flag.&lt;/p&gt;
+&lt;p&gt;See the autograder tutorial in Project 0 for more information 
+about using the autograder.&lt;/p&gt;
+&lt;p&gt;The code for this project contains the following files, 
+available as a &lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/multiagent.zip"&gt;zip
+ archive&lt;/a&gt;.&lt;/p&gt;
+&lt;table class="intro" border="0" cellpadding="10"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td colspan="2"&gt;&lt;b&gt;Files you'll edit:&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/multiAgents.html"&gt;multiAgents.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Where
+ all of your multi-agent search agents will reside.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2"&gt;&lt;b&gt;Files you should read but NOT 
+edit:&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/pacman.html"&gt;pacman.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The
+ main file that runs Pacman games. This file also describes a Pacman 
+&lt;code&gt;GameState&lt;/code&gt; type, which you will use extensively 
+in this project&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/game.html"&gt;game.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The
+ logic behind how the Pacman world works. This file describes several 
+supporting types like AgentState, Agent, Direction, and Grid.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/util.html"&gt;util.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Useful
+ data structures for implementing search algorithms.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2"&gt;&lt;b&gt;Files you can 
+ignore:&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/graphicsDisplay.html"&gt;graphicsDisplay.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Graphics
+ for Pacman&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/graphicsUtils.html"&gt;graphicsUtils.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Support
+ for Pacman graphics&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/textDisplay.html"&gt;textDisplay.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ASCII
+ graphics for Pacman&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/ghostAgents.html"&gt;ghostAgents.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Agents
+ to control ghosts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/keyboardAgents.html"&gt;keyboardAgents.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Keyboard
+ interfaces to control Pacman&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/layout.html"&gt;layout.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Code
+ for reading layout files and storing their contents&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/autograder.html"&gt;autograder.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Project
+ autograder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/testParser.html"&gt;testParser.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Parses
+ autograder test and solution files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/testClasses.html"&gt;testClasses.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;General
+ autograding test classes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;test_cases/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Directory containing the test cases for each 
+question&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/multiagentTestClasses.html"&gt;multiagentTestClasses.py&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Project
+ 2 specific autograding test classes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Files to Edit and Submit:&lt;/strong&gt; You will
+ fill in portions of &lt;code&gt;&lt;a 
+href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/docs/multiAgents.html"&gt;multiAgents.py&lt;/a&gt;&lt;/code&gt;
+ during the assignment. You should submit this file with your code and 
+comments. Please &lt;em&gt;do not&lt;/em&gt; change the other files in 
+this distribution or submit any of our original files other than this 
+file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Evaluation:&lt;/strong&gt; Your code will be 
+autograded for technical correctness. Please &lt;em&gt;do not&lt;/em&gt;
+ change the names of any provided functions or classes within the code, 
+or you will wreak havoc on the autograder.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Getting Help:&lt;/strong&gt; You are not alone! 
+If you find yourself stuck on something, take advantage of our piazza 
+discussion forum.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion:&lt;/strong&gt; Please be careful not 
+to post spoilers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_1" aria-labelledby="tab_1" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_e622a6b004734ed8812f519e399d1f26"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/025ca5a706944a39ac270e427a198d03"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_025ca5a706944a39ac270e427a198d03"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Welcome"&gt;&lt;/a&gt;Multi-Agent 
+Pacman&lt;/h3&gt;
+&lt;p&gt;First, play a game of classic Pacman:&lt;/p&gt;
+&lt;pre&gt;python pacman.py&lt;/pre&gt;
+&lt;p&gt;Now, run the provided &lt;code&gt;ReflexAgent&lt;/code&gt; in 
+&lt;code&gt;multiAgents.py&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;python pacman.py -p ReflexAgent&lt;/pre&gt;
+&lt;p&gt;Note that it plays quite poorly even on simple 
+layouts:&lt;/p&gt;
+&lt;pre&gt;python pacman.py -p ReflexAgent -l testClassic&lt;/pre&gt;
+&lt;p&gt;Inspect its code (in &lt;code&gt;multiAgents.py&lt;/code&gt;) 
+and make sure you understand what it's doing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_2" aria-labelledby="tab_2" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_2d9d5ddceb824f79b9ae0d03f5e3a53a"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/aea2716429194e0984baa2672d97b908"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_aea2716429194e0984baa2672d97b908"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Q1"&gt;&lt;/a&gt;Question 1 (4 points): Reflex 
+Agent&lt;/h3&gt;
+&lt;p&gt;Improve the &lt;code&gt;ReflexAgent&lt;/code&gt; in 
+&lt;code&gt;multiAgents.py&lt;/code&gt; to play respectably. The 
+provided reflex agent code provides some helpful examples of methods 
+that query the &lt;code&gt;GameState&lt;/code&gt; for information. A 
+capable reflex agent will have to consider both food locations and ghost
+ locations to perform well. Your agent should easily and reliably clear 
+the &lt;code&gt;testClassic&lt;/code&gt; layout:&lt;/p&gt;
+&lt;pre&gt;python pacman.py -p ReflexAgent -l testClassic&lt;/pre&gt;
+&lt;p&gt;Try out your reflex agent on the default 
+&lt;code&gt;mediumClassic&lt;/code&gt; layout with one ghost or two (and
+ animation off to speed up the display):&lt;/p&gt;
+&lt;pre&gt;python pacman.py --frameTime 0 -p ReflexAgent -k 
+1&lt;/pre&gt;
+&lt;pre&gt;python pacman.py --frameTime 0 -p ReflexAgent -k 
+2&lt;/pre&gt;
+&lt;p&gt;How does your agent fare? It will likely often die with 2 
+ghosts on the default board, unless your evaluation function is quite 
+good.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; As features, try the reciprocal of 
+important values (such as distance to food) rather than just the values 
+themselves.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; The evaluation function you're 
+writing is evaluating state-action pairs; in later parts of the project,
+ you'll be evaluating states.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Options:&lt;/em&gt; Default ghosts are random; you 
+can also play for fun with slightly smarter directional ghosts using 
+&lt;code&gt;-g DirectionalGhost&lt;/code&gt;. If the randomness is 
+preventing you from telling whether your agent is improving, you can use
+ &lt;code&gt;-f&lt;/code&gt; to run with a fixed random seed (same 
+random choices every game). You can also play multiple games in a row 
+with &lt;code&gt;-n&lt;/code&gt;. Turn off graphics with 
+&lt;code&gt;-q&lt;/code&gt; to run lots of games quickly.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Grading:&lt;/em&gt; we will run your agent on the 
+&lt;code&gt;openClassic&lt;/code&gt; layout 10 times. You will receive 0
+ points if your agent times out, or never wins. You will receive 1 point
+ if your agent wins at least 5 times, or 2 points if your agent wins all
+ 10 games. You will receive an addition 1 point if your agent's average 
+score is greater than 500, or 2 points if it is greater than 1000. You 
+can try your agent out under these conditions with&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q1&lt;/pre&gt;
+&lt;p&gt;To run it without graphics, use:&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q1 --no-graphics&lt;/pre&gt;
+&lt;p&gt;Don't spend too much time on this question, though, as the meat
+ of the project lies ahead.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_3" aria-labelledby="tab_3" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_13fe001c23024691a7680c7667e1351e"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/ed1c1649f1ff4afe93d643b329d6bdd9"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_ed1c1649f1ff4afe93d643b329d6bdd9"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Q2"&gt;&lt;/a&gt;Question 2 (5 points): 
+Minimax&lt;/h3&gt;
+&lt;p&gt;Now you will write an adversarial search agent in the provided 
+&lt;code&gt;MinimaxAgent&lt;/code&gt; class stub in 
+&lt;code&gt;multiAgents.py&lt;/code&gt;. Your minimax agent should work 
+with any number of ghosts, so you'll have to write an algorithm that is 
+slightly more general than what you've previously seen in lecture. In 
+particular, your minimax tree will have multiple min layers (one for 
+each ghost) for every max layer.&lt;/p&gt;
+&lt;p&gt;Your code should also expand the game tree to an arbitrary 
+depth. Score the leaves of your minimax tree with the supplied 
+&lt;code&gt;self.evaluationFunction&lt;/code&gt;, which defaults to 
+&lt;code&gt;scoreEvaluationFunction&lt;/code&gt;. 
+&lt;code&gt;MinimaxAgent&lt;/code&gt; extends 
+&lt;code&gt;MultiAgentSearchAgent&lt;/code&gt;, which gives access to 
+&lt;code&gt;self.depth&lt;/code&gt; and 
+&lt;code&gt;self.evaluationFunction&lt;/code&gt;. Make sure your minimax
+ code makes reference to these two variables where appropriate as these 
+variables are populated in response to command line options.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;b&gt;Important:&lt;/b&gt;&lt;/em&gt; Depth is 
+measured in plies. In a single search ply, all agents (Pacman and all 
+the ghosts) each take one action. As an illustration, the following game
+ tree shows the nodes that depth-1 minimax should explore in a game with
+ Pacman (maximizer, represented with the blue upward-pointing triangle) 
+and two ghosts (minimizers, represented with the red downward-pointing 
+triangles). At the bottom layer, instead of letting Pacman consider his 
+next turn, depth-1 minimax will call the evaluation function, as shown 
+with the green squares.&lt;/p&gt;
+&lt;center&gt;&lt;img 
+src="/c4x/BerkeleyX/CS188.1x-4/asset/multiagent_plytree.png" 
+width="600px" /&gt;&lt;/center&gt;
+&lt;p&gt;As another more complex example, for a game with Pacman and 
+three ghosts, running depth-2 minimax will simulate situations where the
+ turn sequence is: Pacman, Ghost 1, Ghost 2, Ghost 3, Pacman, Ghost 1, 
+Ghost 2, and Ghost 3. The evaluation function will be called before 
+Pacman can consider making his third move.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;b&gt;Grading&lt;/b&gt;&lt;/em&gt;: We will be 
+checking your code to determine whether it explores the correct number 
+of game states. This is the only way reliable way to detect some very 
+subtle bugs in implementations of minimax. As a result, the autograder 
+will be &lt;em&gt;very&lt;/em&gt; picky about how many times you call 
+&lt;code&gt;GameState.generateSuccessor&lt;/code&gt;. If you call it any
+ more or less than necessary, the autograder will complain. To test and 
+debug your code, run&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q2&lt;/pre&gt;
+&lt;p&gt;This will show what your algorithm does on a number of small 
+trees, as well as a pacman game. To run it without graphics, 
+use:&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q2 --no-graphics&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Hints and 
+Observations&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The correct implementation of minimax will lead to Pacman 
+losing the game in some tests. This is not a problem: as it is correct 
+behaviour, it will pass the tests.&lt;/li&gt;
+&lt;li&gt;The evaluation function for the pacman test in this part is 
+already written (&lt;code&gt;self.evaluationFunction&lt;/code&gt;). You 
+shouldn't change this function, but recognize that now we're evaluating 
+*states* rather than actions, as we were for the reflex agent. 
+Look-ahead agents evaluate future states whereas reflex agents evaluate 
+actions from the current state.&lt;/li&gt;
+&lt;li&gt;The evaluation function should be called not only when the 
+maximum ply depth is reached, but also when the game state is a winning 
+state or a losing state. To check whether a game state is a winning or 
+losing state, use the methods &lt;code&gt;GameState.isWin&lt;/code&gt; 
+and &lt;code&gt;GameState.isLose&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The minimax values of the initial state in the 
+&lt;code&gt;minimaxClassic&lt;/code&gt; layout are 9, 8, 7, -492 for 
+depths 1, 2, 3 and 4 respectively. Note that your minimax agent will 
+often win (665/1000 games for us) despite the dire prediction of depth 4
+ minimax.
+&lt;pre&gt;python pacman.py -p MinimaxAgent -l minimaxClassic -a 
+depth=4&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Pacman is always agent 0, and the agents move in order of 
+increasing agent index.&lt;/li&gt;
+&lt;li&gt;All states in minimax should be 
+&lt;code&gt;GameStates&lt;/code&gt;, either passed in to 
+&lt;code&gt;getAction&lt;/code&gt; or generated via 
+&lt;code&gt;GameState.generateSuccessor&lt;/code&gt;. In this project, 
+you will not be abstracting to simplified states.&lt;/li&gt;
+&lt;li&gt;On larger boards such as &lt;code&gt;openClassic&lt;/code&gt; 
+and &lt;code&gt;mediumClassic&lt;/code&gt; (the default), you'll find 
+Pacman to be good at not dying, but quite bad at winning. He'll often 
+thrash around without making progress. He might even thrash around right
+ next to a dot without eating it because he doesn't know where he'd go 
+after eating that dot. Don't worry if you see this behavior, question 5 
+will clean up all of these issues.&lt;/li&gt;
+&lt;li&gt;When Pacman believes that his death is unavoidable, he will 
+try to end the game as soon as possible because of the constant penalty 
+for living. Sometimes, this is the wrong thing to do with random ghosts,
+ but minimax agents always assume the worst:
+&lt;pre&gt;python pacman.py -p MinimaxAgent -l trappedClassic -a 
+depth=3&lt;/pre&gt;
+Make sure you understand why Pacman rushes the closest ghost in this 
+case.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_4" aria-labelledby="tab_4" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_1f772e63e7e449a18729e1ee741cf213"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/26f75af36580440b816bb669549dbce1"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_26f75af36580440b816bb669549dbce1"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Q3"&gt;&lt;/a&gt;Question 3 (5 points): Alpha-Beta
+ Pruning&lt;/h3&gt;
+&lt;p&gt;Make a new agent that uses alpha-beta pruning to more 
+efficiently explore the minimax tree, in 
+&lt;code&gt;AlphaBetaAgent&lt;/code&gt;. Again, your algorithm will be 
+slightly more general than the pseudocode from lecture, so part of the 
+challenge is to extend the alpha-beta pruning logic appropriately to 
+multiple minimizer agents.&lt;/p&gt;
+&lt;p&gt;You should see a speed-up (perhaps depth 3 alpha-beta will run 
+as fast as depth 2 minimax). Ideally, depth 3 on 
+&lt;code&gt;smallClassic&lt;/code&gt; should run in just a few seconds 
+per move or faster.&lt;/p&gt;
+&lt;pre&gt;python pacman.py -p AlphaBetaAgent -a depth=3 -l 
+smallClassic&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;AlphaBetaAgent&lt;/code&gt; minimax values 
+should be identical to the &lt;code&gt;MinimaxAgent&lt;/code&gt; minimax
+ values, although the actions it selects can vary because of different 
+tie-breaking behavior. Again, the minimax values of the initial state in
+ the &lt;code&gt;minimaxClassic&lt;/code&gt; layout are 9, 8, 7 and -492
+ for depths 1, 2, 3 and 4 respectively.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Grading&lt;/em&gt;: Because we check your code to 
+determine whether it explores the correct number of states, it is 
+important that you perform alpha-beta pruning without reordering 
+children. In other words, successor states should always be processed in
+ the order returned by 
+&lt;code&gt;GameState.getLegalActions&lt;/code&gt;. Again, do not call 
+&lt;code&gt;GameState.generateSuccessor&lt;/code&gt; more than 
+necessary.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;You must &lt;i&gt;not&lt;/i&gt; prune on equality in 
+order to match the set of states explored by our autograder.&lt;/b&gt; 
+(Indeed, alternatively, but incompatible with our autograder, would be 
+to also allow for pruning on equality and invoke alpha-beta once on each
+ child of the root node, but this will &lt;i&gt;not&lt;/i&gt; match the 
+autograder.)&lt;/p&gt;
+&lt;p&gt;The pseudo-code below represents the algorithm you should 
+implement for this question.&lt;/p&gt;
+&lt;div style="text-align: center; margin-bottom: 10px;"&gt;&lt;img 
+style="max-width: 500px;" alt="" 
+src="https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/multiagent/v1/004/alpha-beta-on-inequality.png"
+ /&gt;&lt;/div&gt;
+&lt;p&gt;To test and debug your code, run&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q3&lt;/pre&gt;
+&lt;p&gt;This will show what your algorithm does on a number of small 
+trees, as well as a pacman game. To run it without graphics, 
+use:&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q3 --no-graphics&lt;/pre&gt;
+&lt;p&gt;The correct implementation of alpha-beta pruning will lead to 
+Pacman losing some of the tests. This is not a problem: as it is correct
+ behaviour, it will pass the tests.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_5" aria-labelledby="tab_5" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_5ff269816a2a4bfc8629b6ed977bbf9e"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/bf8030fd828e412cab2ff790062432f0"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_bf8030fd828e412cab2ff790062432f0"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Q4"&gt;&lt;/a&gt;Question 4 (5 points): 
+Expectimax&lt;/h3&gt;
+&lt;p&gt;Minimax and alpha-beta are great, but they both assume that you
+ are playing against an adversary who makes optimal decisions. As anyone
+ who has ever won tic-tac-toe can tell you, this is not always the case.
+ In this question you will implement the 
+&lt;code&gt;ExpectimaxAgent&lt;/code&gt;, which is useful for modeling 
+probabilistic behavior of agents who may make suboptimal 
+choices.&lt;/p&gt;
+&lt;p&gt;As with the search and constraint satisfaction problems covered
+ so far in this class, the beauty of these algorithms is their general 
+applicability. To expedite your own development, we've supplied some 
+test cases based on generic trees. You can debug your implementation on 
+small the game trees using the command:&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q4&lt;/pre&gt;
+&lt;p&gt;Debugging on these small and manageable test cases is 
+recommended and will help you to find bugs quickly. &lt;b&gt;Make sure 
+when you compute your averages that you use floats.&lt;/b&gt; Integer 
+division in Python truncates, so that &lt;code&gt;1/2 = 0&lt;/code&gt;, 
+unlike the case with floats where &lt;code&gt;1.0/2.0 = 
+0.5&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Once your algorithm is working on small trees, you can observe 
+its success in Pacman. Random ghosts are of course not optimal minimax 
+agents, and so modeling them with minimax search may not be appropriate.
+ &lt;code&gt;ExpectimaxAgent&lt;/code&gt;, will no longer take the min 
+over all ghost actions, but the expectation according to your agent's 
+model of how the ghosts act. To simplify your code, assume you will only
+ be running against an adversary which chooses amongst their 
+&lt;code&gt;getLegalAction&lt;/code&gt;s uniformly at random.&lt;/p&gt;
+&lt;p&gt;To see how the ExpectimaxAgent behaves in Pacman, 
+run:&lt;/p&gt;
+&lt;pre&gt;python pacman.py -p ExpectimaxAgent -l minimaxClassic -a 
+depth=3&lt;/pre&gt;
+&lt;p&gt;You should now observe a more cavalier approach in close 
+quarters with ghosts. In particular, if Pacman perceives that he could 
+be trapped but might escape to grab a few more pieces of food, he'll at 
+least try. Investigate the results of these two scenarios:&lt;/p&gt;
+&lt;pre&gt;python pacman.py -p AlphaBetaAgent -l trappedClassic -a 
+depth=3 -q -n 10&lt;/pre&gt;
+&lt;pre&gt;python pacman.py -p ExpectimaxAgent -l trappedClassic -a 
+depth=3 -q -n 10&lt;/pre&gt;
+&lt;p&gt;You should find that your 
+&lt;code&gt;ExpectimaxAgent&lt;/code&gt; wins about half the time, while
+ your &lt;code&gt;AlphaBetaAgent&lt;/code&gt; always loses. Make sure 
+you understand why the behavior here differs from the minimax 
+case.&lt;/p&gt;
+&lt;p&gt;The correct implementation of expectimax will lead to Pacman 
+losing some of the tests. This is not a problem: as it is correct 
+behaviour, it will pass the tests.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_6" aria-labelledby="tab_6" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_a91de92268bf41f3a2b5160240524af4"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/html/7eeb6390a9b440f6a4e425b7099c45e5"&gt;
+
+    &lt;div class="xblock xblock-student_view xblock-student_view-html 
+xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" 
+data-init="XBlockToXModuleShim" data-block-type="html" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_7eeb6390a9b440f6a4e425b7099c45e5"
+ data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;div class="project"&gt;
+&lt;h3&gt;&lt;a name="Q5"&gt;&lt;/a&gt;Question 5 (6 points): Evaluation
+ Function&lt;/h3&gt;
+&lt;p&gt;Write a better evaluation function for pacman in the provided 
+function &lt;code&gt;betterEvaluationFunction&lt;/code&gt;. The 
+evaluation function should evaluate states, rather than actions like 
+your reflex agent evaluation function did. You may use any tools at your
+ disposal for evaluation, including your search code from the last 
+project. With depth 2 search, your evaluation function should clear the 
+&lt;code&gt;smallClassic&lt;/code&gt; layout with one random ghost more 
+than half the time and still run at a reasonable rate (to get full 
+credit, Pacman should be averaging around 1000 points when he's 
+winning).&lt;/p&gt;
+&lt;pre&gt;python autograder.py -q q5&lt;/pre&gt;
+&lt;p&gt;Grading: the autograder will run your agent on the 
+&lt;code&gt;smallClassic&lt;/code&gt; layout 10 times. We will assign 
+points to your evaluation function in the following way:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you win at least once without timing out the autograder, 
+you receive 1 points. Any agent not satisfying these criteria will 
+receive 0 points.&lt;/li&gt;
+&lt;li&gt;+1 for winning at least 5 times, +2 for winning all 10 
+times&lt;/li&gt;
+&lt;li&gt;+1 for an average score of at least 500, +2 for an average 
+score of at least 1000 (including scores on lost games)&lt;/li&gt;
+&lt;li&gt;+1 if your games take on average less than 30 seconds on the 
+autograder machine. The autograder is run on EC2, so this machine will 
+have a fair amount of resources, but your personal computer could be far
+ less performant (netbooks) or far more performant (gaming 
+rigs).&lt;/li&gt;
+&lt;li&gt;The additional points for average score and computation time 
+will only be awarded if you win at least 5 times.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Hints and Observations&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;As for your reflex agent evaluation function, you may want to 
+use the reciprocal of important values (such as distance to food) rather
+ than the values themselves.&lt;/li&gt;
+&lt;li&gt;One way you might want to write your evaluation function is to
+ use a linear combination of features. That is, compute values for 
+features about the state that you think are important, and then combine 
+those features by multiplying them by different values and adding the 
+results together. You might decide what to multiply each feature by 
+based on how important you think it is.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_7" aria-labelledby="tab_7" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-vertical" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_540282904b0e46808baa1433ffb70a01"
+ data-block-type="vertical" 
+data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" 
+data-id="i4x://BerkeleyX/CS188.1x-4/problem/c422b0e147d84fecaf1f58044e79631b"&gt;
+
+    &lt;div class="xblock xblock-student_view 
+xblock-student_view-problem xmodule_display xmodule_CapaModule" 
+data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" 
+data-block-type="problem" 
+data-request-token="a3e07e44e66e11e4830b0abfe3b35129" 
+data-runtime-version="1" 
+data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_problem;_c422b0e147d84fecaf1f58044e79631b"
+ data-type="Problem" data-course-id="BerkeleyX/CS188.1x-4/1T2015"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "Problem"}
+  &lt;/script&gt;
+  &lt;div 
+id="problem_i4x-BerkeleyX-CS188_1x-4-problem-c422b0e147d84fecaf1f58044e79631b"
+ class="problems-wrapper" 
+data-problem-id="i4x://BerkeleyX/CS188.1x-4/problem/c422b0e147d84fecaf1f58044e79631b"
+ 
+data-url="/courses/BerkeleyX/CS188.1x-4/1T2015/xblock/i4x:;_;_BerkeleyX;_CS188.1x-4;_problem;_c422b0e147d84fecaf1f58044e79631b/handler/xmodule_handler"
+ data-progress_status="none" data-progress_detail="0/25"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div aria-labelledby="tab_2" id="seq_content">
+    <div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized" data-request-token="a3e07e44e66e11e4830b0abfe3b35129" data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_vertical;_2d9d5ddceb824f79b9ae0d03f5e3a53a" data-block-type="vertical" data-course-id="BerkeleyX/CS188.1x-4/1T2015">
+  <div class="vert-mod">
+  <div class="vert vert-0" data-id="i4x://BerkeleyX/CS188.1x-4/html/aea2716429194e0984baa2672d97b908">
+    <div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule xblock-initialized" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="a3e07e44e66e11e4830b0abfe3b35129" data-runtime-version="1" data-usage-id="i4x:;_;_BerkeleyX;_CS188.1x-4;_html;_aea2716429194e0984baa2672d97b908" data-type="HTMLModule" data-course-id="BerkeleyX/CS188.1x-4/1T2015">
+  
+  <div class="project">
+<h3><a name="Q1"></a>Question 1 (4 points): Reflex Agent</h3>
+<p>Improve the <code>ReflexAgent</code> in <code>multiAgents.py</code> to play respectably. The provided reflex agent code provides some helpful examples of methods that query the <code>GameState</code>
+ for information. A capable reflex agent will have to consider both food
+ locations and ghost locations to perform well. Your agent should easily
+ and reliably clear the <code>testClassic</code> layout:</p>
+<pre>python pacman.py -p ReflexAgent -l testClassic</pre>
+<p>Try out your reflex agent on the default <code>mediumClassic</code> layout with one ghost or two (and animation off to speed up the display):</p>
+<pre>python pacman.py --frameTime 0 -p ReflexAgent -k 1</pre>
+<pre>python pacman.py --frameTime 0 -p ReflexAgent -k 2</pre>
+<p>How does your agent fare? It will likely often die with 2 ghosts on 
+the default board, unless your evaluation function is quite good.</p>
+<p><em>Note:</em> As features, try the reciprocal of important values (such as distance to food) rather than just the values themselves.</p>
+<p><em>Note:</em> The evaluation function you're writing is evaluating 
+state-action pairs; in later parts of the project, you'll be evaluating 
+states.</p>
+<p><em>Options:</em> Default ghosts are random; you can also play for fun with slightly smarter directional ghosts using <code>-g DirectionalGhost</code>. If the randomness is preventing you from telling whether your agent is improving, you can use <code>-f</code> to run with a fixed random seed (same random choices every game). You can also play multiple games in a row with <code>-n</code>. Turn off graphics with <code>-q</code> to run lots of games quickly.</p>
+<p><em>Grading:</em> we will run your agent on the <code>openClassic</code>
+ layout 10 times. You will receive 0 points if your agent times out, or 
+never wins. You will receive 1 point if your agent wins at least 5 
+times, or 2 points if your agent wins all 10 games. You will receive an 
+addition 1 point if your agent's average score is greater than 500, or 2
+ points if it is greater than 1000. You can try your agent out under 
+these conditions with</p>
+<pre>python autograder.py -q q1</pre>
+<p>To run it without graphics, use:</p>
+<pre>python autograder.py -q q1 --no-graphics</pre>
+<p>Don't spend too much time on this question, though, as the meat of the project lies ahead.</p>
+</div>
+<p></p>
+</div>
+
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+  <nav class="sequence-bottom" aria-label="Section">
+    <button class="sequence-nav-button button-previous">Previous</button>
+    <button class="sequence-nav-button button-next">Next</button>
+  </nav>
+</div>
+
+
+
+<script type="text/javascript">
+  var sequenceNav;
+  $(document).ready(function() {
+    sequenceNav = new SequenceNav($('.sequence-nav'));
+  });
+</script>
+
+</div>
+
+    </section>
+  </div>
+</div>
+
+<nav class="nav-utilities " aria-label="Course Utilities">
+
+
+</nav>
+
+
+<div id="accessibile-confirm-modal" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="accessibile-confirm-title">
+    <button class="close-modal">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="accessibile-confirm-title">
+          Confirm
+        <span class="sr">,
+          modal open
+        </span>
+      </h2>
+    </header>
+    <div role="alertdialog" class="status message" tabindex="-1">
+        <p class="message-title"></p>
+    </div>
+    <hr aria-hidden="true">
+    <div class="actions">
+        <button class="dismiss ok-button">OK</button>
+        <button class="dismiss cancel-button" data-dismiss="leanModal">Cancel</button>
+    </div>
+  </div>
+  <a href="#accessibile-confirm-modal" rel="leanModal" id="confirm_open_button" style="display:none">open</a>
+</div>
+
+<script type="text/javascript">
+var accessible_confirm = function(message, callback) {
+    $("#accessibile-confirm-modal .cancel-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+    });
+    $("#accessibile-confirm-modal .ok-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+        callback();
+    });
+
+    accessible_modal("#accessibile-confirm-modal #confirm_open_button", "#accessibile-confirm-modal .close-modal", "#accessibile-confirm-modal", ".content-wrapper");
+    $("#accessibile-confirm-modal #confirm_open_button").click();
+    $("#accessibile-confirm-modal .message-title").html(message);
+};
+</script>
+
+
+      
+    </div>
+
+    
+      
+  
+  
+      
+
+
+<div class="wrapper wrapper-footer edx-footer edx-footer-new">
+  <footer id="footer-global" class="footer-global" role="contentinfo" aria-label="Footer">
+
+    <div class="footer-about">
+      <h2 class="sr footer-about-title">About edX</h2>
+
+      <div class="footer-about-logo">
+        <img alt="edX logo" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/edx-header-logo.png">
+      </div>
+
+      <div class="footer-about-copy">
+        <p>
+          EdX offers interactive online classes and MOOCs from the 
+world's best universities. Online courses from MITx, HarvardX, 
+BerkeleyX, UTx and many other universities. Topics include biology, 
+business, chemistry, computer science, economics, finance, electronics, 
+engineering, food and nutrition, history, humanities, law, literature, 
+math, medicine, music, philosophy, physics, science, statistics and 
+more. EdX is a non-profit online initiative created by founding partners
+ Harvard and MIT.
+        </p>
+      </div>
+
+      <div class="footer-about-copyright">
+      	<p>© 2015 edX Inc.</p>
+
+      	<p>
+      	  EdX, Open edX, and the edX and Open edX logos are registered trademarks or trademarks of <a href="https://www.edx.org/"><span class="copy">edX Inc.</span></a>
+      	</p>
+      </div>
+
+      <div class="footer-about-openedx">
+        <a href="http://open.edx.org/" title="Powered by Open edX">
+          <img alt="Powered by Open edX" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/edx-openedx-logo-tag.png">
+        </a>
+      </div>
+
+      <div class="footer-about-links">
+        <a href="https://www.edx.org/edx-terms-service"><span class="copy">Terms of Service and Honor Code</span></a>
+        <a href="https://www.edx.org/edx-privacy-policy"><span class="copy">Privacy Policy</span>
+	  <span class="note">
+	    (Revised 10/22/2014)
+	</span></a>
+      </div>
+    </div>
+
+    <nav class="footer-nav" role="navigation" aria-label="About edX">
+      <h2 class="footer-nav-title">About edX</h2>
+
+      <div class="footer-nav-links">
+        <a href="https://www.edx.org/about-us"><span class="copy">About</span></a>
+        <a href="https://www.edx.org/news"><span class="copy">News</span></a>
+        <a href="https://www.edx.org/contact"><span class="copy">Contact</span></a>
+        <a href="https://www.edx.org/student-faq"><span class="copy">FAQ</span></a>
+        <a href="https://www.edx.org/edx-blog"><span class="copy">edX Blog</span></a>
+        <a href="https://www.edx.org/donate"><span class="copy">Donate to edX</span></a>
+        <a href="https://www.edx.org/jobs"><span class="copy">Jobs at edX</span></a>
+      </div>
+    </nav>
+
+    <div class="footer-follow">
+      <h2 class="footer-follow-title">Follow Us</h2>
+
+      <div class="footer-follow-links">
+        
+        <a href="http://www.facebook.com/EdxOnline" title="Facebook" rel="noreferrer">
+          <i class="icon fa fa-facebook-square element-invisible"></i>
+          <span class="copy">Facebook</span>
+        </a>
+        
+        <a href="https://twitter.com/edXOnline" title="Twitter" rel="noreferrer">
+          <i class="icon fa fa-twitter element-invisible"></i>
+          <span class="copy">Twitter</span>
+        </a>
+        
+        <a href="http://www.linkedin.com/company/edx" title="LinkedIn" rel="noreferrer">
+          <i class="icon fa fa-linkedin-square element-invisible"></i>
+          <span class="copy">LinkedIn</span>
+        </a>
+        
+        <a href="https://plus.google.com/+edXOnline" title="Google+" rel="noreferrer">
+          <i class="icon fa fa-google-plus-square element-invisible"></i>
+          <span class="copy">Google+</span>
+        </a>
+        
+        <a href="http://edxstories.tumblr.com/" title="Tumblr" rel="noreferrer">
+          <i class="icon fa fa-tumblr-square element-invisible"></i>
+          <span class="copy">Tumblr</span>
+        </a>
+        
+        <a href="http://www.meetup.com/edX-Global-Community" title="Meetup" rel="noreferrer">
+          <i class="icon fa fa-calendar element-invisible"></i>
+          <span class="copy">Meetup</span>
+        </a>
+        
+        <a href="http://www.reddit.com/r/edx" title="Reddit" rel="noreferrer">
+          <i class="icon fa fa-reddit-square element-invisible"></i>
+          <span class="copy">Reddit</span>
+        </a>
+        
+        <a href="https://www.youtube.com/user/edxonline?sub_confirmation=1" title="Youtube" rel="noreferrer">
+          <i class="icon fa fa-youtube-square element-invisible"></i>
+          <span class="copy">Youtube</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</div>
+
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/noreferrer.js" charset="utf-8"></script>
+
+
+    
+
+  </div>
+
+    
+    <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-application.js" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-modules.js" charset="utf-8"></script>
+
+
+
+  
+  <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery_006.js"></script>
+  <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/jquery.js"></script>
+
+  <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/codemirror-compressed.js"></script>
+
+  
+    <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/lms-courseware.js" charset="utf-8"></script>
+
+
+  
+    <script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/discussion.js" charset="utf-8"></script>
+
+
+
+  
+
+
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+  HUB = MathJax.Hub
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="Welcome%20_%20Project%202%20%20Multi-Agent%20Search%20_%20CS188.1x%20Courseware%20_%20edX_files/MathJax.js"></script>
+
+<script type="text/template" id="_inline_discussion">
+
+<section class="discussion" data-discussion-id="{{discussionId}}">
+    <article class="new-post-article"></article>
+
+    <section class="threads">
+        {{#threads}}
+            <article class="discussion-thread" id="thread_{{id}}">
+            </article>
+        {{/threads}}
+    </section>
+
+    <section class="pagination">
+    </section>
+</section>
+</script>
+<script type="text/template" id="_user_profile">
+
+<h2>Active Threads</h2>
+<section class="discussion">
+    {{#threads}}
+        <article class="discussion-thread" id="thread_{{id}}"/>
+    {{/threads}}
+</section>
+<section class="pagination"/>
+</script>
+<script type="text/template" id="_pagination">
+
+<nav class="discussion-{{discussiontype}}-paginator discussion-paginator">
+    <ol>
+        {{#previous}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">&lt; Previous</a></li>
+        {{/previous}}
+        {{#first}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="1">1</a></li>
+        {{/first}}
+        {{#leftdots}}
+        <li>…</li>
+        {{/leftdots}}
+
+        {{#lowPages}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/lowPages}}
+        <li class="current-page"><span>{{page}}</span></li>
+        {{#highPages}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/highPages}}
+
+        {{#rightdots}}
+        <li>…</li>
+        {{/rightdots}}
+        {{#last}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/last}}
+        {{#next}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">Next &gt;</a></li>
+        {{/next}}
+    </ol>
+</nav>
+
+</script>
+<script type="text/template" id="_profile_thread">
+
+<article class="discussion-article" data-id="{{id}}">
+    <div class="discussion-post">
+        <header>
+            <h3>{{title}}</h3>
+            <p class="posted-details">                
+                {{#user}}
+                <a href="{{user_url}}" class="username">{{username}}</a>
+                {{/user}}
+                {{^user}}
+                anonymous
+                {{/user}}
+
+                <span class="timeago" title="{{created_at}}">{{created_at}}</span>
+                <span class="post-status-closed top-post-status" style="display: none">
+                    &bull; This thread is closed.
+                </span>
+            </p>
+        </header>
+        <div class="post-body">{{{abbreviatedBody}}}</div>
+    </div>
+    <div class="post-tools">
+        <a href="{{permalink}}">View discussion</a>
+    </div>
+
+</article>
+</script>
+
+
+  <script type="text/javascript">
+    var $$course_id = "BerkeleyX/CS188.1x\u002D4/1T2015";
+
+    $(function(){
+        $(".ui-accordion-header a, .ui-accordion-content .subtitle").each(function() {
+          var elemText = $(this).text().replace(/^\s+|\s+$/g,''); // Strip leading and trailing whitespace
+          var wordArray = elemText.split(" ");
+          var finalTitle = "";
+          if (wordArray.length > 0) {
+            for (i=0;i<=wordArray.length-1;i++) {
+              finalTitle += wordArray[i];
+              if (i == (wordArray.length-2)) {
+                finalTitle += "&nbsp;";
+              } else if (i == (wordArray.length-1)) {
+                // Do nothing
+              } else {
+                finalTitle += " ";
+              }
+            }
+          }
+          $(this).html(finalTitle);
+        });
+      });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function () {
+    var sample_rate = 0.05;
+    var roll = Math.floor(Math.random() * 100)/100;
+    var onloadBeaconSent = false;
+
+    if(roll < sample_rate){
+      $(window).load(function() {
+        setTimeout(function(){
+          var t = window.performance.timing;
+
+          var data = {
+            event: "onload",
+            value: t.loadEventEnd - t.navigationStart,
+            page: window.location.href,
+          };
+
+          if (!onloadBeaconSent) {
+            $.ajax({method: "POST", url: "/performance", data: data});
+          }
+          onloadBeaconSent = true;
+        }, 0);
+      });
+    }
+  }());
+</script>
+<div style="display: none; opacity: 0;" class="tooltip"></div><div id="lean_overlay"></div><div id="reader-feedback" class="sr" style="display:none" aria-hidden="false" aria-atomic="true" aria-live="assertive"></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Size1,sans-serif;" id="MathJax_Font_Test"></div></div></body></html>
+<!-- Performance beacon for onload times -->
