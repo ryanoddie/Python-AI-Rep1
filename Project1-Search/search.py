@@ -82,78 +82,175 @@ def depthFirstSearch(problem):
     To get started, you might want to try some of these simple commands to
     understand the search problem that is being passed in:
 
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
-    "*** YOUR CODE HERE ***"
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    #print "Start:", problem.getStartState()
+    #print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    #print "Start's successors:", problem.getSuccessors(problem.getStartState())           
+    from game import Directions
+    
     closed = set()
-    fringe = util.Stack()
-    startnode = (problem.getStartState(), 'Start', 1)
-    fringe.push(startnode)
-    # fringe = printFringe(fringe)
+    fringe = util.Stack() 
+    startplan = [(problem.getStartState(), 'Start', 0)]
+    #print 'StartNode:' , startplan
+    fringe.push(startplan)
+    
     while not fringe.isEmpty():
-        testpath = fringe.pop()
-        print ""
-        print "TestNode", testpath
-        if testpath[1] == 'Start':
-            lastnode = testpath
+        #fringe = printFringe(fringe)
+        testplan = fringe.pop()
+        teststatefull = testplan[len(testplan)-1]
+        teststate = teststatefull[0]
+        #print 'TestState:', teststate
+        #print 'ClosedSet:', closed
+        #print 'isGoalState:', problem.isGoalState(teststate)
+        if problem.isGoalState(teststate) == False:
+            closed.add(teststate)
+            successors = problem.getSuccessors(teststate)
+            #print 'Number of Successors:', len(successors)
+            #print 'Possible Successors:', successors
+            for successor in successors:
+                #print 'Successor:', successor
+                #print 'TestPlan:', testplan
+                if successor[0] not in closed:
+                    newplan = testplan[:]
+                    newplan.append(successor)
+                    #print 'NewPlan:', newplan
+                    fringe.push(newplan)
         else:
-            size = len(testpath) - 1
-            print "Size", size
-            lastnode = testpath[size]
-        print "LastNode", lastnode
-        state = lastnode[0]
-        print "State:", state
-        if problem.isGoalState(state):
-            print "Success"
-            directions = []
-            print testpath
-            print "Length", len(testpath)
-            for s in testpath:
-                print s
-                directions.append(s[1])
-            print directions
-        else:
-            print "Keep looking"
-        if not closed.__contains__(state):
-            closed.add(state)
-            print "Closed:", closed
-            print "Successors:", problem.getSuccessors(state)
-            children = problem.getSuccessors(state)
-            print "len children:", len(children)
-            for i in range(len(children)):
-                childstate = children[i]
-                print "Childstate", childstate
-                childnode = testpath.append(childstate)
-                fringe.push(childnode)
-            # fringe = printFringe(fringe)
-
+            #print 'Found solution!'
+            solution = []
+            for statefull in testplan[1:]:
+                direction = statefull[1]
+                #print 'Direction:', direction
+                #directionMap = {'North':Directions.NORTH,
+                #                'South':Directions.SOUTH, 
+                #                'East':Directions.EAST,
+                #                'West':Directions.WEST}
+                #solution.append(directionMap[direction])
+                solution.append(direction)
+            #print 'Solution Length', len(solution)
+            #util.pause()
+            return solution
     return "Failure"
-    # util.raiseNotDefined()
 
 def printFringe(fringe):
 
-    newfringe = util.Stack()
+    #newfringe = util.Stack()
+    newfringe = util.Queue()
     while not fringe.isEmpty():
         singlenode = fringe.pop()
-        print "Fringe:",
-        print singlenode
+        print "Fringe:", singlenode
         newfringe.push(singlenode)
-    return newfringe
+    # Printing reverses fringe order so put it back    
+    while not newfringe.isEmpty():
+        singlenode = newfringe.pop()
+        fringe.push(singlenode)
+    return fringe
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    print "Start:", problem.getStartState()
+    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    print "Start's successors:", problem.getSuccessors(problem.getStartState())           
+    from game import Directions
+    
+    closed = set()
+    fringe = util.Queue() 
+    startplan = [(problem.getStartState(), 'Start', 0)]
+    #print 'StartNode:' , startplan
+    fringe.push(startplan)
+    
+    while not fringe.isEmpty():
+        testplan = fringe.pop()
+        teststatefull = testplan[len(testplan)-1]
+        teststate = teststatefull[0]
+        print 'TestState:', teststate
+        #print 'ClosedSet:', closed
+        #print 'isGoalState:', problem.isGoalState(teststate)
+        if problem.isGoalState(teststate) == False:
+            closed.add(teststate)
+            successors = problem.getSuccessors(teststate)
+            #print 'Number of Successors:', len(successors)
+            #print 'Possible Successors:', successors
+            for successor in successors:
+                #print 'Successor:', successor
+                #print 'Successoro:', successor[0]
+                #print 'Closed:', closed
+                #print 'TestPlan:', testplan
+                if successor[0] not in closed:
+                    newplan = testplan[:]
+                    newplan.append(successor)
+                    #print 'NewPlan:', newplan
+                    fringe.push(newplan)
+            #util.pause()
+        else:
+            #print 'Found solution!'
+            solution = []
+            for statefull in testplan[1:]:
+                direction = statefull[1]
+                #print 'Direction:', direction
+                #directionMap = {'North':Directions.NORTH,
+                #                'South':Directions.SOUTH, 
+                #                'East':Directions.EAST,
+                #                'West':Directions.WEST}
+                #solution.append(directionMap[direction])
+                solution.append(direction)
+            #print 'Solution Length', len(solution)
+            #util.pause()
+            return solution
+    return "Failure"
 
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    print "Start:", problem.getStartState()
+    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    print "Start's successors:", problem.getSuccessors(problem.getStartState())           
+    from game import Directions
+    
+    closed = set()
+    fringe = util.PriorityQueue() 
+    startplan = [(problem.getStartState(), 'Start', 0)]
+    #print 'StartNode:' , startplan
+    fringe.push(startplan, startplan[0][2])
+    
+    while not fringe.isEmpty():
+        testplan = fringe.pop()
+        teststatefull = testplan[len(testplan)-1]
+        teststate = teststatefull[0]
+        print 'TestState:', teststate
+        #print 'ClosedSet:', closed
+        #print 'isGoalState:', problem.isGoalState(teststate)
+        if problem.isGoalState(teststate) == False:
+            closed.add(teststate)
+            successors = problem.getSuccessors(teststate)
+            #print 'Number of Successors:', len(successors)
+            #print 'Possible Successors:', successors
+            for successor in successors:
+                print 'Successor:', successor
+                print 'Successoro:', successor[0]
+                print 'Closed:', closed
+                #print 'TestPlan:', testplan
+                if successor[0] not in closed:
+                    newplan = testplan[:]
+                    newplan.append(successor)
+                    print 'NewPlan:', newplan
+                    fringe.push(newplan, newplan[len(newplan)-1][2])
+            #util.pause()
+        else:
+            #print 'Found solution!'
+            solution = []
+            for statefull in testplan[1:]:
+                direction = statefull[1]
+                #print 'Direction:', direction
+                #directionMap = {'North':Directions.NORTH,
+                #                'South':Directions.SOUTH, 
+                #                'East':Directions.EAST,
+                #                'West':Directions.WEST}
+                #solution.append(directionMap[direction])
+                solution.append(direction)
+            #print 'Solution Length', len(solution)
+            #util.pause()
+            return solution
+    return "Failure"
 
 def nullHeuristic(state, problem=None):
     """
@@ -164,8 +261,57 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    print "Start:", problem.getStartState()
+    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    print "Heuristic:", 0 + heuristic(problem.getStartState(), problem)
+    
+    closed = set()
+    fringe = util.PriorityQueue() 
+    startplan = [(problem.getStartState(), 'Start', 0)]
+    #print 'StartNode:' , startplan
+    fringe.push(startplan, startplan[0][2])
+    
+    while not fringe.isEmpty():
+        testplan = fringe.pop()
+        teststatefull = testplan[len(testplan)-1]
+        teststate = teststatefull[0]
+        #print "Test Heuristic:", heuristic(teststate, problem) 
+        print 'TestState:', teststate
+        #print 'ClosedSet:', closed
+        #print 'isGoalState:', problem.isGoalState(teststate)
+        if problem.isGoalState(teststate) == False:
+            closed.add(teststate)
+            successors = problem.getSuccessors(teststate)
+            #print 'Number of Successors:', len(successors)
+            #print 'Possible Successors:', successors
+            for successor in successors:
+                print 'Successor:', successor
+                print 'Successoro:', successor[0]
+                print 'Closed:', closed
+                #print 'TestPlan:', testplan
+                if successor[0] not in closed:
+                    newplan = testplan[:]
+                    newplan.append(successor)
+                    print 'NewPlan:', newplan
+                    fringe.push(newplan, newplan[len(newplan)-1][2] + heuristic(teststate, problem))
+            #util.pause()
+        else:
+            #print 'Found solution!'
+            solution = []
+            for statefull in testplan[1:]:
+                direction = statefull[1]
+                #print 'Direction:', direction
+                #directionMap = {'North':Directions.NORTH,
+                #                'South':Directions.SOUTH, 
+                #                'East':Directions.EAST,
+                #                'West':Directions.WEST}
+                #solution.append(directionMap[direction])
+                solution.append(direction)
+            #print 'Solution Length', len(solution)
+            #util.pause()
+            return solution
+    return "Failure"
 
 
 # Abbreviations
